@@ -1,0 +1,64 @@
+{
+	"floatButton": {
+		"tooltipShow": "Hiển thị menu mạng xã hội",
+		"tooltipClose": "Đóng menu mạng xã hội"
+	},
+	"common": {
+		"submit": "Gửi",
+		"cancel": "Hủy",
+		"save": "Lưu",
+		"delete": "Xóa",
+		"edit": "Chỉnh sửa",
+		"create": "Tạo mới",
+		"loading": "Đang tải...",
+		"error": "Đã có lỗi xảy ra",
+		"success": "Thành công",
+		"update": "Cập nhật",
+		"add": "Thêm"
+	},
+	"form": {
+		"name": "Tên",
+		"email": "Email",
+		"age": "Tuổi",
+		"website": "Website (tùy chọn)",
+		"acceptTerms": "Chấp nhận điều khoản",
+		"password": "Mật khẩu",
+		"confirmPassword": "Xác nhận mật khẩu"
+	},
+	"deletePopConfirm": {
+		"title": "Bạn có chắc chắn?",
+		"description": "Bạn sẽ không thể hoàn tác hành động này!",
+		"confirmBtn": "Vâng, hãy xóa!",
+		"cancelBtn": "Không, hủy bỏ!",
+		"message": {
+			"success": {
+				"title": "Đã xóa thành công!"
+			},
+			"failed": {
+				"title": "Xóa mục thất bại!"
+			}
+		}
+	},
+	"button": {
+		"createNew": "Tạo mới",
+		"viewDetail": "Xem chi tiết",
+		"addNew": "Thêm mới",
+		"importXlsx": "Nhập dữ liệu (.xlsx)",
+		"exportXlsx": "Xuất dữ liệu (.xlsx)",
+		"update": "Cập nhật"
+	},
+	"table": {
+		"importExportBtn": "Nhập / Xuất",
+		"columnsButton": "Cột",
+		"search": "Tìm kiếm ...",
+		"totalItems": "Tổng {total} mục",
+		"rowPerPage": "Hàng mỗi trang",
+		"allSelected": "Tất cả mục đã được chọn",
+		"selected": "{selected} trong {total} đã chọn",
+		"empty": "Không tìm thấy mục nào.",
+		"columns": {
+			"modifiedAt": "Lần cập nhật cuối",
+			"actions": "Hành động"
+		}
+	}
+}

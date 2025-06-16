@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+@import './css/theme.css';
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', Helvetica, sans-serif;
+}
+
+@utility container {
+    max-width: 1440px;
+    padding-inline: 2rem;
+    margin-inline: auto;
+
+    @variant sm {
+        max-width: 480px;
+        padding-inline: 2rem;
+    }
+
+    @variant md {
+        max-width: 768px;
+        padding-inline: 2rem;
+    }
+
+    @variant lg {
+        max-width: 976px;
+        padding-inline: 2rem;
+    }
+
+    @variant xl {
+        max-width: 1440px;
+        padding-inline: 2rem;
+    }
+}

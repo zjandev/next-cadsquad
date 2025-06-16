@@ -1,0 +1,52 @@
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+
+    --button-hover: '#f2f2f2';
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0f0f0f;
+        --foreground: #ededed;
+
+        --button-hover: '#272727';
+    }
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-button-hover: var(--button-hover);
+
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --font-saira: var(--font-saira);
+    --font-inter: var(--font-inter);
+
+    --color-primary: '#f47920';
+    --color-primary-50: '#fff7ed';
+    --color-primary-100: '#feedd6';
+    --color-primary-200: '#fcd8ac';
+    --color-primary-300: '#fabb77';
+    --color-primary-400: '#f79440';
+    --color-primary-500: '#f47920';
+    --color-primary-600: '#e55c11';
+    --color-primary-700: '#be4510';
+    --color-primary-800: '#973715';
+    --color-primary-900: '#7a2f14';
+    --color-primary-950: '#421608';
+
+    --color-secondary: '#29267b';
+    --color-secondary-50: '#edf1ff';
+    --color-secondary-100: '#dee6ff';
+    --color-secondary-200: '#c4d0ff';
+    --color-secondary-300: '#a0b1ff';
+    --color-secondary-400: '#7a87ff';
+    --color-secondary-500: '#5b5ef9';
+    --color-secondary-600: '#473dee';
+    --color-secondary-700: '#3c30d2';
+    --color-secondary-800: '#3129aa';
+    --color-secondary-900: '#29267b';
+    --color-secondary-950: '#1c184e';
+}

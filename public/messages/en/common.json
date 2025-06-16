@@ -1,0 +1,64 @@
+{
+	"floatButton": {
+		"tooltipShow": "Show social menu",
+		"tooltipClose": "Close social menu"
+	},
+	"common": {
+		"submit": "Submit",
+		"cancel": "Cancel",
+		"save": "Save",
+		"delete": "Delete",
+		"create": "Create",
+		"edit": "Edit",
+		"loading": "Loading...",
+		"error": "An error occurred",
+		"success": "Success",
+		"update": "Update",
+		"add": "Add"
+	},
+	"deletePopConfirm": {
+		"title": "Are you sure?",
+		"description": "You won't be able to revert this!",
+		"confirmBtn": "Yes, delete it!",
+		"cancelBtn": "No, cancel!",
+		"message": {
+			"success": {
+				"title": "Item deleted successfully!"
+			},
+			"failed": {
+				"title": "Failed to delete item!"
+			}
+		}
+	},
+	"form": {
+		"name": "Name",
+		"email": "Email",
+		"age": "Age",
+		"website": "Website (optional)",
+		"acceptTerms": "Accept Terms",
+		"password": "Password",
+		"confirmPassword": "Confirm Password"
+	},
+	"button": {
+		"createNew": "Create new",
+		"viewDetail": "View detail",
+		"addNew": "Add new",
+		"importXlsx": "Import Data (.xlsx)",
+		"exportXlsx": "Export Data (.xlsx)",
+		"update": "Update"
+	},
+	"table": {
+		"importExportBtn": "Import / Export",
+		"columnsButton": "Columns",
+		"search": "Search ...",
+		"totalItems": "Total {total} items",
+		"rowPerPage": "Rows per page",
+		"allSelected": "All items selected",
+		"selected": "{selected} of {total} selected",
+		"empty": "No items found.",
+		"columns": {
+			"modifiedAt": "Modified At",
+			"actions": "Actions"
+		}
+	}
+}
