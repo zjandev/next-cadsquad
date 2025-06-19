@@ -1,0 +1,25 @@
+{
+    "layout": {
+        "followUsOn": "Theo dõi chúng tôi"
+    },
+    "home": {
+        "slogan": "Đối tác thiết kế cơ khí toàn cầu",
+        "sloganDescription": "Chúng tôi biến ý tưởng sáng tạo và bản vẽ thành hiện thực, cung cấp các giải pháp CAD và kỹ thuật chất lượng cao vì một tương lai bền vững.",
+        "sections": {
+            "popularProject": {
+                "title": "Dự án <highlight>phổ biến</highlight>"
+            },
+            "whyChooseUs": {
+                "title": "Tại sao chọn <highlight> CSD </highlight>?"
+            },
+            "contactUs": {
+                "title": "Liên hệ <highlight>với chúng tôi</highlight>",
+                "description": "Bạn có câu hỏi hay góp ý? Hãy viết tin nhắn cho chúng tôi!",
+                "contactInformation": {
+                    "title": "Thông tin liên hệ",
+                    "description": "Hãy nói gì đó để bắt đầu trò chuyện trực tiếp!"
+                }
+            }
+        }
+    }
+}

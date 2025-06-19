@@ -1,0 +1,28 @@
+{
+    "layout": {
+        "followUsOn": "Follow us on"
+    },
+    "home": {
+        "slogan": "Global Mechanical Design Partner",
+        "sloganDescription": "We turn innovative ideas, drawing into reality, delivering high-quality CAD and engineering solutions for a sustainable future.",
+        "sections": {
+            "popularProject": {
+                "title": "Popular <highlight>Project</highlight>"
+            },
+            "whyChooseUs": {
+                "title": "Why Choose <highlight> CSD </highlight>?"
+            },
+            "customerReview": {
+                "title": "Customer <highlight>Review</highlight>"
+            },
+            "contactUs": {
+                "title": "Contact <highlight>Us</highlight>",
+                "description": "Any question or remarks? Just write us a message!",
+                "contactInformation": {
+                    "title": "Contact Information",
+                    "description": "Say something to start a live chat!"
+                }
+            }
+        }
+    }
+}
