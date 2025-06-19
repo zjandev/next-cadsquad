@@ -1,7 +1,7 @@
 import Banner from './_components/Banner'
 import ContactUs from './_components/ContactUs'
-import CustomerReview from './_components/a'
 import PopularProject from './_components/PopularProject'
+import Testimonials from './_components/Testimonials'
 import WhyChooseUs from './_components/WhyChooseUs'
 
 export default function HomePage() {
@@ -17,7 +17,7 @@ export default function HomePage() {
                 <WhyChooseUs />
             </section>
             <section className="container py-20">
-                <CustomerReview />
+                <Testimonials />
             </section>
             <section className="max-w-screen h-full py-20">
                 <ContactUs />

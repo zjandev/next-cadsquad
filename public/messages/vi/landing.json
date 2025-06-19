@@ -12,6 +12,9 @@
             "whyChooseUs": {
                 "title": "Tại sao chọn <highlight> CSD </highlight>?"
             },
+            "customerReview": {
+                "title": "Customer <highlight>Review</highlight>"
+            },
             "contactUs": {
                 "title": "Liên hệ <highlight>với chúng tôi</highlight>",
                 "description": "Bạn có câu hỏi hay góp ý? Hãy viết tin nhắn cho chúng tôi!",
