@@ -7,7 +7,7 @@ import { YoutubeIcon } from '@/app/shared/components/icons/YoutubeIcon'
 import { ZaloIcon } from '@/app/shared/components/icons/ZaloIcon'
 
 import { APP_LANGUAGES } from './appLanguages'
-import { HEADER_NAVIGATE } from './headerNavigate'
+import { HEADER_NAVIGATES } from './headerNavigate'
 import { WHY_CHOOSE_US } from './whyChooseUs'
 
 export const ourSlogan = [
@@ -63,4 +63,4 @@ export const CONTACT_INFORMATIONS = [
 ]
 export type ContactInfor = (typeof CONTACT_INFORMATIONS)[0]
 
-export { HEADER_NAVIGATE, APP_LANGUAGES, WHY_CHOOSE_US }
+export { HEADER_NAVIGATES, APP_LANGUAGES, WHY_CHOOSE_US }

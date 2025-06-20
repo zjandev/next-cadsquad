@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import {
     Button,
@@ -10,17 +10,24 @@ import {
     DropdownTrigger,
 } from '@heroui/react'
 import { PressEvent } from '@react-types/shared'
-import { Languages } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
+import { useLocale } from 'next-intl'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 import { APP_LANGUAGES } from '@/app/shared/constants/appConstant'
+import { AppLanguage } from '@/app/shared/constants/appLanguages'
 import { useRouter } from '@/i18n/navigation'
 import { routing } from '@/i18n/routing'
 
 export default function ChangeLanguage() {
+    const locale = useLocale()
     const getPathname = usePathname().slice(1)
     const router = useRouter()
+
+    const [currentLanguage, setCurrentLanguage] = useState<AppLanguage | null>(
+        null
+    )
 
     const onChangeLanguage = (event: PressEvent) => {
         const locale = (event.target as HTMLElement).dataset.key
@@ -35,11 +42,30 @@ export default function ChangeLanguage() {
         router.push(pathname, { locale })
     }
 
+    useEffect(() => {
+        const findLanguage = APP_LANGUAGES?.find(
+            (lang) => lang.locale === locale
+        ) as AppLanguage
+        setCurrentLanguage(findLanguage)
+    }, [locale])
+
     return (
         <Dropdown>
-            <DropdownTrigger>
-                <Button variant="bordered">
-                    <Languages size={20} />
+            <DropdownTrigger className="p-0">
+                <Button
+                    variant="bordered"
+                    className="rounded-xl"
+                    endContent={<ChevronDown size={15} />}
+                >
+                    {currentLanguage && (
+                        <Image
+                            src={currentLanguage.flag}
+                            alt={currentLanguage.label}
+                            width={24}
+                            height={24}
+                            className="w-6"
+                        />
+                    )}
                 </Button>
             </DropdownTrigger>
             <DropdownMenu aria-label="Static Actions">
