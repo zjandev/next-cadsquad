@@ -1,74 +1,153 @@
+'use client'
+
 import React from 'react'
 
+import { IconMapPinFilled, IconShieldCheckFilled } from '@tabler/icons-react'
+import { Breadcrumb } from 'antd'
+import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 
+import { COMPANY_NAME } from '@/app/shared/constants/appConstant'
+import ImgCadsquadCard from '@/assets/images/cadsquad-card.png'
 import Focus1 from '@/assets/images/focus_1.png'
-import WorldwideBackground from '@/assets/images/worldwide-background.png'
+import ImgVision from '@/assets/images/heading-pages/vision.png'
+import { Link } from '@/i18n/navigation'
+import { SupportLanguages } from '@/i18n/routing'
 
 export default function AboutUsPage() {
+    const locale = useLocale()
+    const tVision = useTranslations('landing.vision')
+
+    const companyName = COMPANY_NAME[`${locale as SupportLanguages}Name`]
+    const companyInfo = [
+        {
+            icon: IconMapPinFilled,
+            enLabel: 'From',
+            viLabel: 'Đến từ',
+            enValue: 'Vietnam',
+            viValue: 'Việt Nam',
+        },
+        {
+            icon: IconShieldCheckFilled,
+            enLabel: 'Since',
+            viLabel: 'Thành lập',
+            enValue: 'Nov 10th, 2022',
+            viValue: '10/11/2022',
+        },
+    ]
+
     return (
         <div className="min-h-screen max-w-screen">
-            <div className="container">
-                <section className="mt-12 text-lg leading-loose text-justify">
-                    <div className="items-start justify-center gap-8 md:flex min-h-fit">
-                        <aside className="min-w-[300px]">
-                            {/* <VisionCard /> */}
-                        </aside>
-                        <section className="relative md:mt-0 h-fit">
-                            <Image
-                                src={WorldwideBackground}
-                                alt="background"
-                                title="background"
-                                loading="eager"
-                                className="absolute right-0 -z-10 opacity-80"
-                                width={800}
-                                height={800}
-                            />
+            <section className="relative w-full overflow-hidden h-72">
+                <div className="relative size-full">
+                    <Image
+                        src={ImgVision}
+                        alt="Image"
+                        className="object-cover size-full"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/80" />
+                </div>
+                <div className="absolute top-[50%] translate-y-[-50%] left-0 w-screen">
+                    <div className="container" style={{ color: 'white' }}>
+                        <Breadcrumb
+                            items={[
+                                {
+                                    title: 'Home',
+                                },
+                                {
+                                    title: 'About us',
+                                },
+                                {
+                                    title: (
+                                        <Link
+                                            href="/about-us/vision"
+                                            style={{ color: 'white' }}
+                                            className="font-medium"
+                                        >
+                                            Vision
+                                        </Link>
+                                    ),
+                                },
+                            ]}
+                            style={{
+                                color: '#99a1af',
+                            }}
+                            separator={<p className="text-gray-400">/</p>}
+                        />
+                        <h2 className="mt-5 text-6xl font-bold font-saira">
+                            {tVision('heading.title')}
+                        </h2>
+                        <p className="mt-3">{tVision('heading.description')}</p>
+                    </div>
+                </div>
+            </section>
+            <section className="container">
+                <div className="mt-12 text-lg leading-loose text-justify">
+                    <div className="items-start justify-center h-full gap-8 md:flex min-h-fit">
+                        <div className="border-solid border-[1px] border-border p-8 pb-4 w-full">
+                            <div className="flex flex-col items-center pb-5 text-center">
+                                <Image
+                                    src={ImgCadsquadCard}
+                                    alt="Cadsquad avatar"
+                                    className="rounded-full size-36"
+                                    title="Cadsquad avatar"
+                                />
+                                <span className="mt-5 text-base font-bold uppercase">
+                                    {companyName}
+                                </span>
+                            </div>
+                            <div className="pt-5 border-t-2 border-solid">
+                                {companyInfo.map((item, index) => {
+                                    const label =
+                                        item[
+                                            `${locale as SupportLanguages}Label`
+                                        ]
+                                    const value =
+                                        item[
+                                            `${locale as SupportLanguages}Value`
+                                        ]
+
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="flex items-center justify-between mb-4 text-base"
+                                        >
+                                            <div className="flex items-center justify-start gap-2">
+                                                <item.icon />
+                                                <p className="font-medium">
+                                                    {label}
+                                                </p>
+                                            </div>
+                                            <p className="font-semibold">
+                                                {value}
+                                            </p>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                        <section
+                            className="md:mt-0 h-fit"
+                            style={{
+                                backgroundImage:
+                                    "url('https://res.cloudinary.com/dqx1guyc0/image/upload/v1750452293/Cadsquad/u28sazqxenpryifqd8da.png')",
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                            }}
+                        >
                             <div className="mb-5">
-                                <p className="first-letter:ml-10">
-                                    Welcome to our Engineering Design Team. We
-                                    are a highly skilled and experienced group
-                                    of mechanical engineers passionate about
-                                    turning innovative ideas into tangible
-                                    reality. With expertise in diverse areas of
-                                    mechanical engineering, we offer
-                                    comprehensive design solutions tailored to
-                                    meet your specific needs. Our team brings
-                                    together a wealth of knowledge and practical
-                                    experience in concept development, 3D
-                                    modeling, 3D artist, CAD drafting, and
-                                    product design.
+                                <p className="indent-8">
+                                    {tVision('sections.paraph1')}
                                 </p>
-                                <p className="mt-3 first-letter:ml-10">
-                                    CADSQUAD&apos;s vision is to become a
-                                    trusted and reputable partner in the field
-                                    of 3D design and related services. We strive
-                                    to achieve this mission by delivering
-                                    creativity, quality, and exceptional
-                                    performance to our clients in every project.
-                                    With the ideal of surpassing client
-                                    expectations and creating products and
-                                    design solutions that go above and beyond,
-                                    CADSQUAD is committed to shaping and driving
-                                    sustainable growth in the CAD and 3D design
-                                    industry. We prioritize continuous
-                                    improvement, ceaseless innovation, and
-                                    ensure that all our projects leave a unique
-                                    mark and provide significant value to our
-                                    clients.
+                                <p className="mt-3 indent-8">
+                                    {tVision('sections.paraph2')}
                                 </p>
                             </div>
                         </section>
                     </div>
-                    <section className="gap-8 md:flex">
-                        <p className="mt-3 first-letter:ml-10">
-                            “With a highly experienced workforce that has
-                            accumulated years of expertise in their respective
-                            fields, including notable achievements in mechanical
-                            engineering CAD design competitions, and a richly
-                            experienced team of 3D artists, CADSQUAD Vietnam
-                            takes pride in the quality of services we deliver to
-                            our clients.”
+                    <div className="gap-8 md:flex">
+                        <p className="indent-8">
+                            {tVision('sections.paraph3')}
                         </p>
                         <Image
                             src={Focus1}
@@ -77,10 +156,10 @@ export default function AboutUsPage() {
                             loading="eager"
                             className="mx-auto mt-3 rounded-md md:w-[50%] md:h-[50%] lg:w-[500px] lg:h-[282px]"
                         />
-                    </section>
-                </section>
-                <section className="mt-14"></section>
-            </div>
+                    </div>
+                </div>
+                <div className="mt-14"></div>
+            </section>
         </div>
     )
 }

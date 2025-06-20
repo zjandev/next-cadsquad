@@ -32,6 +32,7 @@ export default async function RootLayout({
         <html lang={locale}>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} ${saira.variable} antialiased`}
+                suppressHydrationWarning
             >
                 <AppProvider key="root" locale={locale} messages={messages}>
                     <Suspense fallback={<AppLoader />}>{children}</Suspense>

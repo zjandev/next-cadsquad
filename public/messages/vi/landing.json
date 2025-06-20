@@ -24,5 +24,18 @@
                 }
             }
         }
+    },
+    "vision": {
+        "heading": {
+            "title": "Chúng tôi là ai ?",
+            "description": "\"Chúng tôi là một nhóm kỹ sư cơ khí có tay nghề cao và giàu kinh nghiệm, đam mê biến những ý tưởng sáng tạo thành hiện thực.\""
+        },
+        "sections": {
+            "paraph1": "Chào mừng bạn đến với Đội ngũ Thiết kế Kỹ thuật của chúng tôi. Chúng tôi là một nhóm kỹ sư cơ khí có tay nghề cao và giàu kinh nghiệm, đam mê biến những ý tưởng sáng tạo thành hiện thực. Với chuyên môn trong nhiều lĩnh vực của kỹ thuật cơ khí, chúng tôi cung cấp các giải pháp thiết kế toàn diện được điều chỉnh để đáp ứng nhu cầu cụ thể của bạn. Đội ngũ của chúng tôi hội tụ kiến thức chuyên sâu và kinh nghiệm thực tiễn trong phát triển ý tưởng, mô hình 3D, nghệ sĩ 3D, bản vẽ CAD và thiết kế sản phẩm.",
+
+            "paraph2": "Tầm nhìn của CADSQUAD là trở thành đối tác đáng tin cậy và uy tín trong lĩnh vực thiết kế 3D và các dịch vụ liên quan. Chúng tôi nỗ lực đạt được sứ mệnh này bằng cách mang đến sự sáng tạo, chất lượng và hiệu suất vượt trội cho khách hàng trong từng dự án. Với lý tưởng vượt xa mong đợi của khách hàng và tạo ra các sản phẩm cũng như giải pháp thiết kế vượt trội, CADSQUAD cam kết định hình và thúc đẩy sự phát triển bền vững trong ngành thiết kế CAD và 3D. Chúng tôi ưu tiên cải tiến liên tục, đổi mới không ngừng và đảm bảo mọi dự án đều để lại dấu ấn riêng, mang lại giá trị thiết thực cho khách hàng.",
+
+            "paraph3": "“Với đội ngũ nhân sự giàu kinh nghiệm, đã tích lũy nhiều năm chuyên môn trong các lĩnh vực của mình, bao gồm cả những thành tích nổi bật trong các cuộc thi thiết kế CAD cơ khí, cùng với đội ngũ nghệ sĩ 3D dày dạn kinh nghiệm, CADSQUAD Vietnam tự hào về chất lượng dịch vụ mà chúng tôi mang đến cho khách hàng.”"
+        }
     }
 }

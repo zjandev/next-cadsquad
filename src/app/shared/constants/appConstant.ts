@@ -17,6 +17,11 @@ export const ourSlogan = [
     'Shaping the Future of Mechanical Design',
 ]
 
+export const COMPANY_NAME = {
+    viName: 'Công ty dịch vụ CAD',
+    enName: 'CAD services company',
+}
+
 export const SOCIALS = [
     {
         name: 'Facebook',
