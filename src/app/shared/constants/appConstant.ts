@@ -7,6 +7,7 @@ import { YoutubeIcon } from '@/app/shared/components/icons/YoutubeIcon'
 import { ZaloIcon } from '@/app/shared/components/icons/ZaloIcon'
 
 import { APP_LANGUAGES } from './appLanguages'
+import { FOOTER_LINKS } from './footerLinks'
 import { HEADER_NAVIGATES } from './headerNavigate'
 import { WHY_CHOOSE_US } from './whyChooseUs'
 
@@ -53,12 +54,12 @@ export const CONTACT_INFORMATIONS = [
     {
         icon: MailIcon,
         name: 'Contact@cadsquad.com',
-        path: 'mailto: contact.us@csdvietnam.com',
+        path: 'mailto:contact.us@csdvietnam.com',
     },
     {
         icon: ZaloIcon,
-        name: 'Zalo.me/0862248332',
-        path: 'https://t.me/csdptphong',
+        name: 'Zalo.me/0765279228',
+        path: 'https://zalo.me/0765279228',
     },
     {
         icon: FiverrIcon,
@@ -68,4 +69,4 @@ export const CONTACT_INFORMATIONS = [
 ]
 export type ContactInfor = (typeof CONTACT_INFORMATIONS)[0]
 
-export { HEADER_NAVIGATES, APP_LANGUAGES, WHY_CHOOSE_US }
+export { HEADER_NAVIGATES, APP_LANGUAGES, WHY_CHOOSE_US, FOOTER_LINKS }

@@ -47,7 +47,8 @@
         "exportXlsx": "Xuất dữ liệu (.xlsx)",
         "update": "Cập nhật",
         "contact": "Liên hệ",
-        "sendMessage": "Gửi tin nhắn"
+        "sendMessage": "Gửi tin nhắn",
+        "getStartedNow": "Khám phá ngay"
     },
     "table": {
         "importExportBtn": "Nhập / Xuất",

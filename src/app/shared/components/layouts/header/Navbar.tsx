@@ -8,6 +8,7 @@ import { Variants } from 'motion'
 import { useLocale } from 'next-intl'
 import Image from 'next/image'
 
+import { useGetAllServices } from '@/app/[locale]/(pages)/(landing)/cad-services/hooks/useCadService'
 import { HEADER_NAVIGATES } from '@/app/shared/constants/appConstant'
 import { NavigateItem } from '@/app/shared/constants/headerNavigate'
 import { Link } from '@/i18n/navigation'
@@ -15,9 +16,33 @@ import { SupportLanguages } from '@/i18n/routing'
 import { MotionButton, MotionDiv, MotionLi, MotionP } from '@/lib/motion'
 
 export default function Navbar() {
+    const { services } = useGetAllServices('cadServices')
+
+    const innerCadServices = HEADER_NAVIGATES.map((service) => {
+        if (service.enLabel === 'CAD Services') {
+            const newMenus = services.map((item) => {
+                return {
+                    viLabel: item.name,
+                    enLabel: item.name,
+                    image: item.thumbnail,
+                    href: `/cad-services/${item.slug}`,
+                }
+            })
+
+            return {
+                ...service,
+                menus: newMenus,
+            } as NavigateItem
+        }
+
+        return { ...service }
+    })
+
+    const finalHeaderNavs = innerCadServices
+
     return (
         <nav className="z-50 flex items-center justify-start gap-2">
-            {HEADER_NAVIGATES.map((item, index) => {
+            {finalHeaderNavs.map((item, index) => {
                 return <NavbarItem key={index} data={item} />
             })}
         </nav>
@@ -129,7 +154,7 @@ function NavbarItem({ data }: { data: NavigateItem }) {
                             </Button>
                         </Link>
                     </div>
-                    <ul className="grid grid-cols-3 gap-6">
+                    <ul className="grid grid-cols-3 gap-6 max-h-[80vh] overflow-y-auto pr-5">
                         {data.menus.map((menuItem, index) => {
                             const itemLabel =
                                 menuItem[`${locale as SupportLanguages}Label`]
@@ -144,13 +169,16 @@ function NavbarItem({ data }: { data: NavigateItem }) {
                                 >
                                     <Link
                                         href={menuItem.href}
-                                        className="block space-y-2 size-fit"
+                                        className="block space-y-2 size-full"
                                     >
                                         <div className="w-full overflow-hidden rounded-sm aspect-video">
                                             <Image
                                                 src={menuItem.image}
                                                 alt={`${itemLabel} image`}
                                                 className="object-cover transition duration-300 rounded-sm size-full group-hover:scale-110"
+                                                width={500}
+                                                height={500}
+                                                quality={100}
                                             />
                                         </div>
                                         <MotionP

@@ -54,7 +54,7 @@ export const AnimatedTestimonials = ({
                                 <motion.div
                                     key={index}
                                     initial={{
-                                        opacity: 0,
+                                        opacity: '0',
                                         scale: 0.9,
                                         z: -100,
                                         rotate: randomRotateY(),

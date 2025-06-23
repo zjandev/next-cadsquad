@@ -47,7 +47,8 @@
         "exportXlsx": "Export Data (.xlsx)",
         "update": "Update",
         "contact": "Contact",
-        "sendMessage": "Send message"
+        "sendMessage": "Send message",
+        "getStartedNow": "Get started now"
     },
     "table": {
         "importExportBtn": "Import / Export",

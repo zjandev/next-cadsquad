@@ -39,7 +39,7 @@ export default function AboutUsPage() {
     ]
 
     return (
-        <div className="min-h-screen max-w-screen pb-32">
+        <div className="min-h-screen pb-32 max-w-screen">
             <section className="relative w-full overflow-hidden h-72">
                 <div className="relative size-full">
                     <Image
@@ -160,9 +160,9 @@ export default function AboutUsPage() {
                         />
                     </div>
                 </div>
-                <div className="mt-14 space-y-5">
-                    <h4 className="text-2xl font-saira font-semibold text-center uppercase">
-                        Meet the team
+                <div className="space-y-5 mt-14">
+                    <h4 className="text-2xl font-semibold text-center uppercase font-saira">
+                        {tVision('sections.meetTheTeam.title')}
                     </h4>
                     <TeamCarousels />
                 </div>
