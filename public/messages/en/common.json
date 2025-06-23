@@ -62,5 +62,11 @@
             "modifiedAt": "Modified At",
             "actions": "Actions"
         }
+    },
+    "toast": {
+        "sendEmail": {
+            "success": "Send email successfully!",
+            "failed": "Network error!"
+        }
     }
 }

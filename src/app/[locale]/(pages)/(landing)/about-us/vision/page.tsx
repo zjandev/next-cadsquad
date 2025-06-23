@@ -14,6 +14,8 @@ import ImgVision from '@/assets/images/heading-pages/vision.png'
 import { Link } from '@/i18n/navigation'
 import { SupportLanguages } from '@/i18n/routing'
 
+import TeamCarousels from './_components/TeamCarousels'
+
 export default function AboutUsPage() {
     const locale = useLocale()
     const tVision = useTranslations('landing.vision')
@@ -37,7 +39,7 @@ export default function AboutUsPage() {
     ]
 
     return (
-        <div className="min-h-screen max-w-screen">
+        <div className="min-h-screen max-w-screen pb-32">
             <section className="relative w-full overflow-hidden h-72">
                 <div className="relative size-full">
                     <Image
@@ -158,7 +160,12 @@ export default function AboutUsPage() {
                         />
                     </div>
                 </div>
-                <div className="mt-14"></div>
+                <div className="mt-14 space-y-5">
+                    <h4 className="text-2xl font-saira font-semibold text-center uppercase">
+                        Meet the team
+                    </h4>
+                    <TeamCarousels />
+                </div>
             </section>
         </div>
     )

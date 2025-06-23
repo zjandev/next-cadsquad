@@ -62,5 +62,11 @@
             "modifiedAt": "Lần cập nhật cuối",
             "actions": "Hành động"
         }
+    },
+    "toast": {
+        "sendEmail": {
+            "success": "Gửi email thành công!",
+            "failed": "Lỗi mạng!"
+        }
     }
 }
