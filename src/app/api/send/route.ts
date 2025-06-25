@@ -5,7 +5,7 @@ import EmailTemplate from '@/app/shared/components/EmailTemplate'
 import envConfig from '@/config/config'
 import { transporter } from '@/lib/nodemailer'
 
-export const EMAIL_SUBJECT = '[cadsquad.vn] Customer wants to connect'
+const EMAIL_SUBJECT = '[cadsquad.vn] Customer wants to connect'
 
 export async function POST(req: NextRequest) {
     try {
