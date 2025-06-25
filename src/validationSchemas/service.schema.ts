@@ -9,5 +9,6 @@ export const ServiceSchema = yup.object().shape({
     thumbnail: yup.string(),
     horizontalThumbnail: yup.string(),
     images: yup.array(yup.string().required()),
+    content: yup.string(),
 })
 export type Service = yup.InferType<typeof ServiceSchema>

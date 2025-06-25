@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
+import { Image } from 'antd'
 import { AnimatePresence, motion } from 'motion/react'
 
 export type Testimonial = {
@@ -81,15 +82,15 @@ export const AnimatedTestimonials = ({
                                         duration: 0.4,
                                         ease: 'easeInOut',
                                     }}
-                                    className="absolute inset-0 origin-bottom"
+                                    className="absolute inset-0 origin-bottom size-full"
                                 >
-                                    <img
+                                    <Image
                                         src={testimonial.src}
                                         alt={testimonial.name}
                                         width={500}
                                         height={500}
                                         draggable={false}
-                                        className="object-cover object-center w-full h-full rounded-3xl"
+                                        className="object-cover object-center size-full rounded-3xl"
                                     />
                                 </motion.div>
                             ))}

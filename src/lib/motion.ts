@@ -6,6 +6,7 @@ import { MotionConfig, motion } from 'motion/react'
  * Block
  */
 export const MotionDiv = motion.div
+export const MotionSection = motion.section
 export const MotionButton = motion.button
 /**
  * List

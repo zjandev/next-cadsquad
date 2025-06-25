@@ -4,9 +4,9 @@ import { Service } from '@/validationSchemas/service.schema'
 export async function generateMetadata({
     params,
 }: {
-    params: { locale: string; slug: string }
+    params: Promise<{ locale: string; slug: string }>
 }) {
-    const { slug } = params
+    const { slug } = await params
 
     const cadServices = await firebaseService.getByQuery(
         'cadServices',
