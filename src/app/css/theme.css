@@ -1,5 +1,6 @@
 :root {
     --background: oklch(1 0 0); /* #ffffff */
+    --background-secondary: oklch(96.4% 0.3% 247); /* #f6f6f6 */
     --foreground: oklch(0.095 0 0); /* #171717 */
     --border: oklch(0.896 0.003 0); /* #e4e4e4 */
     --button-hover: oklch(0.953 0.001 0); /* #f2f2f2 */
@@ -8,6 +9,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background: oklch(0.061 0 0); /* #0f0f0f */
+        --background-secondary: oklch(25.9% 0.4% 267); /* #262626 */
         --foreground: oklch(0.929 0 0); /* #ededed */
         --border: oklch(0.168 0.001 0); /* #2b2b2b */
         --button-hover: oklch(0.165 0 0); /* #272727 */
@@ -16,6 +18,7 @@
 
 @theme inline {
     --color-background: var(--background);
+    --color-background-secondary: var(--background-secondary);
     --color-foreground: var(--foreground);
     --color-border: var(--border);
     --color-button-hover: var(--button-hover);

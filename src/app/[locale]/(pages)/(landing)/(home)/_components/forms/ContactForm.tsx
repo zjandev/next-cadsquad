@@ -57,7 +57,7 @@ export default function ContactForm() {
     })
 
     return (
-        <form onSubmit={formik.handleSubmit} className="size-full space-y-5">
+        <form onSubmit={formik.handleSubmit} className="space-y-5 size-full">
             <Input
                 id="fullName"
                 name="fullName"
@@ -100,7 +100,7 @@ export default function ContactForm() {
                     Boolean(formik.touched.message)
                 }
             />
-            <div className="w-full grid place-items-center">
+            <div className="grid w-full mt-7 place-items-center">
                 <Button
                     className="px-10 py-6"
                     color="primary"

@@ -11,7 +11,11 @@ type Props = {
 }
 export function AppProvider({ children, locale, messages }: Props) {
     return (
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider
+            locale={locale}
+            messages={messages}
+            timeZone="Asia/Ho_Chi_Minh"
+        >
             <HeroUIProvider>
                 <ToastProvider />
                 <AntdRegistry>{children}</AntdRegistry>

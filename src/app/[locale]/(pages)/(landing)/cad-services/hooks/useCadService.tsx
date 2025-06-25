@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from 'react'
 
-import { message } from 'antd'
-
 import { clientFirebaseService } from '@/lib/firebase/services'
 import { Service } from '@/validationSchemas/service.schema'
 
@@ -31,7 +29,7 @@ export const useGetAllServices = (path: string) => {
                     ) as DataType[]
                     setData(formattedData)
                     setLoading(false)
-                    message.success('Dữ liệu đã được cập nhật')
+                    console.log('Dữ liệu đã được cập nhật')
                 }
             )
 

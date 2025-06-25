@@ -21,7 +21,7 @@ export const HEADER_NAVIGATES: NavigateItem[] = [
     {
         enLabel: 'About us',
         viLabel: 'Về chúng tôi',
-        href: '/about-us',
+        href: '/about-us/overview',
         menus: [
             {
                 viLabel: 'Tổng quan',

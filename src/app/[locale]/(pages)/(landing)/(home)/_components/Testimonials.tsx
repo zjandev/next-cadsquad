@@ -11,8 +11,8 @@ export default function Testimonials() {
     const tHome = useTranslations('landing.home')
 
     return (
-        <div className="size-full space-y-5">
-            <h2 className="text-center text-5xl font-saira font-bold">
+        <div className="container space-y-5">
+            <h2 className="text-5xl font-bold text-center font-saira">
                 {tHome.rich('sections.customerReview.title', {
                     highlight: (chunk) => (
                         <span className="text-primary">{chunk}</span>
@@ -20,7 +20,7 @@ export default function Testimonials() {
                 })}
             </h2>
             <div>
-                <AnimatedTestimonials testimonials={TESTIMONIALS} />
+                <AnimatedTestimonials testimonials={TESTIMONIALS} autoplay />
             </div>
         </div>
     )

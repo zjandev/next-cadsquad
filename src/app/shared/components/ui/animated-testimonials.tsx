@@ -3,8 +3,10 @@
 import { useEffect, useState } from 'react'
 
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
-import { AnimatePresence, motion } from 'motion/react'
+import { AnimatePresence } from 'motion/react'
 import Image from 'next/image'
+
+import { MotionDiv, MotionP, MotionSpan } from '@/lib/motion'
 
 export type Testimonial = {
     quote: string
@@ -37,7 +39,7 @@ export const AnimatedTestimonials = ({
 
     useEffect(() => {
         if (autoplay) {
-            const interval = setInterval(handleNext, 5000)
+            const interval = setInterval(handleNext, 4000)
             return () => clearInterval(interval)
         }
     }, [autoplay])
@@ -52,10 +54,10 @@ export const AnimatedTestimonials = ({
                     <div className="relative w-full h-80">
                         <AnimatePresence>
                             {testimonials.map((testimonial, index) => (
-                                <motion.div
+                                <MotionDiv
                                     key={index}
                                     initial={{
-                                        opacity: '0',
+                                        opacity: 0,
                                         scale: 0.9,
                                         z: -100,
                                         rotate: randomRotateY(),
@@ -83,6 +85,7 @@ export const AnimatedTestimonials = ({
                                         ease: 'easeInOut',
                                     }}
                                     className="absolute inset-0 origin-bottom"
+                                    suppressHydrationWarning
                                 >
                                     <Image
                                         src={testimonial.src}
@@ -92,13 +95,13 @@ export const AnimatedTestimonials = ({
                                         draggable={false}
                                         className="object-cover object-center size-full rounded-3xl"
                                     />
-                                </motion.div>
+                                </MotionDiv>
                             ))}
                         </AnimatePresence>
                     </div>
                 </div>
                 <div className="flex flex-col justify-between py-4">
-                    <motion.div
+                    <MotionDiv
                         key={active}
                         initial={{
                             y: 20,
@@ -123,11 +126,11 @@ export const AnimatedTestimonials = ({
                         <p className="text-sm text-gray-500 dark:text-neutral-500">
                             {testimonials[active].designation}
                         </p>
-                        <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
+                        <MotionP className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
                             {testimonials[active].quote
                                 .split(' ')
                                 .map((word, index) => (
-                                    <motion.span
+                                    <MotionSpan
                                         key={index}
                                         initial={{
                                             filter: 'blur(10px)',
@@ -147,10 +150,10 @@ export const AnimatedTestimonials = ({
                                         className="inline-block"
                                     >
                                         {word}&nbsp;
-                                    </motion.span>
+                                    </MotionSpan>
                                 ))}
-                        </motion.p>
-                    </motion.div>
+                        </MotionP>
+                    </MotionDiv>
                     <div className="flex gap-4 pt-12 md:pt-0">
                         <button
                             onClick={handlePrev}

@@ -1,3 +1,7 @@
+import { Variants } from 'motion'
+
+import { MotionSection } from '@/lib/motion'
+
 import Banner from './_components/Banner'
 import ContactUs from './_components/ContactUs'
 import PopularProject from './_components/PopularProject'
@@ -5,23 +9,56 @@ import Testimonials from './_components/Testimonials'
 import WhyChooseUs from './_components/WhyChooseUs'
 
 export default function HomePage() {
+    const sectionVariants: Variants = {
+        init: {
+            opacity: 0,
+        },
+        animate: {
+            opacity: 1,
+        },
+    }
     return (
         <>
-            <section className="max-w-screen h-full">
+            <MotionSection
+                variants={sectionVariants}
+                initial="init"
+                whileInView="animate"
+                className="h-full max-w-screen"
+            >
                 <Banner />
-            </section>
-            <section className="container">
+            </MotionSection>
+            <MotionSection
+                variants={sectionVariants}
+                initial="init"
+                whileInView="animate"
+                className="pt-24 border-b pb-28 border-border bg-gradient-to-b from-background to-background-secondary"
+            >
                 <PopularProject />
-            </section>
-            <section className="container">
+            </MotionSection>
+            <MotionSection
+                variants={sectionVariants}
+                initial="init"
+                whileInView="animate"
+                className="pt-24 border-b pb-28 border-border bg-gradient-to-b from-background to-background-secondary"
+            >
                 <WhyChooseUs />
-            </section>
-            <section className="container py-20">
+            </MotionSection>
+            <MotionSection
+                variants={sectionVariants}
+                initial="init"
+                whileInView="animate"
+                className="pt-24 border-b pb-28 border-border bg-gradient-to-b from-background to-background-secondary"
+            >
                 <Testimonials />
-            </section>
-            <section className="max-w-screen h-full py-20">
+            </MotionSection>
+            <MotionSection
+                variants={sectionVariants}
+                initial="init"
+                whileInView="animate"
+                className="mb-32"
+            >
                 <ContactUs />
-            </section>
+            </MotionSection>
         </>
     )
 }
