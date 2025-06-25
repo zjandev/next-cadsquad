@@ -1,0 +1,51 @@
+{
+    "layout": {
+        "followUsOn": "Theo dõi chúng tôi"
+    },
+    "home": {
+        "heading": {
+            "title": "Trang chủ"
+        },
+        "slogan": "Đối tác thiết kế cơ khí toàn cầu",
+        "sloganDescription": "Chúng tôi biến ý tưởng sáng tạo và bản vẽ thành hiện thực, cung cấp các giải pháp CAD và kỹ thuật chất lượng cao vì một tương lai bền vững.",
+        "sections": {
+            "popularProject": {
+                "title": "Dự án <highlight>phổ biến</highlight>"
+            },
+            "whyChooseUs": {
+                "title": "Tại sao chọn <highlight> CSD </highlight>?"
+            },
+            "customerReview": {
+                "title": "<highlight>Đánh giá</highlight>"
+            },
+            "contactUs": {
+                "title": "Liên hệ <highlight>với chúng tôi</highlight>",
+                "description": "Bạn có câu hỏi hay góp ý? Hãy viết tin nhắn cho chúng tôi!",
+                "contactInformation": {
+                    "title": "Thông tin liên hệ",
+                    "description": "Liên hệ với chúng tôi để được hỗ trợ nhanh chóng và chính xác!"
+                }
+            }
+        }
+    },
+    "vision": {
+        "heading": {
+            "title": "Chúng tôi là ai ?",
+            "description": "\"Chúng tôi là một nhóm kỹ sư cơ khí có tay nghề cao và giàu kinh nghiệm, đam mê biến những ý tưởng sáng tạo thành hiện thực.\""
+        },
+        "sections": {
+            "paraph1": "Chào mừng bạn đến với Đội ngũ Thiết kế Kỹ thuật của chúng tôi. Chúng tôi là một nhóm kỹ sư cơ khí có tay nghề cao và giàu kinh nghiệm, đam mê biến những ý tưởng sáng tạo thành hiện thực. Với chuyên môn trong nhiều lĩnh vực của kỹ thuật cơ khí, chúng tôi cung cấp các giải pháp thiết kế toàn diện, được tùy chỉnh theo nhu cầu cụ thể của bạn. Đội ngũ của chúng tôi hội tụ kiến thức sâu rộng và kinh nghiệm thực tiễn trong phát triển ý tưởng, mô hình 3D, bản vẽ CAD và thiết kế sản phẩm. Ngoài ra, CADSQUAD còn phát triển hệ thống Học viện đào tạo phần mềm thiết kế nhằm giúp các kỹ sư và sinh viên tiếp cận với thiết kế cơ khí chuyên nghiệp.",
+            "paraph2": "Tầm nhìn của CADSQUAD là trở thành đối tác đáng tin cậy và uy tín trong lĩnh vực thiết kế 3D và các dịch vụ liên quan. Chúng tôi nỗ lực thực hiện sứ mệnh này bằng cách mang đến sự sáng tạo, chất lượng và hiệu suất vượt trội cho khách hàng trong từng dự án. Với lý tưởng vượt qua mong đợi của khách hàng và tạo ra các sản phẩm cũng như giải pháp thiết kế ưu việt, CADSQUAD cam kết định hình và thúc đẩy sự phát triển bền vững trong ngành thiết kế CAD và 3D. Chúng tôi ưu tiên cải tiến liên tục, đổi mới không ngừng và đảm bảo rằng mọi dự án đều để lại dấu ấn riêng và mang lại giá trị to lớn cho khách hàng.",
+            "paraph3": "“Với đội ngũ nhân sự giàu kinh nghiệm, đã tích lũy nhiều năm chuyên môn trong các lĩnh vực của mình, bao gồm cả những thành tích nổi bật trong các cuộc thi thiết kế CAD cơ khí, cùng với đội ngũ nghệ sĩ 3D dày dạn kinh nghiệm, CADSQUAD Vietnam tự hào về chất lượng dịch vụ mà chúng tôi mang đến cho khách hàng.”",
+            "meetTheTeam": {
+                "title": "Đội ngũ của chúng tôi"
+            }
+        }
+    },
+    "cadServices": {
+        "heading": {
+            "title": "Dịch vụ CAD",
+            "description": "Khách hàng và nhân viên là trung tâm trong mọi hoạt động của CADSQUAD. Sự hài lòng của khách hàng là kim chỉ nam dẫn đến thành công của tổ chức. Vì vậy, CADSQUAD luôn nỗ lực lắng nghe, thấu hiểu và nhanh chóng giải quyết các yêu cầu của khách hàng, đồng thời không ngừng nâng cao chất lượng dịch vụ. Với cam kết hỗ trợ chi phí thiết kế hợp lý khi sử dụng dịch vụ của CADSQUAD, chúng tôi tin rằng doanh nghiệp của bạn sẽ hài lòng. Đội ngũ kỹ sư trẻ đầy nhiệt huyết của chúng tôi đều tốt nghiệp từ các trường kỹ thuật uy tín và từng làm việc tại các tập đoàn đa quốc gia, được đào tạo bài bản về các phần mềm kỹ thuật như Autodesk AutoCAD, Autodesk Inventor, Creo... Chúng tôi tự tin vào chất lượng sản phẩm khi bạn lựa chọn đồng hành cùng chúng tôi."
+        }
+    }
+}

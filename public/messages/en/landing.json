@@ -1,0 +1,51 @@
+{
+    "layout": {
+        "followUsOn": "Follow us on"
+    },
+    "home": {
+        "heading": {
+            "title": "Home"
+        },
+        "slogan": "Global Mechanical Design Partner",
+        "sloganDescription": "We turn innovative ideas, drawing into reality, delivering high-quality CAD and engineering solutions for a sustainable future.",
+        "sections": {
+            "popularProject": {
+                "title": "Popular <highlight>Project</highlight>"
+            },
+            "whyChooseUs": {
+                "title": "Why Choose <highlight> CSD </highlight>?"
+            },
+            "customerReview": {
+                "title": "Customer <highlight>Review</highlight>"
+            },
+            "contactUs": {
+                "title": "Contact <highlight>Us</highlight>",
+                "description": "Any question or remarks? Just write us a message!",
+                "contactInformation": {
+                    "title": "Contact Information",
+                    "description": "Say something to start a live chat!"
+                }
+            }
+        }
+    },
+    "vision": {
+        "heading": {
+            "title": "Who we are ?",
+            "description": "\"We are a highly skilled and experienced group of mechanical engineers passionate about turning innovative ideas into tangible reality.\""
+        },
+        "sections": {
+            "paraph1": "Welcome to our Engineering Design Team. We are a group of highly skilled and experienced mechanical engineers who are passionate about turning creative ideas into tangible reality. With expertise in many areas of mechanical engineering, we provide comprehensive design solutions tailored to your specific needs. Our team brings together a wealth of knowledge and practical experience in concept development, 3D modeling, CAD drafting and product design. In addition, CADSQUAD also develops the Academy system to train design software to help engineers and students approach professional mechanical design.",
+            "paraph2": "CADSQUAD's vision is to become a trusted and reputable partner in the field of 3D design and related services. We strive to achieve this mission by bringing creativity, quality and outstanding performance to our customers in every project. With the ideal of exceeding customer expectations and creating superior design products and solutions, CADSQUAD is committed to shaping and driving sustainable growth in the CAD and 3D design industry. We prioritize continuous improvement, relentless innovation and ensure that all our projects leave a unique mark and bring significant value to our customers.",
+            "paraph3": "“With a highly experienced workforce that has accumulated years of expertise in their respective fields, including notable achievements in mechanical engineering CAD design competitions, and a richly experienced team of 3D artists, CADSQUAD Vietnam takes pride in the quality of services we deliver to our clients.”",
+            "meetTheTeam": {
+                "title": "Meet the team"
+            }
+        }
+    },
+    "cadServices": {
+        "heading": {
+            "title": "CAD services",
+            "description": "Customers and employees are the focus of CADSQUAD in all business activities. Customer satisfaction is the compass leading to the success of the organization. Therefore, the effort to listen, understand and quickly resolve customer requests and improve service quality is what CADSQUAD is constantly. With the commitment to support customers with reasonable design costs when using CADSQUAD services, we believe that your business will be satisfied when using our services. Our team of enthusiastic young engineers all graduated from good technical schools and worked at multinational corporations. are well-trained in technical software including Autodesk AutoCAD, Autodesk Inventor, Creo... We are confident in the quality of output when you choose us."
+        }
+    }
+}

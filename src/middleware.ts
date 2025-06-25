@@ -2,7 +2,7 @@ import createIntlMiddleware from 'next-intl/middleware'
 import { NextRequest, NextResponse } from 'next/server'
 
 import {
-    type SupportLanguage,
+    type SupportLanguages,
     defaultLocale,
     getLocaleFromPathname,
     isValidLocale,
@@ -13,7 +13,7 @@ import {
 const intlMiddleware = createIntlMiddleware(routing)
 
 // Helper function to detect user's preferred language
-function detectLanguage(req: NextRequest): SupportLanguage {
+function detectLanguage(req: NextRequest): SupportLanguages {
     // 1. Check for language preference in cookies
     const languageCookie = req.cookies.get('NEXT_LOCALE')?.value
     if (languageCookie && isValidLocale(languageCookie)) {

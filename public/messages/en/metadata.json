@@ -1,6 +1,14 @@
 {
-	"root": {
-		"title": "CSD Vietnam | Highly skilled and experienced group",
-		"description": "CADSQUAD Vietnam delivers high-quality mechanical design and CAD services, turning ideas into sustainable products for global clients."
-	}
+    "home": {
+        "title": "CSD Vietnam | Highly skilled and experienced group",
+        "description": "CADSQUAD Vietnam delivers high-quality mechanical design and CAD services, turning ideas into sustainable products for global clients."
+    },
+    "aboutUs": {
+        "title": "About us | Cadsquad.vn",
+        "description": "CADSQUAD Vietnam delivers high-quality mechanical design and CAD services, turning ideas into sustainable products for global clients."
+    },
+    "cadServices": {
+        "title": "CAD Services | Cadsquad.vn",
+        "description": "CADSQUAD Vietnam delivers high-quality mechanical design and CAD services, turning ideas into sustainable products for global clients."
+    }
 }
