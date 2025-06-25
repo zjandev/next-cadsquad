@@ -6,6 +6,7 @@ export const ServiceSchema = yup.object().shape({
     name: yup.string(),
     slug: yup.string(),
     description: yup.string(),
+    shortDescription: yup.string(),
     thumbnail: yup.string(),
     horizontalThumbnail: yup.string(),
     images: yup.array(yup.string().required()),

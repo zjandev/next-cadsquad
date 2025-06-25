@@ -57,7 +57,9 @@ export default function ServiceCard({ data }: Props) {
                 >
                     {data.name}
                 </Link>
-                <p className="mt-5 text-lg text-gray-700">{data.description}</p>
+                <p className="mt-5 text-lg text-gray-700">
+                    {data.shortDescription}
+                </p>
                 <Link href={destination} className="block">
                     <Button
                         className="mt-8 capitalize rounded-full"

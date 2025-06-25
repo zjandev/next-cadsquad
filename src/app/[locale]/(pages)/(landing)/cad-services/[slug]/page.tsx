@@ -94,6 +94,7 @@ export default async function CADServiceDetailPage({
 
     // console.log(JSON.stringify(templateContent.replaceAll('  ', '')))
 
+    const description = cleanMarkdownString(data.description ?? '')
     const source = cleanMarkdownString(data.content ?? '')
 
     return (
@@ -137,10 +138,22 @@ export default async function CADServiceDetailPage({
                             }}
                             separator={<p className="text-gray-400">/</p>}
                         />
-                        <h2 className="mt-5 text-6xl font-bold font-saira">
+                        <h2 className="mt-5 text-6xl font-bold font-saira mb-3">
                             {data?.name}
                         </h2>
-                        <p className="mt-3">{data?.description}</p>
+                        <MDXRemote
+                            source={description}
+                            components={{
+                                wrapper({ children }) {
+                                    return (
+                                        <div className="leading-relaxed">
+                                            {children}
+                                        </div>
+                                    )
+                                },
+                            }}
+                            onError={() => <p></p>}
+                        />
                     </div>
                 </div>
             </section>
