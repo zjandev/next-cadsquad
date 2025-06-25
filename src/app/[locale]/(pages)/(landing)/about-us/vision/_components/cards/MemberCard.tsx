@@ -2,7 +2,7 @@ import React from 'react'
 
 import Image from 'next/image'
 
-import { Member } from '@/app/shared/constants/teams'
+import { Member } from '@/shared/constants/teams'
 
 type Props = {
     data: Member

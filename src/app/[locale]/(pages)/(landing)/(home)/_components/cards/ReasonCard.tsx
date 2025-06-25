@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { Reason } from '@/app/shared/constants/whyChooseUs'
+import { Reason } from '@/shared/constants/whyChooseUs'
 
 type Props = {
     data: Reason

@@ -15,8 +15,8 @@ import { useLocale } from 'next-intl'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
-import { APP_LANGUAGES } from '@/app/shared/constants/appConstant'
-import { AppLanguage } from '@/app/shared/constants/appLanguages'
+import { APP_LANGUAGES } from '@/shared/constants/appConstant'
+import { AppLanguage } from '@/shared/constants/appLanguages'
 import { useRouter } from '@/i18n/navigation'
 import { routing } from '@/i18n/routing'
 

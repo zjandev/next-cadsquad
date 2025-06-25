@@ -1,12 +1,13 @@
-import { CallIcon } from '@/app/shared/components/icons/CallIcon'
-import { FacebookIcon } from '@/app/shared/components/icons/FacebookIcon'
-import { FiverrIcon } from '@/app/shared/components/icons/FiverrIcon'
-import { MailIcon } from '@/app/shared/components/icons/MailIcon'
-import { TiktokIcon } from '@/app/shared/components/icons/TiktokIcon'
-import { YoutubeIcon } from '@/app/shared/components/icons/YoutubeIcon'
-import { ZaloIcon } from '@/app/shared/components/icons/ZaloIcon'
+import { CallIcon } from '@/shared/components/icons/CallIcon'
+import { FacebookIcon } from '@/shared/components/icons/FacebookIcon'
+import { FiverrIcon } from '@/shared/components/icons/FiverrIcon'
+import { MailIcon } from '@/shared/components/icons/MailIcon'
+import { TiktokIcon } from '@/shared/components/icons/TiktokIcon'
+import { YoutubeIcon } from '@/shared/components/icons/YoutubeIcon'
+import { ZaloIcon } from '@/shared/components/icons/ZaloIcon'
 
 import { APP_LANGUAGES } from './appLanguages'
+import { FLOAT_CONTACTS } from './floatContact'
 import { FOOTER_LINKS } from './footerLinks'
 import { HEADER_NAVIGATES } from './headerNavigate'
 import { WHY_CHOOSE_US } from './whyChooseUs'
@@ -69,4 +70,10 @@ export const CONTACT_INFORMATIONS = [
 ]
 export type ContactInfor = (typeof CONTACT_INFORMATIONS)[0]
 
-export { HEADER_NAVIGATES, APP_LANGUAGES, WHY_CHOOSE_US, FOOTER_LINKS }
+export {
+    HEADER_NAVIGATES,
+    APP_LANGUAGES,
+    WHY_CHOOSE_US,
+    FOOTER_LINKS,
+    FLOAT_CONTACTS,
+}

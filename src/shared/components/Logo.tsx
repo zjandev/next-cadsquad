@@ -5,8 +5,8 @@ import { Link } from '@/i18n/navigation'
 
 import { cn } from '@/lib/utils'
 
-import CSDWhiteLogo from '../../../../public/logo-white.webp'
-import CSDLogo from '../../../../public/logo.webp'
+import CSDWhiteLogo from '../../../public/logo-white.webp'
+import CSDLogo from '../../../public/logo.webp'
 
 type Props = {
     canRedirect?: boolean

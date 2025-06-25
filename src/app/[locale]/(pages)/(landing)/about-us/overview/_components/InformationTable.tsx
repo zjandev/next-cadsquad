@@ -75,45 +75,47 @@ export default function InformationTable() {
     ]
     return (
         <table className="w-full border border-gray-300 shadow-md">
-            {aboutCadsquadInfo.map((item, index) => {
-                const title = item[`${locale as SupportLanguages}Title`]
+            <tbody>
+                {aboutCadsquadInfo.map((item, index) => {
+                    const title = item[`${locale as SupportLanguages}Title`]
 
-                const value = item[`${locale as SupportLanguages}Value`]
-                const values = item[`${locale as SupportLanguages}Values`]
+                    const value = item[`${locale as SupportLanguages}Value`]
+                    const values = item[`${locale as SupportLanguages}Values`]
 
-                return (
-                    <tr
-                        key={item.enTitle + index}
-                        className="grid grid-cols-[0.5fr_1fr] gap-14 border-b border-gray-200 last:border-none"
-                    >
-                        <td className="uppercase font-semibold bg-gray-200 align-middle py-5 pl-10">
-                            {title}
-                        </td>
-                        {(item.enValue || item.viValue) && (
-                            <td className="align-middle py-5 tracking-wide">
-                                {value}
+                    return (
+                        <tr
+                            key={item.enTitle + index}
+                            className="grid grid-cols-[0.5fr_1fr] gap-14 border-b border-gray-200 last:border-none"
+                        >
+                            <td className="py-5 pl-10 font-semibold uppercase align-middle bg-gray-200 border-b border-border">
+                                {title}
                             </td>
-                        )}
+                            {(item.enValue || item.viValue) && (
+                                <td className="py-5 tracking-wide align-middle">
+                                    {value}
+                                </td>
+                            )}
 
-                        {(item.enValues || item.viValues) && (
-                            <td className="pl-8 py-5">
-                                <ul className="list-disc space-y-2">
-                                    {values?.map((item, index) => {
-                                        return (
-                                            <li
-                                                key={item + index}
-                                                className="tracking-wide"
-                                            >
-                                                {item}
-                                            </li>
-                                        )
-                                    })}
-                                </ul>
-                            </td>
-                        )}
-                    </tr>
-                )
-            })}
+                            {(item.enValues || item.viValues) && (
+                                <td className="py-5 pl-8">
+                                    <ul className="space-y-2 list-disc">
+                                        {values?.map((item, index) => {
+                                            return (
+                                                <li
+                                                    key={item + index}
+                                                    className="tracking-wide"
+                                                >
+                                                    {item}
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </td>
+                            )}
+                        </tr>
+                    )
+                })}
+            </tbody>
         </table>
     )
 }

@@ -1,5 +1,6 @@
-import Footer from '@/app/shared/components/layouts/footer'
-import Header from '@/app/shared/components/layouts/header'
+import FloatContact from '@/shared/components/layouts/floatContact'
+import Footer from '@/shared/components/layouts/footer'
+import Header from '@/shared/components/layouts/header'
 
 export default function LandingLayout({
     children,
@@ -9,7 +10,10 @@ export default function LandingLayout({
     return (
         <>
             <Header />
-            <main className="pt-[106px]">{children}</main>
+            <main className="pt-[106px]">
+                {children}
+                <FloatContact />
+            </main>
             <Footer />
         </>
     )

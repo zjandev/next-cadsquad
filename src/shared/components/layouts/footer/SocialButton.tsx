@@ -4,7 +4,7 @@ import React from 'react'
 
 import { Button } from '@heroui/react'
 
-import { Social } from '@/app/shared/constants/appConstant'
+import { Social } from '@/shared/constants/appConstant'
 
 type Props = {
     data: Social

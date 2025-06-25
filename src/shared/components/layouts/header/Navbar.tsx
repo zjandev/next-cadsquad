@@ -9,11 +9,11 @@ import { useLocale } from 'next-intl'
 import Image from 'next/image'
 
 import { useGetAllServices } from '@/app/[locale]/(pages)/(landing)/cad-services/hooks/useCadService'
-import { HEADER_NAVIGATES } from '@/app/shared/constants/appConstant'
-import { NavigateItem } from '@/app/shared/constants/headerNavigate'
 import { Link } from '@/i18n/navigation'
 import { SupportLanguages } from '@/i18n/routing'
 import { MotionButton, MotionDiv, MotionLi, MotionP } from '@/lib/motion'
+import { HEADER_NAVIGATES } from '@/shared/constants/appConstant'
+import { NavigateItem } from '@/shared/constants/headerNavigate'
 
 export default function Navbar() {
     const { services } = useGetAllServices('cadServices')
@@ -120,6 +120,7 @@ function NavbarItem({ data }: { data: NavigateItem }) {
                 className="block mx-3 size-fit"
                 href={data.href}
                 title={label}
+                target={data.outSite ? '_blank' : ''}
             >
                 <MotionButton
                     variants={labelVariants}
@@ -144,6 +145,7 @@ function NavbarItem({ data }: { data: NavigateItem }) {
                             href={data.href}
                             className="block size-fit"
                             title={`Go to ${label}`}
+                            target={data.outSite ? '_blank' : ''}
                         >
                             <Button
                                 isIconOnly
@@ -170,6 +172,9 @@ function NavbarItem({ data }: { data: NavigateItem }) {
                                     <Link
                                         href={menuItem.href}
                                         className="block space-y-2 size-full"
+                                        target={
+                                            menuItem.outSite ? '_blank' : ''
+                                        }
                                     >
                                         <div className="w-full overflow-hidden rounded-sm aspect-video">
                                             <Image

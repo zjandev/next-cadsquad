@@ -3,7 +3,7 @@
 import { Button } from '@heroui/react'
 import { useTranslations } from 'next-intl'
 
-import { CallLoopIcon } from '@/app/shared/components/icons/CallLoopIcon'
+import { CallLoopIcon } from '@/shared/components/icons/CallLoopIcon'
 
 export default function CTAButton() {
     const gradientColors = [

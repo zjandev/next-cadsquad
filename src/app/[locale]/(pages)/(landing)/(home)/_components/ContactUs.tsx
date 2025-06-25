@@ -6,7 +6,7 @@ import { useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { RoughNotation } from 'react-rough-notation'
 
-import { CONTACT_INFORMATIONS } from '@/app/shared/constants/appConstant'
+import { CONTACT_INFORMATIONS } from '@/shared/constants/appConstant'
 import { Link } from '@/i18n/navigation'
 import { MotionP } from '@/lib/motion'
 

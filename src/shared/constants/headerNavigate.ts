@@ -10,11 +10,13 @@ export type NavigateItem = {
     viLabel: string
     enLabel: string
     href: string
+    outSite?: boolean
     menus?: {
         viLabel: string
         enLabel: string
         image: string | StaticImageData
         href: string
+        outSite?: boolean
     }[]
 }
 export const HEADER_NAVIGATES: NavigateItem[] = [
@@ -65,7 +67,8 @@ export const HEADER_NAVIGATES: NavigateItem[] = [
     {
         enLabel: 'Academy',
         viLabel: 'Khóa học',
-        href: '/academy',
+        href: 'https://courses.csdvietnam.com',
+        outSite: true,
     },
     {
         enLabel: 'New & Media',

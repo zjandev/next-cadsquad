@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 
-import { WHY_CHOOSE_US } from '@/app/shared/constants/appConstant'
+import { WHY_CHOOSE_US } from '@/shared/constants/appConstant'
 import { MotionDiv } from '@/lib/motion'
 
 import ReasonCard from './cards/ReasonCard'

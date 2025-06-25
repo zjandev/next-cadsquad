@@ -2,9 +2,9 @@
 
 import React from 'react'
 
-import Logo from '@/app/shared/components/Logo'
-import Actions from '@/app/shared/components/layouts/header/Actions'
-import Navbar from '@/app/shared/components/layouts/header/Navbar'
+import Logo from '@/shared/components/Logo'
+import Actions from '@/shared/components/layouts/header/Actions'
+import Navbar from '@/shared/components/layouts/header/Navbar'
 
 export default function Header() {
     return (

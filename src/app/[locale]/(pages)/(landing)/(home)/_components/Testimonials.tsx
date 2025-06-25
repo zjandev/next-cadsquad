@@ -4,7 +4,7 @@ import React from 'react'
 
 import { useTranslations } from 'next-intl'
 
-import { AnimatedTestimonials } from '@/app/shared/components/ui/animated-testimonials'
+import { AnimatedTestimonials } from '@/shared/components/ui/animated-testimonials'
 import { TESTIMONIALS } from '@/data/testimonials'
 
 export default function Testimonials() {

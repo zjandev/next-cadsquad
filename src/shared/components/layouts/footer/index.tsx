@@ -6,12 +6,12 @@ import { Variants } from 'motion'
 import { useLocale, useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 
-import Logo from '@/app/shared/components/Logo'
+import Logo from '@/shared/components/Logo'
 import {
     CONTACT_INFORMATIONS,
     FOOTER_LINKS,
     SOCIALS,
-} from '@/app/shared/constants/appConstant'
+} from '@/shared/constants/appConstant'
 import { SupportLanguages } from '@/i18n/routing'
 import { MotionDiv, MotionP } from '@/lib/motion'
 

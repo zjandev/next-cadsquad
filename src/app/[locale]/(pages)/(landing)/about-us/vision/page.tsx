@@ -7,7 +7,7 @@ import { Breadcrumb } from 'antd'
 import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-import { COMPANY_NAME } from '@/app/shared/constants/appConstant'
+import { COMPANY_NAME } from '@/shared/constants/appConstant'
 import ImgCadsquadCard from '@/assets/images/cadsquad-card.png'
 import Focus1 from '@/assets/images/focus_1.png'
 import ImgVision from '@/assets/images/heading-pages/vision.png'

@@ -1,4 +1,4 @@
-import { Testimonial } from '@/app/shared/components/ui/animated-testimonials'
+import { Testimonial } from '@/shared/components/ui/animated-testimonials'
 
 export const TESTIMONIALS: Testimonial[] = [
     {

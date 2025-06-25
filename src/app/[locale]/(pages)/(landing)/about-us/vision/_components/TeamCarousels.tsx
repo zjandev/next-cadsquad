@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Carousel } from 'antd'
 
-import { TEAMS } from '@/app/shared/constants/teams'
+import { TEAMS } from '@/shared/constants/teams'
 
 import MemberCard from './cards/MemberCard'
 
