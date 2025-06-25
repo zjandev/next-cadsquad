@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react'
 
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
-import { Image } from 'antd'
 import { AnimatePresence, motion } from 'motion/react'
+import Image from 'next/image'
 
 export type Testimonial = {
     quote: string
@@ -82,7 +82,7 @@ export const AnimatedTestimonials = ({
                                         duration: 0.4,
                                         ease: 'easeInOut',
                                     }}
-                                    className="absolute inset-0 origin-bottom size-full"
+                                    className="absolute inset-0 origin-bottom"
                                 >
                                     <Image
                                         src={testimonial.src}
