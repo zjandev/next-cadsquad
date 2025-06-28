@@ -50,7 +50,7 @@ export default function ContactUs() {
                     </h4>
                     <p className="mt-1 text-sm opacity-80">
                         {tHome(
-                            'sections.contactUs.contactInformation.description'
+                            'sections.contactUs.contactInformation.description',
                         )}
                     </p>
                     <ul className="mt-10 lg:mt-14 md:mt-6 md:grid md:grid-cols-2 lg:block">

@@ -44,7 +44,7 @@ function detectLanguage(req: NextRequest): SupportLanguages {
     return defaultLocale
 }
 
-// Helper function to check if path already has a locale prefix
+// Helper function to check if a path already has a locale prefix
 function hasLocalePrefix(pathname: string): boolean {
     return getLocaleFromPathname(pathname) !== null
 }
@@ -52,7 +52,7 @@ function hasLocalePrefix(pathname: string): boolean {
 export default async function middleware(req: NextRequest) {
     const path = req.nextUrl.pathname
 
-    // Check if path already has a locale prefix
+    // Check if a path already has a locale prefix
     if (!hasLocalePrefix(path)) {
         // Detect user's preferred language
         const preferredLocale = detectLanguage(req)
@@ -63,7 +63,7 @@ export default async function middleware(req: NextRequest) {
         // Preserve search parameters
         newUrl.search = req.nextUrl.search
 
-        // Redirect to path with language prefix
+        // Redirect to a path with language prefix
         return NextResponse.redirect(newUrl)
     }
 

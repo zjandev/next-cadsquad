@@ -1,7 +1,8 @@
 @import 'tailwindcss';
+@import './css/theme.css';
 
 /* 
-** Import HEROUI
+** Import heroui
 */
 @plugin '../lib/hero.ts';
 @source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
@@ -9,7 +10,6 @@
 /*
 ** Import customize theme
 */
-@import './css/theme.css';
 
 body {
     background: var(--background);

@@ -4,22 +4,23 @@ import React from 'react'
 
 import { Variants } from 'motion'
 import { useLocale, useTranslations } from 'next-intl'
-import { Link } from '@/i18n/navigation'
 
+import { Link } from '@/i18n/navigation'
+import { SupportLanguages } from '@/i18n/routing'
+import { MotionDiv, MotionP } from '@/lib/motion'
 import Logo from '@/shared/components/Logo'
 import {
     CONTACT_INFORMATIONS,
     FOOTER_LINKS,
     SOCIALS,
 } from '@/shared/constants/appConstant'
-import { SupportLanguages } from '@/i18n/routing'
-import { MotionDiv, MotionP } from '@/lib/motion'
 
 import Decorate from './Decorate'
 import SocialButton from './SocialButton'
 
 export default function Footer() {
     const locale = useLocale()
+    const currentYear = new Date().getFullYear()
 
     const tLanding = useTranslations('landing')
 
@@ -36,7 +37,7 @@ export default function Footer() {
     }
 
     return (
-        <div className="container relative h-full overflow-hidden text-white bg-linear-150 from-secondary-900 via-secondary-900 to-secondary-800 py-11 px-14 rounded-t-xl min-h-96">
+        <div className="container relative h-full overflow-hidden text-white bg-linear-150 from-secondary-900 via-secondary-900 to-secondary-800 py-6 px-10 rounded-t-xl min-h-96">
             <div className="absolute bottom-0 right-0 z-0 object-cover opacity-40">
                 <Decorate />
             </div>
@@ -65,12 +66,12 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className="grid grid-cols-3 gap-5 mt-10 lg:mt-14 md:mt-6">
-                    <ul className="col-span-1">
+                <div className="grid grid-cols-3 gap-5 mt-10 lg:mt-8 md:mt-6">
+                    <ul className="col-span-1 space-y-6">
                         {CONTACT_INFORMATIONS.map((contact, index) => (
                             <li
                                 key={index}
-                                className="gap-4 my-6 overflow-hidden w-fit md:flex md:items-center md:my-4 lg:my-7 underline-offset-4"
+                                className="gap-4 overflow-hidden w-fit md:flex md:items-center underline-offset-4"
                             >
                                 <contact.icon />
                                 <MotionP
@@ -151,6 +152,21 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div
+                id="copyright"
+                className="border-t border-border text-sm mt-5 pt-3"
+            >
+                <p>
+                    Copyright @ {currentYear} by{' '}
+                    <Link
+                        href={'https://www.cadsquad.vn'}
+                        className="hover:underline underline-offset-2"
+                    >
+                        CADSQUAD
+                    </Link>{' '}
+                    - All Right Reserved
+                </p>
             </div>
         </div>
     )

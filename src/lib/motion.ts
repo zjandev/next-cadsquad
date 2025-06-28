@@ -1,6 +1,6 @@
 'use client'
 
-import { MotionConfig, motion } from 'motion/react'
+import { motion, MotionConfig } from 'motion/react'
 
 /**
  * Block

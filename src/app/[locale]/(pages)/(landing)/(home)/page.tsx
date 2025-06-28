@@ -7,6 +7,7 @@ import ContactUs from './_components/ContactUs'
 import PopularProject from './_components/PopularProject'
 import Testimonials from './_components/Testimonials'
 import WhyChooseUs from './_components/WhyChooseUs'
+import Workflow from './_components/Workflow'
 
 export default function HomePage() {
     const sectionVariants: Variants = {
@@ -31,7 +32,7 @@ export default function HomePage() {
                 variants={sectionVariants}
                 initial="init"
                 whileInView="animate"
-                className="pt-24 border-b pb-28 border-border bg-gradient-to-b from-background to-background-secondary"
+                className="pt-16 border-b pb-24 border-border bg-gradient-to-b from-background to-background-secondary"
             >
                 <PopularProject />
             </MotionSection>
@@ -39,7 +40,7 @@ export default function HomePage() {
                 variants={sectionVariants}
                 initial="init"
                 whileInView="animate"
-                className="pt-24 border-b pb-28 border-border bg-gradient-to-b from-background to-background-secondary"
+                className="pt-16 border-b pb-24 border-border bg-gradient-to-b from-background to-background-secondary"
             >
                 <WhyChooseUs />
             </MotionSection>
@@ -47,7 +48,15 @@ export default function HomePage() {
                 variants={sectionVariants}
                 initial="init"
                 whileInView="animate"
-                className="pt-24 border-b pb-28 border-border bg-gradient-to-b from-background to-background-secondary"
+                className="pt-16 border-b pb-24 border-border bg-gradient-to-b from-background to-background-secondary"
+            >
+                <Workflow />
+            </MotionSection>
+            <MotionSection
+                variants={sectionVariants}
+                initial="init"
+                whileInView="animate"
+                className="pt-16 border-b pb-24 border-border bg-gradient-to-b from-background to-background-secondary"
             >
                 <Testimonials />
             </MotionSection>
@@ -55,7 +64,7 @@ export default function HomePage() {
                 variants={sectionVariants}
                 initial="init"
                 whileInView="animate"
-                className="mb-32"
+                className="mb-24"
             >
                 <ContactUs />
             </MotionSection>

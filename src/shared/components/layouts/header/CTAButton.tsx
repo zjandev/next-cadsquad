@@ -7,10 +7,11 @@ import { CallLoopIcon } from '@/shared/components/icons/CallLoopIcon'
 
 export default function CTAButton() {
     const gradientColors = [
-        'var(--color-red-500)',
-        'var(--color-orange-500)',
-        'var(--color-yellow-500)',
-        'var(--color-orange-500)',
+        'var(--color-secondary-400)',
+        'var(--color-secondary-500)',
+        'var(--color-secondary-600)',
+        'var(--color-secondary-700)',
+        'var(--color-secondary-800)',
     ]
 
     const tButton = useTranslations('button')

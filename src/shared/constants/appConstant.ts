@@ -11,6 +11,7 @@ import { FLOAT_CONTACTS } from './floatContact'
 import { FOOTER_LINKS } from './footerLinks'
 import { HEADER_NAVIGATES } from './headerNavigate'
 import { WHY_CHOOSE_US } from './whyChooseUs'
+import { WORKFLOW } from './workflow'
 
 export const ourSlogan = [
     'Professional CAD Services',
@@ -76,4 +77,5 @@ export {
     WHY_CHOOSE_US,
     FOOTER_LINKS,
     FLOAT_CONTACTS,
+    WORKFLOW,
 }

@@ -25,6 +25,9 @@
                     "title": "Thông tin liên hệ",
                     "description": "Liên hệ với chúng tôi để được hỗ trợ nhanh chóng và chính xác!"
                 }
+            },
+            "workflow": {
+                "title": "Quy trình <highlight>làm việc</highlight>"
             }
         }
     },
