@@ -23,12 +23,18 @@ export default function CustomerReview() {
 
     useEffect(() => {
         if (emblaApi) {
-            emblaApi.on('select', () => {
+            const onSelect = () => {
                 if (prevButtonRef.current)
                     prevButtonRef.current.disabled = !emblaApi.canScrollPrev()
                 if (nextButtonRef.current)
                     nextButtonRef.current.disabled = !emblaApi.canScrollNext()
-            })
+            }
+
+            emblaApi.on('select', onSelect)
+            onSelect()
+            return () => {
+                emblaApi.off('select', onSelect)
+            }
         }
     }, [emblaApi])
     return (

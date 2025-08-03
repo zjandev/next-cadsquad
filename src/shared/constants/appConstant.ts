@@ -6,6 +6,7 @@ import { TiktokIcon } from '@/shared/components/icons/TiktokIcon'
 import { YoutubeIcon } from '@/shared/components/icons/YoutubeIcon'
 import { ZaloIcon } from '@/shared/components/icons/ZaloIcon'
 
+import { ABOUT_US_NAVIGATE } from './aboutUsNavigate'
 import { APP_LANGUAGES } from './appLanguages'
 import { FLOAT_CONTACTS } from './floatContact'
 import { FOOTER_LINKS } from './footerLinks'
@@ -72,6 +73,7 @@ export const CONTACT_INFORMATIONS = [
 export type ContactInfor = (typeof CONTACT_INFORMATIONS)[0]
 
 export {
+    ABOUT_US_NAVIGATE,
     HEADER_NAVIGATES,
     APP_LANGUAGES,
     WHY_CHOOSE_US,
