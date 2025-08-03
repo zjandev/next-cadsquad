@@ -7,6 +7,7 @@ import Image from 'next/image'
 
 import BannerImg from '@/assets/images/banner.png'
 import MobileBannerImg from '@/assets/images/mobile-banner.png'
+import { MotionSpan } from '@/lib/motion'
 
 export default function Banner() {
     const tHome = useTranslations('landing.home')
@@ -30,11 +31,55 @@ export default function Banner() {
             </div>
             <div className="container relative">
                 <div className="absolute bottom-10 text-background">
-                    <h1 className="text-3xl lg:text-7xl font-bold lg:font-semibold font-saira tracking-wide">
-                        {tHome('slogan')}
+                    <h1 className="text-4xl lg:text-7xl font-bold lg:font-semibold tracking-normal flex flex-wrap">
+                        {tHome('slogan')
+                            .split(' ')
+                            .map((char, idx) => {
+                                return (
+                                    <MotionSpan
+                                        key={idx}
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{
+                                            opacity: 1,
+                                            y: 0,
+                                            transition: {
+                                                delay: (idx + 1) * 0.1,
+                                                type: 'spring',
+                                                stiffness: 120,
+                                                damping: 20,
+                                            },
+                                        }}
+                                        className="pr-2 lg:pr-5"
+                                    >
+                                        {char}
+                                    </MotionSpan>
+                                )
+                            })}
                     </h1>
-                    <p className="mt-2 ml-1 text-base lg:text-lg opacity-80">
-                        {tHome('sloganDescription')}
+                    <p className="mt-2 ml-1 text-base lg:text-lg opacity-80 flex flex-wrap">
+                        {tHome('sloganDescription')
+                            .split(' ')
+                            .map((char, idx) => {
+                                return (
+                                    <MotionSpan
+                                        key={idx}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{
+                                            opacity: 1,
+                                            y: 0,
+                                            transition: {
+                                                delay: idx * 0.03,
+                                                type: 'spring',
+                                                stiffness: 120,
+                                                damping: 20,
+                                            },
+                                        }}
+                                        className="pr-1"
+                                    >
+                                        {char}
+                                    </MotionSpan>
+                                )
+                            })}
                     </p>
                 </div>
             </div>

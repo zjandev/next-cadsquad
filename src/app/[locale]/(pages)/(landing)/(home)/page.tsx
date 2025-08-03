@@ -41,7 +41,7 @@ export default function HomePage() {
                 variants={sectionVariants}
                 initial="init"
                 whileInView="animate"
-                className="mt-8 pb-10 lg:py-16"
+                className="mt-8 pb-10 lg:pt-10 lg:pb-16"
             >
                 <OurServices />
             </MotionSection>
@@ -49,7 +49,7 @@ export default function HomePage() {
                 variants={sectionVariants}
                 initial="init"
                 whileInView="animate"
-                className="mt-8 pb-10 lg:py-16"
+                className="mt-8 pb-10 lg:pt-10 lg:pb-16"
             >
                 <WhyChooseUs />
             </MotionSection>
@@ -57,7 +57,7 @@ export default function HomePage() {
                 variants={sectionVariants}
                 initial="init"
                 whileInView="animate"
-                className="mt-8 pb-10 lg:py-16"
+                className="mt-8 pb-10 lg:pt-10 lg:pb-16"
             >
                 <Workflow />
             </MotionSection>
@@ -65,7 +65,7 @@ export default function HomePage() {
                 variants={sectionVariants}
                 initial="init"
                 whileInView="animate"
-                className="py-16"
+                className="pt-12 pb-16"
             >
                 <CustomerReview />
             </MotionSection>

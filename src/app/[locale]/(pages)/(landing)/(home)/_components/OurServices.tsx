@@ -8,9 +8,11 @@ import { CarouselRef } from 'antd/es/carousel'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
+import { MotionDiv } from '@/lib/motion'
 import { isMobile, isTablet } from '@/shared/constants/breakpoints'
 import { OUR_SERVICES } from '@/shared/database/ourServices'
 
+import HeadingSection from './HeadingSection'
 import ServiceCard from './cards/ServiceCard'
 
 const services = OUR_SERVICES
@@ -22,13 +24,13 @@ export default function OurServices() {
     return (
         <div className="container space-y-5 lg:space-y-8">
             <div className="flex items-center justify-between">
-                <h2 className="text-3xl lg:text-5xl font-bold font-saira">
+                <HeadingSection>
                     {tHome.rich('sections.ourServices.title', {
                         highlight: (chunk) => (
                             <span className="text-primary">{chunk}</span>
                         ),
                     })}
-                </h2>
+                </HeadingSection>
                 <div className="flex items-center justify-end gap-3">
                     <Button
                         isIconOnly
@@ -67,7 +69,22 @@ export default function OurServices() {
                 infinite
             >
                 {services?.map((service, idx) => (
-                    <ServiceCard key={service?.id ?? idx} data={service} />
+                    <MotionDiv
+                        key={idx}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                delay: idx * 0.1,
+                                type: 'spring',
+                                stiffness: 120,
+                                damping: 20,
+                            },
+                        }}
+                    >
+                        <ServiceCard data={service} />
+                    </MotionDiv>
                 ))}
             </Carousel>
         </div>

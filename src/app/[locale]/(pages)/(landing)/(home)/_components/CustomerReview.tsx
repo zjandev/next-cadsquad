@@ -10,6 +10,8 @@ import { useTranslations } from 'next-intl'
 import { TESTIMONIALS } from '@/data/testimonials'
 import { isMobile } from '@/shared/constants/breakpoints'
 
+import { MotionDiv } from '../../../../../../lib/motion'
+import HeadingSection from './HeadingSection'
 import CustomerReviewCard from './cards/CustomerReviewCard'
 
 export default function CustomerReview() {
@@ -32,13 +34,13 @@ export default function CustomerReview() {
     return (
         <div className="container space-y-5 lg:space-y-8">
             <div className="flex items-center justify-between">
-                <h2 className="text-3xl lg:text-5xl font-bold font-saira">
+                <HeadingSection>
                     {tHome.rich('sections.customerReview.title', {
                         highlight: (chunk) => (
                             <span className="text-primary">{chunk}</span>
                         ),
                     })}
-                </h2>
+                </HeadingSection>
                 <div className="flex items-center justify-end gap-3">
                     <Button
                         isIconOnly
@@ -67,10 +69,24 @@ export default function CustomerReview() {
             <div className="relative max-w-screen pl-auto">
                 <div ref={emblaRef}>
                     <div className="flex gap-5">
-                        {TESTIMONIALS.map((tes, index) => (
-                            <div key={index} className="flex-shrink-0 p-2">
+                        {TESTIMONIALS.map((tes, idx) => (
+                            <MotionDiv
+                                key={idx}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{
+                                    opacity: 1,
+                                    y: 0,
+                                    transition: {
+                                        delay: idx * 0.1,
+                                        type: 'spring',
+                                        stiffness: 120,
+                                        damping: 20,
+                                    },
+                                }}
+                                className="flex-shrink-0 p-2"
+                            >
                                 <CustomerReviewCard data={tes} />
-                            </div>
+                            </MotionDiv>
                         ))}
                     </div>
                 </div>

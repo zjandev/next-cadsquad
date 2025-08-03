@@ -42,13 +42,13 @@ export default function Navbar() {
     return (
         <nav className="z-50 flex items-center justify-start gap-2">
             {finalHeaderNavs.map((item, index) => {
-                return <NavbarItem key={index} data={item} />
+                return <NavbarItem key={index} data={item} index={index} />
             })}
         </nav>
     )
 }
 
-function NavbarItem({ data }: { data: NavigateItem }) {
+function NavbarItem({ data, index }: { data: NavigateItem; index: number }) {
     const locale = useLocale()
 
     const label = data[`${locale as SupportLanguages}Label`]
@@ -56,13 +56,17 @@ function NavbarItem({ data }: { data: NavigateItem }) {
     const labelVariants: Variants = {
         init: {
             opacity: 0,
+            y: 10,
         },
-        animate: {
+        animate: (i: number) => ({
             opacity: 1,
             color: 'var(--foreground)',
-        },
+            y: 0,
+            transition: { delay: i * 0.1, type: 'spring', stiffness: 120 },
+        }),
         hover: {
             opacity: 1,
+            y: 0,
             color: 'var(--color-primary)',
         },
     }
@@ -127,6 +131,7 @@ function NavbarItem({ data }: { data: NavigateItem }) {
             >
                 <MotionButton
                     variants={labelVariants}
+                    custom={index}
                     className="space-y-2 cursor-pointer"
                 >
                     <p className="px-4 mt-2 font-bold uppercase">{label}</p>

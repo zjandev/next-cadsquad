@@ -10,7 +10,6 @@ import Logo from '@/shared/components/Logo'
 import Actions from '@/shared/components/layouts/header/Actions'
 import Navbar from '@/shared/components/layouts/header/Navbar'
 
-import { isMobile } from '../../../constants/breakpoints'
 import { MenuIcon } from '../../icons/MenuIcon'
 import ChangeLanguage from './ChangeLanguage'
 
@@ -36,20 +35,18 @@ const wrapperVariants: Variants = {
 }
 
 const logoVariants: Variants = {
-    init: { opacity: 0 },
+    init: { opacity: 0, y: 10, height: '64px' },
     collapse: {
         opacity: 1,
+        y: 0,
         height: '40px',
-        transition: {
-            duration: 0.05,
-        },
+        transition: { delay: 0, type: 'spring', stiffness: 120, damping: 20 },
     },
     extend: {
         opacity: 1,
-        height: isMobile ? '40px' : '64px',
-        transition: {
-            duration: 0.05,
-        },
+        y: 0,
+        height: '64px',
+        transition: { delay: 0, type: 'spring', stiffness: 120, damping: 20 },
     },
 }
 
