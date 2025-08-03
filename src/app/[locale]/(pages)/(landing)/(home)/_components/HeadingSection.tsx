@@ -13,7 +13,7 @@ export default function HeadingSection({
     return (
         <MotionH2
             initial={{ opacity: 0, y: 20 }}
-            animate={{
+            whileInView={{
                 opacity: 1,
                 y: 0,
                 transition: {
@@ -23,6 +23,7 @@ export default function HeadingSection({
                     damping: 20,
                 },
             }}
+            viewport={{ once: true }}
             className={cn(
                 'text-3xl lg:text-5xl font-bold font-saira',
                 className

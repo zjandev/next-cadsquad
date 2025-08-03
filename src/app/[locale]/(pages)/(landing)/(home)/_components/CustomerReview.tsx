@@ -83,6 +83,7 @@ export default function CustomerReview() {
                                         damping: 20,
                                     },
                                 }}
+                                viewport={{ once: true }}
                                 className="flex-shrink-0 p-2"
                             >
                                 <CustomerReviewCard data={tes} />

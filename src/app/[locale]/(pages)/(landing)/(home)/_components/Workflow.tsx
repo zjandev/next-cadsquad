@@ -39,6 +39,7 @@ export default function Workflow() {
                             damping: 20,
                         },
                     }}
+                    viewport={{ once: true }}
                     className="size-full flex items-center justify-center"
                 >
                     <Image
@@ -71,6 +72,7 @@ export default function Workflow() {
                                                     damping: 20,
                                                 },
                                             }}
+                                            viewport={{ once: true }}
                                             className="flex items-center justify-start gap-5 w-full cursor-pointer"
                                         >
                                             <div

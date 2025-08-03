@@ -33,6 +33,7 @@ export default function WhyChooseUs() {
                                 damping: 20,
                             },
                         }}
+                        viewport={{ once: true }}
                         className="size-full"
                     >
                         <ReasonCard data={reason} />

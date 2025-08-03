@@ -82,6 +82,7 @@ export default function OurServices() {
                                 damping: 20,
                             },
                         }}
+                        viewport={{ once: true }}
                     >
                         <ServiceCard data={service} />
                     </MotionDiv>
