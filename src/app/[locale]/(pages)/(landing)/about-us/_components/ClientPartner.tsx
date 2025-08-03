@@ -11,7 +11,7 @@ import { PARTNER } from '@/lib/seeds/partner'
 
 export default function ClientPartner() {
     return (
-        <section className="relative w-full overflow-hidden min-h-[780px] pt-22">
+        <section className="relative w-full overflow-hidden min-h-[780px] pt-24">
             <div className="relative w-full min-h-[780px]">
                 <Image
                     src={ClientPartnerImg}
