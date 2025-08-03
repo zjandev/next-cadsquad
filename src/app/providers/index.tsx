@@ -4,6 +4,8 @@ import { AntdRegistry } from '@ant-design/nextjs-registry'
 import { HeroUIProvider, ToastProvider } from '@heroui/react'
 import { NextIntlClientProvider } from 'next-intl'
 
+import SwrProvider from './SwrProvider'
+
 type Props = {
     children: React.ReactNode
     locale: string
@@ -16,10 +18,12 @@ export function AppProvider({ children, locale, messages }: Props) {
             messages={messages}
             timeZone="Asia/Ho_Chi_Minh"
         >
-            <HeroUIProvider>
-                <ToastProvider />
-                <AntdRegistry>{children}</AntdRegistry>
-            </HeroUIProvider>
+            <SwrProvider>
+                <HeroUIProvider>
+                    <ToastProvider />
+                    <AntdRegistry>{children}</AntdRegistry>
+                </HeroUIProvider>
+            </SwrProvider>
         </NextIntlClientProvider>
     )
 }

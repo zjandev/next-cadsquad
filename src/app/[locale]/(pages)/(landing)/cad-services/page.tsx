@@ -8,21 +8,17 @@ import Image from 'next/image'
 
 import ImgCadService from '@/assets/images/cad-services.png'
 import { Link } from '@/i18n/navigation'
+import { OUR_SERVICES } from '@/shared/database/ourServices'
 
-import ServiceCard, {
-    ServiceCardSkeleton,
-} from './_components/cards/ServiceCard'
-import { useGetAllServices } from './hooks/useCadService'
+import ServiceCard from './_components/cards/ServiceCard'
 
 export default function CADServices() {
-    const { services, isLoading } = useGetAllServices('cadServices')
-
     const tHome = useTranslations('landing.home')
     const tCadServices = useTranslations('landing.cadServices')
 
     return (
-        <div className="min-h-screen pb-32 max-w-screen">
-            <section className="relative w-full overflow-hidden min-h-72 max-h-[400px]">
+        <div className="min-h-screen pb-16 max-w-screen">
+            <section className="relative w-full overflow-hidden h-[600px] lg:h-[500px]">
                 <div className="relative size-full">
                     <Image
                         src={ImgCadService}
@@ -58,23 +54,16 @@ export default function CADServices() {
                         <h2 className="mt-5 text-6xl font-bold font-saira">
                             {tCadServices('heading.title')}
                         </h2>
-                        <p className="mt-5 leading-relaxed max-w-[85%] text-justify">
+                        <p className="mt-5 leading-normal max-w-[95%] lg:max-w-[85%] text-justify">
                             {tCadServices('heading.description')}
                         </p>
                     </div>
                 </div>
             </section>
-            <section className="container space-y-10 mt-28">
-                {isLoading &&
-                    new Array(6)
-                        .fill(0)
-                        .map((item, idx) => (
-                            <ServiceCardSkeleton key={item + idx} />
-                        ))}
-                {!isLoading &&
-                    services.map((service) => (
-                        <ServiceCard key={service.key} data={service} />
-                    ))}
+            <section className="container space-y-10 mt-14">
+                {OUR_SERVICES.map((service) => (
+                    <ServiceCard key={service.id} data={service} />
+                ))}
             </section>
         </div>
     )

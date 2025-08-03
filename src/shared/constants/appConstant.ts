@@ -55,8 +55,8 @@ export const CONTACT_INFORMATIONS = [
     },
     {
         icon: MailIcon,
-        name: 'Contact@cadsquad.com',
-        path: 'mailto:contact.us@csdvietnam.com',
+        name: 'Contact@cadsquad.vn',
+        path: 'mailto:contact@cadsquad.vn',
     },
     {
         icon: ZaloIcon,

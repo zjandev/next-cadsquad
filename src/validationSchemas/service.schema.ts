@@ -1,7 +1,7 @@
 import * as yup from 'yup'
 
 export const ServiceSchema = yup.object().shape({
-    id: yup.string(),
+    id: yup.number(),
     order: yup.string(),
     name: yup.string(),
     slug: yup.string(),

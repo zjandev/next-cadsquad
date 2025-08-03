@@ -1,8 +1,8 @@
 import { getTranslations } from 'next-intl/server'
 
 export async function generateMetadata({
-                                           params,
-                                       }: Readonly<{
+    params,
+}: Readonly<{
     params: Promise<{ locale: string }>
 }>) {
     // Get locale and check if it's valid
@@ -21,9 +21,9 @@ export async function generateMetadata({
 }
 
 export default function HomeLayout({
-                                       children,
-                                   }: {
+    children,
+}: {
     children: React.ReactNode
 }) {
-    return children
+    return <div className="mt-[-106px]">{children}</div>
 }

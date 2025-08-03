@@ -8,19 +8,18 @@ import { Variants } from 'motion'
 import { useLocale } from 'next-intl'
 import Image from 'next/image'
 
-import { useGetAllServices } from '@/app/[locale]/(pages)/(landing)/cad-services/hooks/useCadService'
 import { Link } from '@/i18n/navigation'
 import { SupportLanguages } from '@/i18n/routing'
 import { MotionButton, MotionDiv, MotionLi, MotionP } from '@/lib/motion'
 import { HEADER_NAVIGATES } from '@/shared/constants/appConstant'
 import { NavigateItem } from '@/shared/constants/headerNavigate'
+import { OUR_SERVICES } from '@/shared/database/ourServices'
 
+const services = OUR_SERVICES
 export default function Navbar() {
-    const { services } = useGetAllServices('cadServices')
-
     const innerCadServices = HEADER_NAVIGATES.map((service) => {
-        if (service.enLabel === 'CAD Services') {
-            const newMenus = services.map((item) => {
+        if (services && service.enLabel === 'CAD Services') {
+            const newMenus = services?.map((item) => {
                 return {
                     viLabel: item.name,
                     enLabel: item.name,
@@ -93,10 +92,14 @@ function NavbarItem({ data }: { data: NavigateItem }) {
         init: {
             opacity: 0,
             display: 'none',
+            boxShadow:
+                'rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px',
         },
         hover: {
             opacity: 1,
             display: 'grid',
+            boxShadow:
+                'rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px',
         },
     }
 
@@ -124,18 +127,16 @@ function NavbarItem({ data }: { data: NavigateItem }) {
             >
                 <MotionButton
                     variants={labelVariants}
-                    className="py-5 space-y-2 cursor-pointer"
+                    className="space-y-2 cursor-pointer"
                 >
-                    <p className="px-4 mt-2 text-base font-bold uppercase">
-                        {label}
-                    </p>
+                    <p className="px-4 mt-2 font-bold uppercase">{label}</p>
                     <MotionDiv variants={bottomLineVariants} />
                 </MotionButton>
             </Link>
             {data.menus && (
                 <MotionDiv
                     variants={dropdownWrapperVariants}
-                    className="absolute left-0 top-[100%] z-50 container bg-white rounded-3xl p-9 grid grid-cols-[350px_1fr] gap-5 shadow-lg"
+                    className="absolute left-0 top-[100%] z-50 container bg-white rounded-b-3xl p-9 grid grid-cols-[350px_1fr] gap-5"
                 >
                     <div className="space-y-14">
                         <p className="text-3xl font-semibold font-saira">

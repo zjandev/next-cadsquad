@@ -5,9 +5,9 @@ import { Breadcrumb, Image } from 'antd'
 import { MDXRemote } from 'next-mdx-remote-client/rsc'
 
 import { Link } from '@/i18n/navigation'
-import { firebaseService } from '@/lib/firebase/services'
 import { MotionSection } from '@/lib/motion'
 import { cleanMarkdownString } from '@/lib/utils'
+import { OUR_SERVICES } from '@/shared/database/ourServices'
 import { Service } from '@/validationSchemas/service.schema'
 
 export default async function CADServiceDetailPage({
@@ -17,11 +17,7 @@ export default async function CADServiceDetailPage({
 }) {
     const { slug } = await params
 
-    const cadServices = await firebaseService.getByQuery(
-        'cadServices',
-        'slug',
-        slug
-    )
+    const cadServices = OUR_SERVICES.filter((item) => item.slug === slug)
 
     const data = cadServices?.[0] as Service
 
@@ -98,8 +94,8 @@ export default async function CADServiceDetailPage({
     const source = cleanMarkdownString(data.content ?? '')
 
     return (
-        <div className="min-h-screen pb-32 max-w-screen">
-            <section className="relative w-full overflow-hidden h-[500px]">
+        <div className="min-h-screen pb-20 max-w-screen">
+            <section className="relative w-full overflow-hidden h-[350px] lg:h-[500px]">
                 <div className="relative size-full">
                     <Image
                         src={
@@ -107,7 +103,8 @@ export default async function CADServiceDetailPage({
                             (data?.thumbnail as string)
                         }
                         alt="Image"
-                        className="object-cover size-full"
+                        className="!object-cover !h-full"
+                        rootClassName="!object-cover !h-full"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
                 </div>
@@ -138,7 +135,7 @@ export default async function CADServiceDetailPage({
                             }}
                             separator={<p className="text-gray-400">/</p>}
                         />
-                        <h2 className="mt-5 text-6xl font-bold font-saira mb-3">
+                        <h2 className="mt-5 text-3xl lg:text-6xl font-bold font-saira mb-3">
                             {data?.name}
                         </h2>
                         <MDXRemote
@@ -146,7 +143,7 @@ export default async function CADServiceDetailPage({
                             components={{
                                 wrapper({ children }) {
                                     return (
-                                        <div className="leading-relaxed">
+                                        <div className="leading-normal lg:leading-relaxed !text-sm lg:!text-lg !opacity-85">
                                             {children}
                                         </div>
                                     )

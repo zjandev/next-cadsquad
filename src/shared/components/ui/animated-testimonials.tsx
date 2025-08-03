@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { SVGProps, useEffect, useState } from 'react'
 
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
 import { AnimatePresence } from 'motion/react'
@@ -11,7 +11,8 @@ import { MotionDiv, MotionP, MotionSpan } from '@/lib/motion'
 export type Testimonial = {
     quote: string
     name: string
-    designation: string
+    designation: (props: SVGProps<SVGSVGElement>) => React.JSX.Element
+    destinationName: string
     src: string
 }
 export const AnimatedTestimonials = ({
@@ -48,9 +49,9 @@ export const AnimatedTestimonials = ({
         return Math.floor(Math.random() * 21) - 10
     }
     return (
-        <div className="max-w-sm px-4 py-20 mx-auto font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
-            <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
-                <div>
+        <div className="max-w-sm px-4 py-20 mx-auto font-sans antialiased md:px-8 lg:px-12">
+            <div className="relative grid grid-cols-1 gap-5 lg:gap-20 md:grid-cols-2">
+                <div className="scale-50 lg:scale-0">
                     <div className="relative w-full h-80">
                         <AnimatePresence>
                             {testimonials.map((testimonial, index) => (
@@ -126,7 +127,7 @@ export const AnimatedTestimonials = ({
                         <p className="text-sm text-gray-500 dark:text-neutral-500">
                             {testimonials[active].designation}
                         </p>
-                        <MotionP className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
+                        <MotionP className="mt-3 lg:mt-8 text-base lg:text-lg text-gray-500 dark:text-neutral-300 line-clamp-5">
                             {testimonials[active].quote
                                 .split(' ')
                                 .map((word, index) => (

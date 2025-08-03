@@ -37,27 +37,29 @@ export default function Footer() {
     }
 
     return (
-        <div className="container relative h-full overflow-hidden text-white bg-linear-150 from-secondary-900 via-secondary-900 to-secondary-800 py-6 px-10 rounded-t-xl min-h-96">
+        <div className="max-w-screen xl:mx-20 relative h-full overflow-hidden text-white bg-linear-150 from-secondary-900 via-secondary-900 to-secondary-800 py-10 lg:py-6 px-6 lg:px-14 rounded-t-xl min-h-96">
             <div className="absolute bottom-0 right-0 z-0 object-cover opacity-40">
                 <Decorate />
             </div>
             <div className="relative z-10">
-                <div className="flex items-start justify-between">
-                    <div className="flex items-end justify-start gap-5">
+                <div className="md:flex items-end justify-between">
+                    <div className="xl:flex items-end justify-start gap-5">
                         <Logo
                             logoTheme="white"
                             classNames={{
-                                logo: 'max-w-[200px]',
+                                logo: 'max-w-[150px] xl:max-w-[200px]',
                             }}
                         />
-                        <div className="h-20 w-[1px] bg-border opacity-30" />
-                        <p className="text-2xl font-semibold font-saira">
+                        <div className="hidden xl:block h-20 w-[1px] bg-border opacity-30" />
+                        <p className="mt-4 xl:mt-0 text-base xl:text-2xl font-semibold font-saira">
                             {tLanding('home.slogan')}
                         </p>
                     </div>
-                    <div className="flex items-center justify-end gap-5">
-                        <p>{tLanding('layout.followUsOn')}:</p>
-                        <ul className="flex items-center justify-start gap-4">
+                    <div className="mt-5 flex items-end md:items-center justify-start xl:justify-end gap-3 xl:gap-5">
+                        <p className="hidden md:block">
+                            {tLanding('layout.followUsOn')}:
+                        </p>
+                        <ul className="flex items-center justify-start gap-3 xl:gap-4">
                             {SOCIALS.map((soc, idx) => (
                                 <li key={idx}>
                                     <SocialButton data={soc} />
@@ -66,12 +68,12 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className="grid grid-cols-3 gap-5 mt-10 lg:mt-8 md:mt-6">
+                <div className="lg:grid grid-cols-3 gap-5 mt-10 lg:mt-8 md:mt-6">
                     <ul className="col-span-1 space-y-6">
                         {CONTACT_INFORMATIONS.map((contact, index) => (
                             <li
                                 key={index}
-                                className="gap-4 overflow-hidden w-fit md:flex md:items-center underline-offset-4"
+                                className="gap-4 overflow-hidden w-fit flex items-center underline-offset-4"
                             >
                                 <contact.icon />
                                 <MotionP
@@ -98,8 +100,8 @@ export default function Footer() {
                             </li>
                         ))}
                     </ul>
-                    <div className="col-span-2">
-                        <div className="grid grid-cols-2">
+                    <div className="mt-10 lg:mt-0 col-span-2">
+                        <div className="lg:grid grid-cols-2 space-y-10 xl:space-y-0">
                             {FOOTER_LINKS.map((item, index) => {
                                 const groupName =
                                     item[
@@ -155,7 +157,7 @@ export default function Footer() {
             </div>
             <div
                 id="copyright"
-                className="border-t border-border text-sm mt-5 pt-3"
+                className="border-t border-border text-sm mt-10 xl:mt-5 pt-5"
             >
                 <p>
                     Copyright @ {currentYear} by{' '}

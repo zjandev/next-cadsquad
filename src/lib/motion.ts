@@ -5,6 +5,7 @@ import { motion, MotionConfig } from 'motion/react'
 /**
  * Block
  */
+export const MotionHeader = motion.header
 export const MotionDiv = motion.div
 export const MotionSection = motion.section
 export const MotionButton = motion.button

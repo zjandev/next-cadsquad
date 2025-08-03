@@ -1,8 +1,14 @@
 'use client'
 
-import React, { Suspense, useState } from 'react'
+import React, { Suspense, useRef, useState } from 'react'
 
-import { Html, OrbitControls, RoundedBox, Text } from '@react-three/drei'
+import {
+    Html,
+    OrbitControls,
+    PerspectiveCamera,
+    RoundedBox,
+    Text,
+} from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { motion } from 'framer-motion-3d'
 
@@ -11,29 +17,58 @@ import { WORKFLOW } from '@/shared/constants/appConstant'
 import { WorkflowItem } from '@/shared/constants/workflow'
 
 export default function WorkflowScene() {
+    const orbitControlsRef = useRef()
+
     return (
         <Canvas
             shadows
-            camera={{
-                position: [8, 0, 12], // Camera đặt chếch từ trên nhìn xuống
-                fov: 50,
-                near: 0.1,
-                far: 100,
-            }}
             style={{
-                width: '100%',
-                height: '100%',
+                width: '600px',
+                height: '600px',
             }}
         >
+            {/* Camera configuration */}
+            <PerspectiveCamera
+                makeDefault
+                position={[0, 0, 12]}
+                rotation={[Math.PI / 20, Math.PI / 6, 0]}
+                fov={80}
+                near={0.5}
+                far={200}
+            />
+
+            {/* OrbitControls - chỉ sử dụng một lần */}
+            <OrbitControls
+                ref={orbitControlsRef}
+                enableZoom={true}
+                enableRotate={true}
+                enablePan={true}
+                minDistance={5}
+                maxDistance={20}
+                minPolarAngle={0}
+                maxPolarAngle={Math.PI}
+                autoRotate={false}
+                autoRotateSpeed={0.5}
+                dampingFactor={0.1}
+                enableDamping={true}
+                onStart={() => console.log('OrbitControls: Start')}
+                onEnd={() => console.log('OrbitControls: End')}
+            />
+
+            {/* Lighting */}
             <ambientLight intensity={0.5} />
             <directionalLight
                 castShadow
-                position={[10, 10, 10]}
+                position={[16, 10, 10]}
                 intensity={1}
                 shadow-mapSize-width={1024}
                 shadow-mapSize-height={1024}
             />
-            <OrbitControls enableZoom={false} enableRotate={false} />
+
+            {/* Debug helpers - uncomment để debug */}
+            {/* <axesHelper args={[5]} /> */}
+            {/* <gridHelper args={[20, 20]} /> */}
+
             <Suspense fallback={null}>
                 {WORKFLOW.toReversed().map((item, index) => (
                     <Block
@@ -44,6 +79,25 @@ export default function WorkflowScene() {
                     />
                 ))}
             </Suspense>
+
+            {/* Debug info */}
+            <Html position={[8, 8, 0]}>
+                <div
+                    style={{
+                        background: 'rgba(0,0,0,0.8)',
+                        color: 'white',
+                        padding: '8px',
+                        borderRadius: '4px',
+                        fontSize: '12px',
+                        fontFamily: 'monospace',
+                    }}
+                >
+                    <div>Left click + drag: Rotate</div>
+                    <div>Right click + drag: Pan</div>
+                    <div>Scroll: Zoom</div>
+                    <div>Check console for OrbitControls events</div>
+                </div>
+            </Html>
         </Canvas>
     )
 }
@@ -86,7 +140,7 @@ function Block({ y, delay, data }: BlockProps) {
                 args={[6, 2, 2]}
                 radius={0.2}
                 smoothness={4}
-                position={[-5, -4, 3]}
+                position={[0, -4, 3]}
                 onPointerEnter={() => setIsHovered(true)}
                 onPointerLeave={() => setIsHovered(false)}
             >
@@ -99,17 +153,18 @@ function Block({ y, delay, data }: BlockProps) {
             </RoundedBox>
 
             {isHovered && <BlockDetail data={data} />}
+
             {/* Text on the block */}
             <Text
-                position={[-5, -4, 4.01]}
+                position={[0, -4, 4.01]}
                 fontSize={0.3}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 fontWeight={700}
-                maxWidth={5} // Giới hạn chiều rộng
+                maxWidth={5}
                 textAlign="center"
-                whiteSpace="normal" // Cho phép xuống dòng
+                whiteSpace="normal"
             >
                 {data.title.toUpperCase()}
             </Text>
@@ -134,8 +189,7 @@ type BlockDetailProps = {
 function BlockDetail({ data }: BlockDetailProps) {
     return (
         <>
-            {/* TODO: Add line arrow */}
-            <Html position={[2, -4, -1]} center>
+            <Html position={[4, -4, -1]} center>
                 <MotionDiv
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -151,14 +205,15 @@ function BlockDetail({ data }: BlockDetailProps) {
                         backdropFilter: 'blur(15px)',
                         border: '1px solid rgba(255, 255, 255, 0.3)',
                         color: '#1F2937',
-                        minWidth: '500px',
-                        width: '100%',
+                        minWidth: '300px',
+                        maxWidth: '400px',
+                        pointerEvents: 'none', // Tránh can thiệp vào OrbitControls
                     }}
                 >
                     <p
                         style={{
                             margin: '0 0 4px 0',
-                            fontSize: '20px',
+                            fontSize: '18px',
                             color: data?.color,
                             textTransform: 'uppercase',
                         }}
@@ -168,7 +223,7 @@ function BlockDetail({ data }: BlockDetailProps) {
                     <p
                         style={{
                             margin: 0,
-                            fontSize: '16px',
+                            fontSize: '14px',
                             opacity: 0.8,
                             textWrap: 'wrap',
                         }}

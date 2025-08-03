@@ -7,14 +7,13 @@ import { Breadcrumb } from 'antd'
 import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-import { COMPANY_NAME } from '@/shared/constants/appConstant'
 import ImgCadsquadCard from '@/assets/images/cadsquad-card.png'
 import Focus1 from '@/assets/images/focus_1.png'
 import ImgVision from '@/assets/images/heading-pages/vision.png'
+import TeamImg from '@/assets/images/team.png'
 import { Link } from '@/i18n/navigation'
 import { SupportLanguages } from '@/i18n/routing'
-
-import TeamCarousels from './_components/TeamCarousels'
+import { COMPANY_NAME } from '@/shared/constants/appConstant'
 
 export default function AboutUsPage() {
     const locale = useLocale()
@@ -83,8 +82,8 @@ export default function AboutUsPage() {
                     </div>
                 </div>
             </section>
-            <section className="container">
-                <div className="mt-12 text-lg leading-loose text-justify">
+            <section>
+                <div className="container mt-12 text-lg leading-loose text-justify">
                     <div className="items-start justify-center h-full gap-8 md:flex min-h-fit">
                         <div className="border-solid border-[1px] border-border p-8 pb-4 w-full">
                             <div className="flex flex-col items-center pb-5 text-center">
@@ -160,11 +159,9 @@ export default function AboutUsPage() {
                         />
                     </div>
                 </div>
-                <div className="space-y-5 mt-14">
-                    <h4 className="text-2xl font-semibold text-center uppercase font-saira">
-                        {tVision('sections.meetTheTeam.title')}
-                    </h4>
-                    <TeamCarousels />
+                <div className="space-y-5 mt-12">
+                    <Image src={TeamImg} alt="Team" className="rounded-sm" />
+                    {/* <TeamCarousels /> */}
                 </div>
             </section>
         </div>

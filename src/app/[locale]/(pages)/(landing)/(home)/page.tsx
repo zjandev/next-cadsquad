@@ -4,8 +4,9 @@ import { MotionSection } from '@/lib/motion'
 
 import Banner from './_components/Banner'
 import ContactUs from './_components/ContactUs'
-import PopularProject from './_components/PopularProject'
-import Testimonials from './_components/Testimonials'
+import CustomerReview from './_components/CustomerReview'
+import OurServices from './_components/OurServices'
+import Partner from './_components/Partner'
 import WhyChooseUs from './_components/WhyChooseUs'
 import Workflow from './_components/Workflow'
 
@@ -19,7 +20,7 @@ export default function HomePage() {
         },
     }
     return (
-        <>
+        <div className="max-w-screen overflow-hidden">
             <MotionSection
                 variants={sectionVariants}
                 initial="init"
@@ -32,15 +33,23 @@ export default function HomePage() {
                 variants={sectionVariants}
                 initial="init"
                 whileInView="animate"
-                className="pt-16 border-b pb-24 border-border bg-gradient-to-b from-background to-background-secondary"
+                className="py-4"
             >
-                <PopularProject />
+                <Partner />
             </MotionSection>
             <MotionSection
                 variants={sectionVariants}
                 initial="init"
                 whileInView="animate"
-                className="pt-16 border-b pb-24 border-border bg-gradient-to-b from-background to-background-secondary"
+                className="mt-8 pb-10 lg:py-16"
+            >
+                <OurServices />
+            </MotionSection>
+            <MotionSection
+                variants={sectionVariants}
+                initial="init"
+                whileInView="animate"
+                className="mt-8 pb-10 lg:py-16"
             >
                 <WhyChooseUs />
             </MotionSection>
@@ -48,7 +57,7 @@ export default function HomePage() {
                 variants={sectionVariants}
                 initial="init"
                 whileInView="animate"
-                className="pt-16 border-b pb-24 border-border bg-gradient-to-b from-background to-background-secondary"
+                className="mt-8 pb-10 lg:py-16"
             >
                 <Workflow />
             </MotionSection>
@@ -56,18 +65,18 @@ export default function HomePage() {
                 variants={sectionVariants}
                 initial="init"
                 whileInView="animate"
-                className="pt-16 border-b pb-24 border-border bg-gradient-to-b from-background to-background-secondary"
+                className="py-16"
             >
-                <Testimonials />
+                <CustomerReview />
             </MotionSection>
             <MotionSection
                 variants={sectionVariants}
                 initial="init"
                 whileInView="animate"
-                className="mb-24"
+                className="mb-10"
             >
                 <ContactUs />
             </MotionSection>
-        </>
+        </div>
     )
 }

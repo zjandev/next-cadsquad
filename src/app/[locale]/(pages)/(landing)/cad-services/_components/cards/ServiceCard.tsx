@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl'
 
 import { Link } from '@/i18n/navigation'
 import { MotionDiv } from '@/lib/motion'
+import { isMobile } from '@/shared/constants/breakpoints'
 import { Service } from '@/validationSchemas/service.schema'
 
 type Props = {
@@ -25,6 +26,7 @@ export default function ServiceCard({ data }: Props) {
         animate: {
             opacity: 1,
             borderColor: 'transparent',
+            boxShadow: isMobile ? 'rgba(0, 0, 0, 0.24) 0px 3px 8px' : 'none',
         },
         hover: {
             opacity: 1,
@@ -41,7 +43,7 @@ export default function ServiceCard({ data }: Props) {
             initial="init"
             whileInView="animate"
             whileHover="hover"
-            className="grid grid-cols-[600px_1fr] gap-10 border-1 p-4 rounded-lg"
+            className="lg:grid grid-cols-[600px_1fr] gap-10 border-1 p-4 rounded-lg"
         >
             <div className="h-full overflow-hidden rounded-lg aspect-video">
                 <Image
@@ -50,14 +52,14 @@ export default function ServiceCard({ data }: Props) {
                     className="object-cover h-full aspect-video"
                 />
             </div>
-            <div className="w-full">
+            <div className="mt-6 lg:mt-0 w-full">
                 <Link
                     href={destination}
                     className="text-2xl font-semibold font-saira line-clamp-1 hover:underline underline-offset-4"
                 >
                     {data.name}
                 </Link>
-                <p className="mt-5 text-lg text-gray-700">
+                <p className="mt-3 lg:mt-5 text-lg text-gray-700">
                     {data.shortDescription}
                 </p>
                 <Link href={destination} className="block">

@@ -7,13 +7,13 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --background: oklch(0.061 0 0); /* #0f0f0f */
-        --background-secondary: oklch(25.9% 0.4% 267); /* #262626 */
-        --foreground: oklch(0.929 0 0); /* #ededed */
-        --border: oklch(0.168 0.001 0); /* #2b2b2b */
-        --button-hover: oklch(0.165 0 0); /* #272727 */
-    }
+    /* :root {
+        --background: oklch(0.061 0 0);
+        --background-secondary: oklch(25.9% 0.4% 267); 
+        --foreground: oklch(0.929 0 0);
+        --border: oklch(0.168 0.001 0); 
+        --button-hover: oklch(0.165 0 0);
+    } */
 }
 
 @theme inline {
