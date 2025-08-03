@@ -23,7 +23,7 @@ export const HEADER_NAVIGATES: NavigateItem[] = [
     {
         enLabel: 'About us',
         viLabel: 'Về chúng tôi',
-        href: '/about-us/overview',
+        href: '/about-us',
         menus: [
             {
                 viLabel: 'Tổng quan',
