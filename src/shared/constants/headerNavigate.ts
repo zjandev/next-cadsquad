@@ -29,7 +29,7 @@ export const HEADER_NAVIGATES: NavigateItem[] = [
                 viLabel: 'Tổng quan',
                 enLabel: 'Overview',
                 image: ImgTeam,
-                href: '/about-us/overview',
+                href: '/about-us#overview',
             },
             {
                 viLabel: 'Tầm nhìn',
@@ -41,7 +41,7 @@ export const HEADER_NAVIGATES: NavigateItem[] = [
                 viLabel: 'Hành trình của chúng tôi',
                 enLabel: 'Our journey',
                 image: ImgCsdHeart,
-                href: '/about-us/our-journey',
+                href: '/about-us#our-journey',
             },
         ],
     },

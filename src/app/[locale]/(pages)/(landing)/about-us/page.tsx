@@ -10,7 +10,7 @@ export default function AboutUsPage() {
     return (
         <div className="relative pb-20 max-w-screen">
             <AboutUsHeading />
-            <div className="sticky top-[66px] z-50">
+            <div className="sticky top-[66px] z-10">
                 <AboutUsNavigate />
             </div>
             <section id="overview">
