@@ -18,8 +18,8 @@ export default async function PostDetailPage({
     const post = POSTS.find((item) => item.slug === slug)
 
     return (
-        <div className="px-10 grid grid-cols-[250px_1fr_400px] gap-5 h-full">
-            <div className="relative h-full">
+        <div className="px-4 lg:px-10 lg:grid grid-cols-[250px_1fr_400px] gap-5 h-full">
+            <div className="hidden lg:block relative h-full">
                 <div className="sticky top-24">
                     <TableOfContent source={post!.content!} />
                 </div>
@@ -34,11 +34,11 @@ export default async function PostDetailPage({
                     </h2>
                     <AuthorCard postCreatedAt={post?.createdAt as string} />
                 </div>
-                <div className="mt-10 pb-20">
+                <div className="mt-10 pb-12 lg:pb-20">
                     <Content source={post!.content!} />
                 </div>
             </div>
-            <div className="relative h-full">
+            <div className="lg:relative h-full">
                 <div className="sticky top-24">
                     <RelatedPosts data={POSTS} />
                 </div>

@@ -11,8 +11,8 @@ type Props = {
 export default function RelatedPosts({ data }: Props) {
     return (
         <div className="space-y-5">
-            <h4 className="text-sm font-semibold">Related Posts</h4>
-            <div className="max-h-[72vh] overflow-y-auto space-y-1.5">
+            <h4 className="text-lg lg:text-sm font-semibold">Related Posts</h4>
+            <div className="lg:max-h-[72vh] pb-12 lg:pb-0 overflow-y-auto space-y-1.5">
                 {data.map((post) => {
                     return (
                         <PostCard
