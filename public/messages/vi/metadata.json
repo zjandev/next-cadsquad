@@ -5,7 +5,7 @@
         "keywords": "CAD Vietnam, thiết kế cơ khí, dịch vụ CAD, CSD Vietnam, CADSQUAD",
         "ogTitle": "Cadsquad - Giải pháp thiết kế cơ khí và CAD chất lượng cao",
         "ogDescription": "Cung cấp dịch vụ thiết kế và kỹ thuật CAD chuyên nghiệp tại Việt Nam cho khách hàng toàn cầu.",
-        "ogImage": "/public/ogImage.webp",
+        "ogImage": "https://res.cloudinary.com/dqx1guyc0/image/upload/v1754592421/Cadsquad/ogImage_mogssp.png",
         "canonical": "https://cadsquad.vn/"
     },
     "aboutUs": {
@@ -14,7 +14,7 @@
         "keywords": "về CADSQUAD, giới thiệu CAD Vietnam, giải pháp CAD Việt Nam, đội ngũ kỹ sư CAD",
         "ogTitle": "Giới thiệu về Cadsquad - Giải pháp CAD hàng đầu Việt Nam",
         "ogDescription": "Tìm hiểu về đội ngũ và hành trình phát triển của Cadsquad.vn - đối tác CAD đáng tin cậy.",
-        "ogImage": "/public/ogImage.webp",
+        "ogImage": "https://res.cloudinary.com/dqx1guyc0/image/upload/v1754592421/Cadsquad/ogImage_mogssp.png",
         "canonical": "https://cadsquad.vn/about-us"
     },
     "cadServices": {
@@ -23,7 +23,7 @@
         "keywords": "dịch vụ CAD, mô hình 3D, bản vẽ kỹ thuật, thiết kế kỹ thuật, CAD drafting, CAD rendering",
         "ogTitle": "Dịch vụ CAD chuyên nghiệp tại Việt Nam | Cadsquad.vn",
         "ogDescription": "Chuyên cung cấp dịch vụ vẽ kỹ thuật, 2D/3D modeling và dựng hình chất lượng cao.",
-        "ogImage": "/public/ogImage.webp",
+        "ogImage": "https://res.cloudinary.com/dqx1guyc0/image/upload/v1754592421/Cadsquad/ogImage_mogssp.png",
         "canonical": "https://cadsquad.vn/cad-services"
     },
     "newsMedia": {
@@ -32,7 +32,7 @@
         "keywords": "tin tức CAD, xu hướng thiết kế, phần mềm CAD, kỹ thuật số CAD, cập nhật CAD mới",
         "ogTitle": "Tin tức và truyền thông ngành CAD | Cadsquad.vn",
         "ogDescription": "Khám phá thông tin, bài viết chuyên sâu và mẹo hữu ích trong lĩnh vực CAD.",
-        "ogImage": "/public/ogImage.webp",
+        "ogImage": "https://res.cloudinary.com/dqx1guyc0/image/upload/v1754592421/Cadsquad/ogImage_mogssp.png",
         "canonical": "https://cadsquad.vn/news-and-media"
     }
 }
