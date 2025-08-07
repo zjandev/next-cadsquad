@@ -7,6 +7,7 @@ export const PostSchema = yup.object().shape({
     shortDescription: yup.string().nullable(),
     keywords: yup.array(yup.string().required()).nullable(),
     thumbnailUrl: yup.string(),
+    bgCoverUrl: yup.string().nullable(),
     content: yup.string(),
     tags: yup.array(yup.string().required()),
     countView: yup.number(),

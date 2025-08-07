@@ -7,12 +7,12 @@ import AppLoader from '@/app/[locale]/loading'
 import '@/app/globals.css'
 import { AppProvider } from '@/app/providers'
 import { geistMono, geistSans, saira } from '@/fonts'
-import { routing, SupportLanguages } from '@/i18n/routing'
+import { SupportLanguages, routing } from '@/i18n/routing'
 
 export default async function RootLayout({
-                                             children,
-                                             params,
-                                         }: Readonly<{
+    children,
+    params,
+}: Readonly<{
     children: React.ReactNode
     params: Promise<{ locale: string }>
 }>) {
@@ -30,14 +30,14 @@ export default async function RootLayout({
 
     return (
         <html lang={locale}>
-        <body
-            className={`${geistSans.variable} ${geistMono.variable} ${saira.variable} antialiased`}
-            suppressHydrationWarning
-        >
-        <AppProvider key="root" locale={locale} messages={messages}>
-            <Suspense fallback={<AppLoader />}>{children}</Suspense>
-        </AppProvider>
-        </body>
+            <body
+                className={`${geistSans.variable} ${geistMono.variable} ${saira.variable} antialiased`}
+                suppressHydrationWarning
+            >
+                <AppProvider key="root" locale={locale} messages={messages}>
+                    <Suspense fallback={<AppLoader />}>{children}</Suspense>
+                </AppProvider>
+            </body>
         </html>
     )
 }

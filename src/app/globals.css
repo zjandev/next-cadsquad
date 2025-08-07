@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './css/theme.css';
+@plugin "@tailwindcss/typography";
 
 /* 
 ** Import heroui
@@ -39,6 +40,32 @@ body {
 
     @variant xl {
         max-width: 1440px;
+        padding-inline: 20px;
+    }
+}
+
+@utility post_container {
+    max-width: 1040px;
+    padding-inline: 20px;
+    margin-inline: auto;
+
+    @variant sm {
+        max-width: 480px;
+        padding-inline: 20px;
+    }
+
+    @variant md {
+        max-width: 768px;
+        padding-inline: 20px;
+    }
+
+    @variant lg {
+        max-width: 976px;
+        padding-inline: 20px;
+    }
+
+    @variant xl {
+        max-width: 1040px;
         padding-inline: 20px;
     }
 }

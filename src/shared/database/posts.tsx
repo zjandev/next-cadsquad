@@ -10,17 +10,19 @@ export const POSTS: Post[] = [
         keywords: ['autocad', 'tutorial', 'newbie', 'huong-dan'],
         thumbnailUrl:
             'https://res.cloudinary.com/dqx1guyc0/image/upload/v1754559976/Cadsquad/posts/huong-dan-su-dung-autocad-cho-nguoi-moi-bat-dau_xaesjd.png',
+        bgCoverUrl:
+            'https://lagrandeourse.design/wp-content/uploads/2024/04/Techniques-de-prototypage-rapide-en-product-design.jpg',
         content: `
 Phần mềm AutoCAD đã quá quen thuộc trong ngành CAD CAM, với độ sử dụng phổ biến hàng đầu trên toàn thế giới. Trải qua 60 năm phát triển, giờ đây AutoCAD được sử dụng cho nhiều ứng dụng, bao gồm các kế hoạch kiến trúc, bố cục và bản vẽ sản xuất sản phẩm. Nhờ vào tính ứng dụng linh hoạt  này đã khiến AutoCAD đã và đang trở thành tiêu chuẩn cần có cho một số ngành công nghiệp.
 
 Đầu tiên chúng ta sẽ tìm hiểu cách di chuyển và sau đó chuyển ngay sang phần phác thảo 2D. Sau đó, chúng ta sẽ tiếp tục khám phá các công cụ vẽ kỹ thuật và mô hình 3D của nó. Cuối cùng nhưng không kém phần quan trọng, hãy tìm hiểu cách làm việc với các tệp lưới, bao gồm xuất các mô hình STL để in 3D.
 
-# 1. TỔNG QUAN VỀ AUTOCAD
+# 1. Tổng quan về AutoCAD
 AutoCAD được phát triển và duy trì bởi hãng Autodesk, gã khổng lồ phần mềm cũng cung cấp các chương trình mô hình CAD và 3D khác như Inventor , Revit , Maya , 3ds Max , Tinkercad và Fusion 360 .
 
 AutoCAD là phần mềm thiết kế chuyên nghiệp, với mức giá niêm yết $1,775 mỗi năm cho người dùng phổ thông. Bên cạnh đó, AutoCAD hỗ trợ sử dụng miễn phí không giới hạn trong tối đa một năm, đối với khối giáo dục như sinh viên và giáo viên. Ngoài ra, Autodesk cung cấp bản dùng thử miễn phí 30 ngày cho người dùng mới sử dụng. Bạn hãy thử làm theo hướng dẫn dưới đây, 6 bước để thành công với AutoCAD dành cho người mới bắt đầu.
 
-# 2. HƯỚNG DẪN SỬ DỤNG AUTOCAD CHO NGƯỜI MỚI BẮT ĐẦU
+# 2. Hướng dân sử dụng AutoCAD cho người mới bắt đầu
 ## Bước 1: Biết giao diện người dùng
 <img src="https://res.cloudinary.com/dqx1guyc0/image/upload/v1754560271/Cadsquad/posts/huong-dan-su-dung-auto-cad/autocad-tip-1_a6cjnd.png"/>
 
