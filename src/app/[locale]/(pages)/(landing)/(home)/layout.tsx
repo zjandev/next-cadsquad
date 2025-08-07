@@ -32,7 +32,7 @@ export async function generateMetadata({
                 },
             ],
             siteName: 'Cadsquad.vn',
-            locale,
+            locale: 'en_US',
             type: 'website',
         },
         alternates: {

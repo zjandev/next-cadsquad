@@ -1,0 +1,24 @@
+{
+        "name": "Cadsquad Vietnam",
+        "short_name": "Cadsquad",
+        "description": "CADSQUAD Vietnam provides high-quality CAD services and mechanical design for global clients.",
+        "lang": "en",
+        "start_url": "/",
+        "scope": "/",
+        "display": "standalone",
+        "orientation": "portrait",
+        "background_color": "#ffffff",
+        "theme_color": "#0f172a",
+        "icons": [
+                {
+                        "src": "/public/favicon.ico",
+                        "sizes": "192x192",
+                        "type": "image/ico"
+                },
+                {
+                        "src": "/public/favicon.ico",
+                        "sizes": "512x512",
+                        "type": "image/ico"
+                }
+        ]
+}

@@ -1,4 +1,4 @@
-import { OUR_SERVICES } from '@/shared/database/ourServices'
+import { POSTS } from '@/shared/database/posts'
 
 export async function generateMetadata({
     params,
@@ -7,21 +7,21 @@ export async function generateMetadata({
 }) {
     const { slug } = await params
 
-    const data = OUR_SERVICES.find((srv) => srv.slug === slug)
+    const data = POSTS.find((post) => post.slug === slug)
 
     return {
-        title: data?.name + ' | Cadsquad.vn',
-        description: data?.description,
-        // keywords: data?.description?.split(','),
+        title: data?.title + ' | Cadsquad.vn',
+        description: data?.shortDescription,
+        keywords: data?.keywords,
         openGraph: {
-            title: data?.name,
-            description: data?.description,
+            title: data?.title,
+            description: data?.shortDescription,
             images: [
                 {
-                    url: data?.thumbnail,
+                    url: data?.thumbnailUrl,
                     width: 1200,
                     height: 630,
-                    alt: data?.name,
+                    alt: data?.title,
                 },
             ],
             siteName: 'Cadsquad.vn',
@@ -29,12 +29,12 @@ export async function generateMetadata({
             type: 'website',
         },
         alternates: {
-            canonical: `https://cadsquad.vn/cad-services/${data?.slug}`,
+            canonical: `https://cadsquad.vn/news-and-media/${data?.slug}`,
         },
     }
 }
 
-export default function CADServiceDetailLayout({
+export default function PostDetailLayout({
     children,
 }: {
     children: React.ReactNode
