@@ -62,13 +62,30 @@ export default function Content({ source }: Props) {
                                 }}
                             />
                         ),
+                        img: ({ src, alt, ...props }) => (
+                            <Image
+                                src={src}
+                                alt={alt}
+                                {...props}
+                                preview={{
+                                    maskClassName: 'hover:!opacity-0',
+                                    classNames: {
+                                        wrapper: 'scale-125',
+                                    },
+                                }}
+                            />
+                        ),
                         wrapper: ({ children }) => (
                             <div suppressHydrationWarning>{children}</div>
                         ),
                     }}
-                    onError={(err) => (
-                        <p>{`Couldn't load content!${JSON.stringify(err)}`}</p>
-                    )}
+                    onError={(err) => {
+                        console.log(err)
+
+                        return (
+                            <p>{`Couldn't load content!${JSON.stringify(err)}`}</p>
+                        )
+                    }}
                 />
             </div>
         </Suspense>

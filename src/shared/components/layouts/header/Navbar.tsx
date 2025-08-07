@@ -8,7 +8,7 @@ import { Variants } from 'motion'
 import { useLocale } from 'next-intl'
 import Image from 'next/image'
 
-import { Link } from '@/i18n/navigation'
+import { Link, usePathname } from '@/i18n/navigation'
 import { SupportLanguages } from '@/i18n/routing'
 import { MotionButton, MotionDiv, MotionLi, MotionP } from '@/lib/motion'
 import { HEADER_NAVIGATES } from '@/shared/constants/appConstant'
@@ -51,6 +51,11 @@ export default function Navbar() {
 function NavbarItem({ data, index }: { data: NavigateItem; index: number }) {
     const locale = useLocale()
 
+    const pathname = usePathname()
+    const isCurrentPath =
+        data.href.startsWith('/') &&
+        pathname.split('/').includes(data.href.split('/')[1])
+
     const label = data[`${locale as SupportLanguages}Label`]
 
     const labelVariants: Variants = {
@@ -60,7 +65,7 @@ function NavbarItem({ data, index }: { data: NavigateItem; index: number }) {
         },
         animate: (i: number) => ({
             opacity: 1,
-            color: 'var(--foreground)',
+            color: isCurrentPath ? 'var(--color-primary)' : 'var(--foreground)',
             y: 0,
             transition: { delay: i * 0.1, type: 'spring', stiffness: 120 },
         }),
@@ -79,7 +84,7 @@ function NavbarItem({ data, index }: { data: NavigateItem; index: number }) {
             backgroundColor: 'var(--color-primary)',
         },
         animate: {
-            width: 0,
+            width: isCurrentPath ? '100%' : 0,
             height: '2px',
             opacity: 1,
         },

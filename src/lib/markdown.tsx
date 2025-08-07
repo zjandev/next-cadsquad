@@ -22,6 +22,9 @@ export const getHeadings = (source: string, options?: Options) => {
 
 export const getHeadingId = (str: string) => {
     let id = ''
+    if (typeof str !== 'string') {
+        return
+    }
     // 1. First char match [1-9]
     if (str.split('')[0].match(/\d+/) && str.split('')[1] === '.') {
         id = removeAccents(str.split('.')[1].trim())
