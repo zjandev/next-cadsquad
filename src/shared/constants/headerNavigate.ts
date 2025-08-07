@@ -71,7 +71,7 @@ export const HEADER_NAVIGATES: NavigateItem[] = [
         outSite: true,
     },
     {
-        enLabel: 'New & Media',
+        enLabel: 'News & Media',
         viLabel: 'Tin tức',
         href: '/news-and-media',
     },

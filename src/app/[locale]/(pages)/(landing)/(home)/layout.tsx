@@ -1,10 +1,12 @@
+import { Metadata } from 'next'
+
 import { getTranslations } from 'next-intl/server'
 
 export async function generateMetadata({
     params,
 }: Readonly<{
     params: Promise<{ locale: string }>
-}>) {
+}>): Promise<Metadata> {
     // Get locale and check if it's valid
     const { locale } = await params
 
@@ -17,6 +19,25 @@ export async function generateMetadata({
     return {
         title: tMetadata('title'),
         description: tMetadata('description'),
+        keywords: tMetadata('keywords').split(','),
+        openGraph: {
+            title: tMetadata('ogTitle'),
+            description: tMetadata('ogDescription'),
+            images: [
+                {
+                    url: tMetadata('ogImage'),
+                    width: 1200,
+                    height: 630,
+                    alt: tMetadata('ogTitle'),
+                },
+            ],
+            siteName: 'Cadsquad.vn',
+            locale,
+            type: 'website',
+        },
+        alternates: {
+            canonical: tMetadata('canonical'),
+        },
     }
 }
 

@@ -1,14 +1,38 @@
 {
     "home": {
-        "title": "CSD Vietnam | Highly skilled and experienced group",
-        "description": "CADSQUAD Vietnam cung cấp giải pháp thiết kế cơ khí và dịch vụ CAD chất lượng cao, biến ý tưởng thành sản phẩm bền vững cho khách hàng toàn cầu."
+        "title": "Cadsquad | Highly skilled and experienced group",
+        "description": "Cadsquad cung cấp dịch vụ thiết kế cơ khí và CAD chất lượng cao, biến ý tưởng thành sản phẩm bền vững cho khách hàng toàn cầu.",
+        "keywords": "CAD Vietnam, thiết kế cơ khí, dịch vụ CAD, CSD Vietnam, CADSQUAD",
+        "ogTitle": "CSD Vietnam - Giải pháp thiết kế cơ khí và CAD chất lượng cao",
+        "ogDescription": "Cung cấp dịch vụ thiết kế và kỹ thuật CAD chuyên nghiệp tại Việt Nam cho khách hàng toàn cầu.",
+        "ogImage": "/public/ogImage.webp",
+        "canonical": "https://cadsquad.vn/"
     },
     "aboutUs": {
         "title": "Về chúng tôi | Cadsquad.vn",
-        "description": "CADSQUAD Vietnam cung cấp giải pháp thiết kế cơ khí và dịch vụ CAD chất lượng cao, biến ý tưởng thành sản phẩm bền vững cho khách hàng toàn cầu."
+        "description": "Khám phá sứ mệnh, giá trị và đội ngũ chuyên môn tại Cadsquad.vn - nhà cung cấp giải pháp CAD đáng tin cậy tại Việt Nam.",
+        "keywords": "về CADSQUAD, giới thiệu CAD Vietnam, giải pháp CAD Việt Nam, đội ngũ kỹ sư CAD",
+        "ogTitle": "Giới thiệu về Cadsquad.vn - Giải pháp CAD hàng đầu Việt Nam",
+        "ogDescription": "Tìm hiểu về đội ngũ và hành trình phát triển của Cadsquad.vn - đối tác CAD đáng tin cậy.",
+        "ogImage": "/public/ogImage.webp",
+        "canonical": "https://cadsquad.vn/about-us"
     },
     "cadServices": {
         "title": "Dịch vụ CAD | Cadsquad.vn",
-        "description": "CADSQUAD Vietnam cung cấp giải pháp thiết kế cơ khí và dịch vụ CAD chất lượng cao, biến ý tưởng thành sản phẩm bền vững cho khách hàng toàn cầu."
+        "description": "Dịch vụ CAD chuyên nghiệp dành cho kiến trúc sư, kỹ sư và nhà thiết kế. Nhận bản vẽ kỹ thuật, mô hình 2D/3D, dựng hình chất lượng cao tại Cadsquad.vn.",
+        "keywords": "dịch vụ CAD, mô hình 3D, bản vẽ kỹ thuật, thiết kế kỹ thuật, CAD drafting, CAD rendering",
+        "ogTitle": "Dịch vụ CAD chuyên nghiệp tại Việt Nam | Cadsquad.vn",
+        "ogDescription": "Chuyên cung cấp dịch vụ vẽ kỹ thuật, 2D/3D modeling và dựng hình chất lượng cao.",
+        "ogImage": "/public/ogImage.webp",
+        "canonical": "https://cadsquad.vn/cad-services"
+    },
+    "newsMedia": {
+        "title": "Tin tức & Truyền thông | Cadsquad.vn",
+        "description": "Cập nhật tin tức mới nhất về CAD, xu hướng thiết kế, phần mềm và công nghệ ngành.",
+        "keywords": "tin tức CAD, xu hướng thiết kế, phần mềm CAD, kỹ thuật số CAD, cập nhật CAD mới",
+        "ogTitle": "Tin tức và truyền thông ngành CAD | Cadsquad.vn",
+        "ogDescription": "Khám phá thông tin, bài viết chuyên sâu và mẹo hữu ích trong lĩnh vực CAD.",
+        "ogImage": "/public/ogImage.webp",
+        "canonical": "https://cadsquad.vn/news-and-media"
     }
 }

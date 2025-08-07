@@ -1,14 +1,38 @@
 {
     "home": {
-        "title": "CSD Vietnam | Highly skilled and experienced group",
-        "description": "CADSQUAD Vietnam delivers high-quality mechanical design and CAD services, turning ideas into sustainable products for global clients."
+        "title": "Cadsquad | Highly skilled and experienced group",
+        "description": "CADSQUAD Vietnam delivers high-quality mechanical design and CAD services, turning ideas into sustainable products for global clients.",
+        "keywords": "CAD services, mechanical design, CAD outsourcing, CAD Vietnam, product development, CAD experts, 2D CAD, 3D CAD, CAD drafting, CAD engineering, services de CAO, conception mécanique, externalisation CAO, ingénierie Vietnam, conception de produit, experts CAO, dessin technique, CAO 2D, CAO 3D",
+        "canonical": "https://cadsquad.vn/",
+        "ogTitle": "Cadsquad Vietnam - High-Quality CAD & Mechanical Design Services",
+        "ogDescription": "Expert CAD services from Vietnam. Mechanical design, 2D/3D modeling, drafting, and more for global businesses.",
+        "ogImage": "/public/ogImage.webp"
     },
     "aboutUs": {
         "title": "About us | Cadsquad.vn",
-        "description": "CADSQUAD Vietnam delivers high-quality mechanical design and CAD services, turning ideas into sustainable products for global clients."
+        "description": "Discover the mission, values, and expertise behind Cadsquad.vn - Vietnam's trusted CAD solutions provider. Learn how we empower designers, engineers, and businesses with innovative CAD tools and services.",
+        "keywords": "about Cadsquad, CAD company Vietnam, CAD professionals, CAD solutions, engineering team, who we are, trusted CAD partner, à propos de Cadsquad, société de CAO au Vietnam, équipe d'ingénieurs, solutions CAO, partenaire de confiance CAO, professionnels de la CAO, expertise CAO",
+        "canonical": "https://cadsquad.vn/about-us",
+        "ogTitle": "About Cadsquad - Trusted CAD Experts in Vietnam",
+        "ogDescription": "Learn more about our team, mission, and expertise in providing top-tier CAD services for global partners.",
+        "ogImage": "/public/ogImage.webp"
     },
     "cadServices": {
         "title": "CAD Services | Cadsquad.vn",
-        "description": "CADSQUAD Vietnam delivers high-quality mechanical design and CAD services, turning ideas into sustainable products for global clients."
+        "description": "Professional CAD services tailored for architects, engineers, and designers. Get high-quality drafting, 2D/3D modeling, rendering at Cadsquad.vn - trusted CAD solutions in Vietnam.",
+        "keywords": "CAD services, 2D CAD drafting, 3D modeling, CAD rendering, technical drawings, AutoCAD services, Revit modeling, CAD for architecture, CAD for engineering, services CAO, modélisation 3D, dessin technique, rendu 3D, plans d’architecture, CAO pour ingénieurs, CAO pour architectes, externalisation CAO, services AutoCAD, services Revit",
+        "canonical": "https://cadsquad.vn/cad-services",
+        "ogTitle": "Professional CAD Services in Vietnam | Cadsquad.vn",
+        "ogDescription": "Explore our CAD drafting, 3D modeling, and rendering solutions tailored for engineers and architects worldwide.",
+        "ogImage": "/public/ogImage.webp"
+    },
+    "newsMedia": {
+        "title": "News & Media | Cadsquad.vn",
+        "description": "Stay updated with the latest CAD news, design innovations, software updates, and industry trends. Explore expert insights, tutorials, and tips at Cadsquad.vn - your go-to hub for all things CAD in Vietnam.",
+        "keywords": "CAD news, CAD trends, design innovations, CAD software updates, tutorials CAD, tips CAD, industry news, actualités CAO, tendances de la CAO, innovations en conception, mises à jour logiciels CAO, tutoriels CAO, astuces CAO, actualités du secteur, nouvelles de l'industrie CAO",
+        "canonical": "https://cadsquad.vn/news-and-media",
+        "ogTitle": "CAD News & Industry Insights | Cadsquad.vn",
+        "ogDescription": "Get the latest updates on CAD technology, design trends, and expert tips from Cadsquad.vn.",
+        "ogImage": "/public/ogImage.webp"
     }
 }

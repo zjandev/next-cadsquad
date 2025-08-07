@@ -9,7 +9,7 @@ export async function generateMetadata({
 
     const tMetadata = await getTranslations({
         locale,
-        namespace: 'metadata.cadServices',
+        namespace: 'metadata.newsMedia',
     })
 
     return {
@@ -37,7 +37,7 @@ export async function generateMetadata({
     }
 }
 
-export default function CADServicesLayout({
+export default function NewsAndMediaLayout({
     children,
 }: {
     children: React.ReactNode

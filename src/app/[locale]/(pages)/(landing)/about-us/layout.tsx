@@ -11,12 +11,31 @@ export async function generateMetadata({
     // Use server-side translations
     const tMetadata = await getTranslations({
         locale,
-        namespace: 'metadata.home',
+        namespace: 'metadata.aboutUs',
     })
 
     return {
         title: tMetadata('title'),
         description: tMetadata('description'),
+        keywords: tMetadata('keywords').split(','),
+        openGraph: {
+            title: tMetadata('ogTitle'),
+            description: tMetadata('ogDescription'),
+            images: [
+                {
+                    url: tMetadata('ogImage'),
+                    width: 1200,
+                    height: 630,
+                    alt: tMetadata('ogTitle'),
+                },
+            ],
+            siteName: 'Cadsquad.vn',
+            locale,
+            type: 'website',
+        },
+        alternates: {
+            canonical: tMetadata('canonical'),
+        },
     }
 }
 
