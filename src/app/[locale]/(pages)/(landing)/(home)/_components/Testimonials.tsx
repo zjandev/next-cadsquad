@@ -5,7 +5,7 @@ import React from 'react'
 import { useTranslations } from 'next-intl'
 
 import { AnimatedTestimonials } from '@/shared/components/ui/animated-testimonials'
-import { TESTIMONIALS } from '@/data/testimonials'
+import { TESTIMONIALS } from '@/shared/database/testimonials'
 
 export default function Testimonials() {
     const tHome = useTranslations('landing.home')

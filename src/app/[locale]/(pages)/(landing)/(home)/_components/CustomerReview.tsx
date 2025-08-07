@@ -7,7 +7,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
-import { TESTIMONIALS } from '@/data/testimonials'
+import { TESTIMONIALS } from '@/shared/database/testimonials'
 import { isMobile } from '@/shared/constants/breakpoints'
 
 import { MotionDiv } from '../../../../../../lib/motion'
