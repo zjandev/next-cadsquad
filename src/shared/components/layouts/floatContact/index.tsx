@@ -3,14 +3,14 @@
 import React, { useEffect, useState } from 'react'
 
 import { Tooltip } from '@heroui/react'
-import { PlusIcon, X } from 'lucide-react'
 import { Variants } from 'motion'
 import Image from 'next/image'
 
 import { Link } from '@/i18n/navigation'
-import { MotionButton, MotionDiv } from '@/lib/motion'
+import { MotionDiv } from '@/lib/motion'
 import { FLOAT_CONTACTS } from '@/shared/constants/appConstant'
 
+import ContactButton from './ContactButton'
 import ScrollToTop from './ScrollToTop'
 
 export default function FloatContact() {
@@ -69,14 +69,7 @@ export default function FloatContact() {
                     content={!show ? 'Show social menu' : 'Close social menu'}
                     placement="left"
                 >
-                    <MotionButton
-                        className="p-3 bg-white dark:bg-black-900 rounded-full shadow-lg dark:shadow-black-full hover:text-primary cursor-pointer"
-                        onClick={() => setShow(!show)}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        {!show ? <PlusIcon size={30} /> : <X size={30} />}
-                    </MotionButton>
+                    <ContactButton show={show} setShow={setShow} />
                 </Tooltip>
             </div>
 
