@@ -11,37 +11,12 @@ import Image from 'next/image'
 import { Link, usePathname } from '@/i18n/navigation'
 import { SupportLanguages } from '@/i18n/routing'
 import { MotionButton, MotionDiv, MotionLi, MotionP } from '@/lib/motion'
-import { HEADER_NAVIGATES } from '@/shared/constants/appConstant'
-import { NavigateItem } from '@/shared/constants/headerNavigate'
-import { OUR_SERVICES } from '@/shared/database/ourServices'
+import { NAVBAR_DATA, NavigateItem } from '@/shared/constants/headerNavigate'
 
-const services = OUR_SERVICES
 export default function Navbar() {
-    const innerCadServices = HEADER_NAVIGATES.map((service) => {
-        if (services && service.enLabel === 'CAD Services') {
-            const newMenus = services?.map((item) => {
-                return {
-                    viLabel: item.name,
-                    enLabel: item.name,
-                    image: item.thumbnail,
-                    href: `/cad-services/${item.slug}`,
-                }
-            })
-
-            return {
-                ...service,
-                menus: newMenus,
-            } as NavigateItem
-        }
-
-        return { ...service }
-    })
-
-    const finalHeaderNavs = innerCadServices
-
     return (
         <nav className="z-50 flex items-center justify-start gap-2">
-            {finalHeaderNavs.map((item, index) => {
+            {NAVBAR_DATA.map((item, index) => {
                 return <NavbarItem key={index} data={item} index={index} />
             })}
         </nav>

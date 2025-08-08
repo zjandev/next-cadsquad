@@ -18,7 +18,7 @@ export default function WhyChooseUs() {
                     ),
                 })}
             </HeadingSection>
-            <div className="px-12 lg:px-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-7">
+            <div className="px-4 lg:px-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-7">
                 {WHY_CHOOSE_US.map((reason, idx) => (
                     <MotionDiv
                         key={idx}

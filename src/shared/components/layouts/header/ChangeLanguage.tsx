@@ -15,10 +15,10 @@ import { useLocale } from 'next-intl'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
-import { APP_LANGUAGES } from '@/shared/constants/appConstant'
-import { AppLanguage } from '@/shared/constants/appLanguages'
 import { useRouter } from '@/i18n/navigation'
 import { routing } from '@/i18n/routing'
+import { APP_LANGUAGES } from '@/shared/constants/appConstant'
+import { AppLanguage } from '@/shared/constants/appLanguages'
 
 export default function ChangeLanguage() {
     const locale = useLocale()

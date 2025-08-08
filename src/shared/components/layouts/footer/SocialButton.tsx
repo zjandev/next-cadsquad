@@ -5,13 +5,14 @@ import React from 'react'
 import { Button } from '@heroui/react'
 
 import { Social } from '@/shared/constants/appConstant'
-import { isMobile } from '@/shared/constants/breakpoints'
+import { useDevice } from '@/shared/hooks/useDevice'
 
 type Props = {
     data: Social
 }
 
 export default function SocialButton({ data }: Props) {
+    const { isMobile } = useDevice()
     return (
         <Button
             isIconOnly

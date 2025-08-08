@@ -5,6 +5,7 @@ import ImgCsdHeart from '@/assets/images/cadsquad-heart.png'
 import ImgStellStructure from '@/assets/images/stell-structure.png'
 import ImgTeam from '@/assets/images/teams.png'
 import ImgVision from '@/assets/images/vision.png'
+import { OUR_SERVICES } from '@/shared/database/ourServices'
 
 export type NavigateItem = {
     viLabel: string
@@ -76,3 +77,27 @@ export const HEADER_NAVIGATES: NavigateItem[] = [
         href: '/news-and-media',
     },
 ]
+const services = OUR_SERVICES
+
+const getInnerCadService = () => {
+    return HEADER_NAVIGATES.map((service) => {
+        if (services && service.enLabel === 'CAD Services') {
+            const newMenus = services?.map((item) => {
+                return {
+                    viLabel: item.name,
+                    enLabel: item.name,
+                    image: item.thumbnail,
+                    href: `/cad-services/${item.slug}`,
+                }
+            })
+
+            return {
+                ...service,
+                menus: newMenus,
+            } as NavigateItem
+        }
+
+        return { ...service }
+    })
+}
+export const NAVBAR_DATA = getInnerCadService()

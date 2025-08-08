@@ -1,8 +1,8 @@
 import React from 'react'
 
 import Image from 'next/image'
-import { Link } from '@/i18n/navigation'
 
+import { Link } from '@/i18n/navigation'
 import { cn } from '@/lib/utils'
 
 import CSDWhiteLogo from '../../../public/logo-white.webp'

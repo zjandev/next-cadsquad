@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl'
 
 import { Link } from '@/i18n/navigation'
 import { MotionDiv } from '@/lib/motion'
-import { isMobile } from '@/shared/constants/breakpoints'
+import { useDevice } from '@/shared/hooks/useDevice'
 import { Service } from '@/validationSchemas/service.schema'
 
 type Props = {
@@ -17,6 +17,7 @@ type Props = {
 
 export default function ServiceCard({ data }: Props) {
     const tButton = useTranslations('button')
+    const { isMobile } = useDevice()
 
     const wrapperVariants: Variants = {
         init: {

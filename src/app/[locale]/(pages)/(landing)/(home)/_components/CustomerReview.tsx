@@ -7,15 +7,16 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
+import { MotionDiv } from '@/lib/motion'
 import { TESTIMONIALS } from '@/shared/database/testimonials'
-import { isMobile } from '@/shared/constants/breakpoints'
+import { useDevice } from '@/shared/hooks/useDevice'
 
-import { MotionDiv } from '../../../../../../lib/motion'
 import HeadingSection from './HeadingSection'
 import CustomerReviewCard from './cards/CustomerReviewCard'
 
 export default function CustomerReview() {
     const tHome = useTranslations('landing.home')
+    const { isMobile } = useDevice()
 
     const [emblaRef, emblaApi] = useEmblaCarousel()
     const prevButtonRef = useRef<HTMLButtonElement | null>(null)

@@ -8,22 +8,6 @@ import { Link } from '@/i18n/navigation'
 import { MotionButton, MotionDiv, MotionP } from '@/lib/motion'
 import { Service } from '@/validationSchemas/service.schema'
 
-const imageVariants: Variants = {
-    init: {
-        scale: '1',
-    },
-    animate: {
-        scale: '1',
-    },
-    hover: {
-        scale: '1.06',
-        filter: 'blur(3px)',
-        transition: {
-            duration: 0.1,
-        },
-    },
-}
-
 const buttonTextVariants: Variants = {
     init: {
         display: 'none',
@@ -55,16 +39,16 @@ export default function ServiceCard({ data }: { data: Service }) {
                     whileHover="hover"
                     className="relative w-full aspect-video md:aspect-[1/1.3] rounded-xl border border-border overflow-hidden"
                 >
-                    <MotionDiv variants={imageVariants} className="size-full">
+                    <div className="group size-full">
                         <Image
                             src={data?.thumbnail}
                             alt="Service image"
                             title={data.name}
                             rootClassName="!block size-full"
-                            className="!block !size-full object-cover rounded-xl brightness-50"
+                            className="!block !size-full object-cover rounded-xl brightness-50 group-hover:scale-125 transition duration-250"
                             preview={false}
                         />
-                    </MotionDiv>
+                    </div>
                     <div className="py-3 px-5 absolute top-1">
                         <p className="text-white text-lg font-semibold font-saira max-w-[90%]">
                             {data.name}

@@ -1,4 +1,8 @@
-const BREAKPOINTS = {
+'use client'
+
+import { useWindowSize } from 'usehooks-ts'
+
+export const BREAKPOINTS = {
     // Mobile first (min-width)
     sm: '(min-width: 640px)', // Small screens and up
     md: '(min-width: 768px)', // Medium screens and up
@@ -15,21 +19,21 @@ const BREAKPOINTS = {
 }
 
 // Alternative object with individual constants
-const SM = BREAKPOINTS.sm
-const MD = BREAKPOINTS.md
-const LG = BREAKPOINTS.lg
-const XL = BREAKPOINTS.xl
-const XXL = BREAKPOINTS['2xl']
+export const SCREENS = {
+    mobile: 480,
+    tablet: 768,
+    desktop: 1024,
+    largeDevice: 1440,
+}
 
-// Usage example with matchMedia
-const isMobile =
-    typeof window !== undefined &&
-    window.matchMedia(BREAKPOINTS['max-md']).matches
-const isTablet =
-    typeof window !== undefined &&
-    window.matchMedia(BREAKPOINTS.md).matches &&
-    window.matchMedia(BREAKPOINTS['max-lg']).matches
-const isDesktop =
-    typeof window !== undefined && window.matchMedia(BREAKPOINTS.lg).matches
+export const useDevice = () => {
+    const size = useWindowSize()
 
-export { BREAKPOINTS, SM, MD, LG, XL, XXL, isMobile, isTablet, isDesktop }
+    const isMobile = size.width < SCREENS.mobile
+    const isTablet = size.width > SCREENS.mobile && size.width > SCREENS.tablet
+    const isDesktop =
+        size.width > SCREENS.tablet && size.width > SCREENS.desktop
+    const isLargeDevice = size.width > SCREENS.desktop
+
+    return { isMobile, isTablet, isDesktop, isLargeDevice }
+}

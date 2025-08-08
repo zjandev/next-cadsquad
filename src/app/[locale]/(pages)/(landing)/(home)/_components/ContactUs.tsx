@@ -8,11 +8,12 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import Decorate from '@/shared/components/layouts/footer/Decorate'
 import { CONTACT_INFORMATIONS } from '@/shared/constants/appConstant'
-import { isMobile } from '@/shared/constants/breakpoints'
+import { useDevice } from '@/shared/hooks/useDevice'
 
 import ContactForm from './forms/ContactForm'
 
 export default function ContactUs() {
+    const { isMobile } = useDevice()
     const tHome = useTranslations('landing.home')
     const ref = useRef(null)
 

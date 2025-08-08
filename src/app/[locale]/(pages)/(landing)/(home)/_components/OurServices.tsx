@@ -9,8 +9,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 import { MotionDiv } from '@/lib/motion'
-import { isMobile, isTablet } from '@/shared/constants/breakpoints'
 import { OUR_SERVICES } from '@/shared/database/ourServices'
+import { useDevice } from '@/shared/hooks/useDevice'
 
 import HeadingSection from './HeadingSection'
 import ServiceCard from './cards/ServiceCard'
@@ -20,6 +20,7 @@ const services = OUR_SERVICES
 export default function OurServices() {
     const carouselRef: RefObject<CarouselRef | null> = createRef<CarouselRef>()
     const tHome = useTranslations('landing.home')
+    const { isMobile, isTablet, isDesktop } = useDevice()
 
     return (
         <div className="container space-y-5 lg:space-y-8">
@@ -58,15 +59,16 @@ export default function OurServices() {
             </div>
             <Carousel
                 autoplay
-                speed={1200}
+                speed={1400}
                 ref={carouselRef}
                 draggable
                 lazyLoad="anticipated"
-                slidesToShow={isMobile ? (isTablet ? 2 : 1) : 4}
+                slidesToShow={isDesktop ? 4 : isTablet ? 2 : 1}
                 centerPadding="30"
                 dots={false}
                 className="!w-full"
                 infinite
+                slidesToScroll={isDesktop ? 4 : isTablet ? 2 : 1}
             >
                 {services?.map((service, idx) => (
                     <MotionDiv
