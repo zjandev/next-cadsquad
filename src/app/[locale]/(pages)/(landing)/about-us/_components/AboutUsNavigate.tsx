@@ -1,8 +1,14 @@
+'use client'
+
 import React from 'react'
 
+import { usePathname } from '@/i18n/navigation'
 import { ABOUT_US_NAVIGATE } from '@/shared/constants/appConstant'
 
 export default function AboutUsNavigate() {
+    const pathname = usePathname()
+    console.log(pathname)
+
     return (
         <nav className="bg-border">
             <ul className="container flex items-center justify-center">

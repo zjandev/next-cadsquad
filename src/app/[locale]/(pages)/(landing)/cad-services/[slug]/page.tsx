@@ -2,6 +2,7 @@ import React from 'react'
 import { Suspense } from 'react'
 
 import { Breadcrumb, Image } from 'antd'
+import { ChevronsLeft, ChevronsRight } from 'lucide-react'
 import { MDXRemote } from 'next-mdx-remote-client/rsc'
 
 import { Link } from '@/i18n/navigation'
@@ -9,6 +10,8 @@ import { MotionSection } from '@/lib/motion'
 import { cleanMarkdownString } from '@/lib/utils'
 import { OUR_SERVICES } from '@/shared/database/ourServices'
 import { Service } from '@/validationSchemas/service.schema'
+
+import OurServices from '../../(home)/_components/OurServices'
 
 export default async function CADServiceDetailPage({
     params,
@@ -20,6 +23,10 @@ export default async function CADServiceDetailPage({
     const cadServices = OUR_SERVICES.filter((item) => item.slug === slug)
 
     const data = cadServices?.[0] as Service
+
+    const prevService = data.id! - 1 !== 0 && OUR_SERVICES[data.id! - 1]
+    const nextService =
+        data.id! + 1 < OUR_SERVICES.length && OUR_SERVICES[data.id! + 1]
 
     /**
      * Use for create new content with this template
@@ -103,8 +110,8 @@ export default async function CADServiceDetailPage({
                             (data?.thumbnail as string)
                         }
                         alt="Image"
-                        className="!object-cover !h-full"
-                        rootClassName="!object-cover !h-full"
+                        className="!object-cover !size-full"
+                        rootClassName="!object-cover !size-full"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
                 </div>
@@ -174,6 +181,59 @@ export default async function CADServiceDetailPage({
                         )}
                     />
                 </Suspense>
+            </MotionSection>
+
+            <MotionSection className="container mt-24 mb-16 flex items-center justify-end lg:justify-between gap-5">
+                {prevService ? (
+                    <Link
+                        href={`/cad-services/${prevService.slug}`}
+                        className="block"
+                    >
+                        <button className="hidden lg:block text-left border border-border rounded-lg px-7 py-4 group transition duration-250 hover:border-danger cursor-pointer">
+                            <div className="flex items-center justify-start gap-1">
+                                <ChevronsLeft
+                                    size={16}
+                                    className="group-hover:text-danger transition duration-250"
+                                />
+                                <p className="text-sm font-semibold opacity-75">
+                                    Trước đó
+                                </p>
+                            </div>
+                            <p className="mt-1 text-lg font-semibold line-clamp-2 w-[350px] max-h-[2lh] leading-normal group-hover:text-danger transition duration-250">
+                                {prevService.name}
+                            </p>
+                        </button>
+                    </Link>
+                ) : (
+                    <button></button>
+                )}
+                {nextService ? (
+                    <Link
+                        href={`/cad-services/${nextService.slug}`}
+                        className="block"
+                    >
+                        <button className="text-right border border-border rounded-lg px-7 py-4 group transition duration-250 hover:border-danger cursor-pointer">
+                            <div className="flex items-center justify-end gap-1">
+                                <p className="text-sm font-semibold opacity-75">
+                                    Kế tiếp
+                                </p>
+                                <ChevronsRight
+                                    size={16}
+                                    className="group-hover:text-danger transition duration-250"
+                                />
+                            </div>
+                            <p className="mt-1 text-lg font-semibold line-clamp-2 w-[350px] max-h-[2lh] leading-normal group-hover:text-danger transition duration-250">
+                                {nextService.name}
+                            </p>
+                        </button>
+                    </Link>
+                ) : (
+                    <button></button>
+                )}
+            </MotionSection>
+
+            <MotionSection>
+                <OurServices />
             </MotionSection>
         </div>
     )

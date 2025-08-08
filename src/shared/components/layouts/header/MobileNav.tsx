@@ -123,14 +123,15 @@ function RootNav({
                                     <p className="!text-black uppercase font-semibold text-lg">
                                         {item.enLabel}
                                     </p>
-                                    {item.outSite && (
-                                        <div className="size-12 flex items-center justify-center">
+
+                                    <div className="size-12 flex items-center justify-center">
+                                        {item.outSite && (
                                             <ArrowUpRight
                                                 className="!text-danger"
                                                 size={20}
                                             />
-                                        </div>
-                                    )}
+                                        )}
+                                    </div>
                                 </div>
                             </Link>
                         )
@@ -159,7 +160,7 @@ function NavItem({
                 onClick={() => {
                     setCurrentNav(null)
                 }}
-                className="mx-4 flex items-center justify-start gap-6"
+                className="mx-4 flex items-center justify-start gap-6 cursor-pointer"
             >
                 <Button
                     isIconOnly
