@@ -64,3 +64,54 @@ export const WHY_CHOOSE_US: Reason[] = [
         icon: DollarIco,
     },
 ]
+
+export const VI_WHY_CHOOSE_US: Reason[] = [
+    {
+        title: 'Kinh nghiệm và Chuyên môn',
+        description:
+            'CADSQUAD sở hữu bề dày kinh nghiệm trong lĩnh vực mô hình hóa và dựng hình 3D, đặc biệt trong ngành cơ khí. Chuyên môn sâu của đội ngũ chúng tôi đảm bảo mang lại kết quả chất lượng cao.',
+        icon: ExperienceIco,
+    },
+    {
+        title: 'Dịch vụ Toàn diện',
+        description:
+            'Chúng tôi cung cấp đa dạng dịch vụ, bao gồm mô hình 3D, bản vẽ 2D, kết cấu thép, mô phỏng, dựng hình, in 3D. Sự đa dạng này đáp ứng nhiều nhu cầu khác nhau của khách hàng.',
+        icon: ServiceIco,
+    },
+    {
+        title: 'Đảm bảo Chất lượng',
+        description:
+            'CADSQUAD cam kết mang lại kết quả xuất sắc với sự chính xác và chú trọng từng chi tiết. Quy trình kiểm soát chất lượng của chúng tôi đảm bảo sự hoàn hảo trong mọi dự án.',
+        icon: PremiumIco,
+    },
+    {
+        title: 'Giải pháp Sáng tạo',
+        description:
+            'Đội ngũ nghệ sĩ 3D của chúng tôi tận tâm biến ý tưởng của bạn thành hiện thực với sự sáng tạo và đổi mới, biến các khái niệm thành những hình ảnh ấn tượng để lại dấu ấn lâu dài.',
+        icon: InnovationIco,
+    },
+    {
+        title: 'Công nghệ Hiện đại',
+        description:
+            'Chúng tôi áp dụng các công cụ phần mềm và phần cứng mới nhất để luôn dẫn đầu trong ngành, đảm bảo hiệu quả và độ chính xác cho mọi dự án.',
+        icon: LearningIco,
+    },
+    {
+        title: 'Giao hàng Đúng hạn',
+        description:
+            'CADSQUAD hiểu rõ tầm quan trọng của tiến độ. Chúng tôi luôn nỗ lực bàn giao dự án đúng thời gian, giúp bạn duy trì lịch trình công việc.',
+        icon: DeliveryIco,
+    },
+    {
+        title: 'Lấy Khách hàng làm Trung tâm',
+        description:
+            'Chúng tôi ưu tiên giao tiếp cởi mở với khách hàng, đảm bảo tầm nhìn và phản hồi của bạn được tích hợp vào quá trình thiết kế để đạt kết quả mong muốn.',
+        icon: SatisfactionIco,
+    },
+    {
+        title: 'Giá cả Cạnh tranh',
+        description:
+            'Bên cạnh chất lượng dịch vụ cao, CADSQUAD vẫn mang đến mức giá cạnh tranh, giúp dịch vụ mô hình 3D, dựng hình và thiết kế chuyên nghiệp trở nên dễ tiếp cận cho nhiều khách hàng.',
+        icon: DollarIco,
+    },
+]

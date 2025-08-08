@@ -1,8 +1,9 @@
 'use client'
 
-import React from 'react'
+import React, { useTransition } from 'react'
 
 import { Button } from '@heroui/react'
+import { useTranslations } from 'next-intl'
 
 import { Link } from '@/i18n/navigation'
 import { POSTS } from '@/shared/database/posts'
@@ -11,6 +12,7 @@ import FeaturedPosts from './_components/FeaturedPosts'
 import RecentPosts from './_components/RecentPosts'
 
 export default function NewsAndMediaPage() {
+    const tNewMedia = useTranslations('landing.newsMedia')
     const featuredPosts = POSTS
     const recentPosts = POSTS
 
@@ -21,10 +23,12 @@ export default function NewsAndMediaPage() {
             </section>
             <section className="mt-14 space-y-8">
                 <div className="flex items-center justify-between gap-5">
-                    <h2 className="text-3xl font-semibold">Recent Posts</h2>
+                    <h2 className="text-3xl font-semibold">
+                        {tNewMedia('recentPosts')}
+                    </h2>
                     <Link href="/news-and-media/all-posts">
                         <Button variant="ghost" className="font-semibold">
-                            All Posts
+                            {tNewMedia('button.allPosts')}
                         </Button>
                     </Link>
                 </div>

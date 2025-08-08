@@ -16,7 +16,7 @@
                 "title": "Dự án <highlight>phổ biến</highlight>"
             },
             "whyChooseUs": {
-                "title": "Tại sao chọn <highlight> CSD </highlight>?"
+                "title": "Tại sao chọn <highlight> Cadsquad </highlight>?"
             },
             "customerReview": {
                 "title": "<highlight>Đánh giá</highlight>"
@@ -48,10 +48,40 @@
             }
         }
     },
+    "aboutUs": {
+        "heading": {
+            "title": "Giới thiệu về Cadsquad",
+            "description": ""
+        },
+        "sections": {
+            "overview": {
+                "title": "Tổng quan",
+                "aboutCadsquad": "Về CADSQUAD"
+            },
+            "ourJourney": {
+                "title": "Lịch sử phát triển"
+            },
+            "clientAndPartner": {
+                "title": "Khách hàng và đối tác",
+                "button": {
+                    "client": "Khách hàng",
+                    "partner": "Đối tác"
+                }
+            }
+        }
+    },
     "cadServices": {
         "heading": {
             "title": "Dịch vụ CAD",
             "description": "Khách hàng và nhân viên là trung tâm trong mọi hoạt động của CADSQUAD. Sự hài lòng của khách hàng là kim chỉ nam dẫn đến thành công của tổ chức. Vì vậy, CADSQUAD luôn nỗ lực lắng nghe, thấu hiểu và nhanh chóng giải quyết các yêu cầu của khách hàng, đồng thời không ngừng nâng cao chất lượng dịch vụ. Với cam kết hỗ trợ chi phí thiết kế hợp lý khi sử dụng dịch vụ của CADSQUAD, chúng tôi tin rằng doanh nghiệp của bạn sẽ hài lòng. Đội ngũ kỹ sư trẻ đầy nhiệt huyết của chúng tôi đều tốt nghiệp từ các trường kỹ thuật uy tín và từng làm việc tại các tập đoàn đa quốc gia, được đào tạo bài bản về các phần mềm kỹ thuật như Autodesk AutoCAD, Autodesk Inventor, Creo... Chúng tôi tự tin vào chất lượng sản phẩm khi bạn lựa chọn đồng hành cùng chúng tôi."
+        }
+    },
+    "newsMedia": {
+        "otherFeaturedPost": "Bài viết nổi bật khác",
+        "recentPosts": "Bài viết gần đây",
+        "relatedPosts": "Bài viết liên quan",
+        "button": {
+            "allPosts": "Tất cả bài viết"
         }
     }
 }

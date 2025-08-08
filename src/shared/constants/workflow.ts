@@ -36,4 +36,42 @@ export const WORKFLOW = [
     },
 ]
 
+export const VI_WORKFLOW = [
+    {
+        stepNumber: 1,
+        title: 'Tiếp nhận ý tưởng',
+        description:
+            'Chúng tôi bắt đầu bằng việc tiếp nhận ý tưởng và tìm hiểu tầm nhìn của bạn. Đội ngũ của chúng tôi sẽ phối hợp để nắm rõ mục tiêu và các yêu cầu đặc thù của dự án.',
+        color: '#ef4444',
+    },
+    {
+        stepNumber: 2,
+        title: 'Mô hình 3D và Bản vẽ kỹ thuật',
+        description:
+            'Khi đã hiểu rõ ý tưởng của bạn, các chuyên gia của chúng tôi sẽ tiến hành tạo mô hình 3D chi tiết và bản vẽ kỹ thuật. Đây là nền tảng cho các yếu tố thiết kế và kỹ thuật của dự án.',
+        color: '#f59e0b',
+    },
+    {
+        stepNumber: 3,
+        title: 'Kiểm tra và Bàn giao',
+        description:
+            'Sau khi hoàn thành mô hình 3D và bản vẽ kỹ thuật, chúng tôi tiến hành kiểm tra chất lượng kỹ lưỡng để đảm bảo mọi yếu tố đạt tiêu chuẩn. Sau khi xác nhận đạt yêu cầu, chúng tôi sẽ bàn giao dự án cho bạn.',
+        color: '#10b981',
+    },
+    {
+        stepNumber: 4,
+        title: 'Sản xuất',
+        description:
+            'Tùy thuộc vào tính chất dự án, bước này có thể bao gồm sản xuất, gia công hoặc hiện thực hóa thiết kế. Chúng tôi tùy chỉnh quy trình sản xuất để phù hợp với yêu cầu và mục tiêu cụ thể của bạn.',
+        color: '#3b82f6',
+    },
+    {
+        stepNumber: 5,
+        title: 'Kiểm tra nghiệm thu',
+        description:
+            'Giai đoạn cuối cùng là kiểm tra nghiệm thu, được thực hiện dựa trên nhu cầu và tiêu chí riêng của dự án. Chúng tôi phối hợp chặt chẽ với bạn để tiến hành các bước kiểm tra cần thiết, đảm bảo sản phẩm cuối cùng đáp ứng đúng kỳ vọng.',
+        color: '#8b5cf6',
+    },
+]
+
 export type WorkflowItem = (typeof WORKFLOW)[0]

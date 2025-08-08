@@ -1,20 +1,14 @@
 'use client'
 
-import { SVGProps, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
 import { AnimatePresence } from 'motion/react'
 import Image from 'next/image'
 
 import { MotionDiv, MotionP, MotionSpan } from '@/lib/motion'
+import { Testimonial } from '@/shared/database/testimonials'
 
-export type Testimonial = {
-    quote: string
-    name: string
-    designation: (props: SVGProps<SVGSVGElement>) => React.JSX.Element
-    destinationName: string
-    src: string
-}
 export const AnimatedTestimonials = ({
     testimonials,
     autoplay = false,
@@ -125,7 +119,10 @@ export const AnimatedTestimonials = ({
                             {testimonials[active].name}
                         </h3>
                         <p className="text-sm text-gray-500 dark:text-neutral-500">
-                            {testimonials[active].designation}
+                            {
+                                testimonials[active]
+                                    .designation as unknown as React.ReactNode
+                            }
                         </p>
                         <MotionP className="mt-3 lg:mt-8 text-base lg:text-lg text-gray-500 dark:text-neutral-300 line-clamp-5">
                             {testimonials[active].quote

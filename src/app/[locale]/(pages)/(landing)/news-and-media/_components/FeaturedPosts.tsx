@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { useTranslations } from 'next-intl'
+
 import { Post } from '@/validationSchemas/post.schema'
 
 import PostCard from './cards/PostCard'
@@ -8,6 +10,7 @@ type Props = {
     data: Post[]
 }
 export default function FeaturedPosts({ data }: Props) {
+    const tNewMedia = useTranslations('landing.newsMedia')
     const firstFeaturedPost = data?.[0]
     const otherPosts = data?.slice(1, 6)
 
@@ -18,7 +21,7 @@ export default function FeaturedPosts({ data }: Props) {
             </div>
             <div className="mt-6 lg:mt-0 col-span-1 space-y-2">
                 <h2 className="mt-1 text-2xl font-semibold">
-                    Other featured posts
+                    {tNewMedia('otherFeaturedPost')}
                 </h2>
                 <div className="grid grid-rows-5 gap-2">
                     {otherPosts.map((post, idx) => {

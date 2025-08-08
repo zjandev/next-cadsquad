@@ -4,15 +4,18 @@ import React from 'react'
 
 import { Accordion, AccordionItem } from '@heroui/react'
 import { Image } from 'antd'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { MotionDiv } from '@/lib/motion'
-import { WORKFLOW } from '@/shared/constants/appConstant'
+import { VI_WORKFLOW, WORKFLOW } from '@/shared/constants/workflow'
 
 import HeadingSection from './HeadingSection'
 
 export default function Workflow() {
+    const locale = useLocale()
     const tHome = useTranslations('landing.home')
+
+    const workflow = locale === 'vi' ? VI_WORKFLOW : WORKFLOW
 
     return (
         <div className="container space-y-5 lg:space-y-8">
@@ -24,9 +27,6 @@ export default function Workflow() {
                 })}
             </HeadingSection>
             <div className="lg:grid grid-cols-2 gap-8">
-                {/* <div className="flex items-center justify-center h-[600px] w-full bg-white">
-                    <WorkflowScene />
-                </div> */}
                 <MotionDiv
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{
@@ -54,7 +54,7 @@ export default function Workflow() {
                 </MotionDiv>
                 <div>
                     <Accordion defaultSelectedKeys={['0']}>
-                        {WORKFLOW.map((item, idx) => {
+                        {workflow.map((item, idx) => {
                             return (
                                 <AccordionItem
                                     key={idx}

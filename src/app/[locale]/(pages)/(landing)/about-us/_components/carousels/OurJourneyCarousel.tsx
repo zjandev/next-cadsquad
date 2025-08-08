@@ -7,11 +7,14 @@ import { Image } from 'antd'
 import useEmblaCarousel from 'embla-carousel-react'
 import { AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useLocale } from 'next-intl'
 
 import { MotionDiv, MotionLi, MotionP } from '@/lib/motion'
-import { OUR_JOURNEY } from '@/shared/database/ourJourney'
+import { OUR_JOURNEY, VI_OUR_JOURNEY } from '@/shared/database/ourJourney'
 
 export default function OurJourneyCarousel() {
+    const locale = useLocale()
+    const ourJourneys = locale === 'vi' ? VI_OUR_JOURNEY : OUR_JOURNEY
     const [focusedSlide, setFocusedSlide] = useState(0)
 
     const [emblaTimeRef, emblaTimeApi] = useEmblaCarousel()
@@ -53,7 +56,7 @@ export default function OurJourneyCarousel() {
                 <div className="h-0.5 w-screen bg-[#dcdcdc]" />
                 <div ref={emblaTimeRef} className="-mt-[8px]">
                     <div className="flex gap-5 first:ml-[590px] last:mr-[590px]">
-                        {OUR_JOURNEY.map((jNey, idx) => {
+                        {ourJourneys.map((jNey, idx) => {
                             const isFocus = idx === focusedSlide
 
                             return (
@@ -126,7 +129,7 @@ export default function OurJourneyCarousel() {
 
                 <div ref={emblaMainRef} className="mt-10">
                     <div className="first:ml-[270px] last:mr-[270px] flex gap-5">
-                        {OUR_JOURNEY.map((jNey, idx) => {
+                        {ourJourneys.map((jNey, idx) => {
                             const isFocus = idx === focusedSlide
 
                             return (

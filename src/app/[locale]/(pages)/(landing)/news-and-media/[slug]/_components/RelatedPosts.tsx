@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { useTranslations } from 'next-intl'
+
 import { Post } from '@/validationSchemas/post.schema'
 
 import PostCard from '../../_components/cards/PostCard'
@@ -9,9 +11,12 @@ type Props = {
 }
 
 export default function RelatedPosts({ data }: Props) {
+    const tNewMedia = useTranslations('landing.newsMedia')
     return (
         <div className="space-y-5">
-            <h4 className="text-lg lg:text-sm font-semibold">Related Posts</h4>
+            <h4 className="text-lg lg:text-sm font-semibold">
+                {tNewMedia('relatedPosts')}
+            </h4>
             <div className="lg:max-h-[72vh] pb-12 lg:pb-0 overflow-y-auto space-y-1.5">
                 {data.map((post) => {
                     return (

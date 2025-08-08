@@ -2,13 +2,16 @@
 
 import React from 'react'
 
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { AnimatedTestimonials } from '@/shared/components/ui/animated-testimonials'
-import { TESTIMONIALS } from '@/shared/database/testimonials'
+import { TESTIMONIALS, VI_TESTIMONIALS } from '@/shared/database/testimonials'
 
 export default function Testimonials() {
+    const locale = useLocale()
     const tHome = useTranslations('landing.home')
+
+    const testimonials = locale === 'vi' ? VI_TESTIMONIALS : TESTIMONIALS
 
     return (
         <div className="container">
@@ -20,7 +23,7 @@ export default function Testimonials() {
                 })}
             </h2>
             <div>
-                <AnimatedTestimonials testimonials={TESTIMONIALS} autoplay />
+                <AnimatedTestimonials testimonials={testimonials} autoplay />
             </div>
         </div>
     )

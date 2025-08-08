@@ -41,7 +41,11 @@ export default function ContactUs() {
                     </p>
                     <div className="mt-8 flex items-center justify-start gap-4 w-full text-white">
                         {CONTACT_INFORMATIONS.map((contact, index) => (
-                            <Link href={contact.path} key={index}>
+                            <Link
+                                href={contact.path}
+                                key={index}
+                                target="_blank"
+                            >
                                 <Button
                                     isIconOnly
                                     className="rounded-full"

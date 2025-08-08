@@ -1,13 +1,23 @@
 export const ABOUT_US_NAVIGATE = [
-    { viTitle: 'Tổng quan', enTitle: 'Overview', href: '/about-us/#overview' },
+    { title: 'Overview', href: '/about-us/#overview' },
     {
-        viTitle: 'Lịch sử phát triển',
-        enTitle: 'Our journey',
+        title: 'Our journey',
         href: '/about-us/#our-journey',
     },
     {
-        viTitle: 'Khách hàng & Đối tác',
-        enTitle: 'Client & Partner',
+        title: 'Client & Partner',
+        href: '/about-us/#client-partner',
+    },
+]
+
+export const VI_ABOUT_US_NAVIGATE = [
+    { title: 'Tổng quan', href: '/about-us/#overview' },
+    {
+        title: 'Lịch sử phát triển',
+        href: '/about-us/#our-journey',
+    },
+    {
+        title: 'Khách hàng & Đối tác',
         href: '/about-us/#client-partner',
     },
 ]

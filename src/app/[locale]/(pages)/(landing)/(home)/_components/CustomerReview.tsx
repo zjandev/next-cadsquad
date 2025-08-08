@@ -5,22 +5,25 @@ import React, { useEffect, useRef } from 'react'
 import { Button } from '@heroui/react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { MotionDiv } from '@/lib/motion'
-import { TESTIMONIALS } from '@/shared/database/testimonials'
+import { TESTIMONIALS, VI_TESTIMONIALS } from '@/shared/database/testimonials'
 import { useDevice } from '@/shared/hooks/useDevice'
 
 import HeadingSection from './HeadingSection'
 import CustomerReviewCard from './cards/CustomerReviewCard'
 
 export default function CustomerReview() {
+    const locale = useLocale()
     const tHome = useTranslations('landing.home')
     const { isMobile } = useDevice()
 
     const [emblaRef, emblaApi] = useEmblaCarousel()
     const prevButtonRef = useRef<HTMLButtonElement | null>(null)
     const nextButtonRef = useRef<HTMLButtonElement | null>(null)
+
+    const testimonials = locale === 'vi' ? VI_TESTIMONIALS : TESTIMONIALS
 
     useEffect(() => {
         if (emblaApi) {
@@ -76,7 +79,7 @@ export default function CustomerReview() {
             <div className="relative max-w-screen pl-auto">
                 <div ref={emblaRef}>
                     <div className="flex gap-5">
-                        {TESTIMONIALS.map((tes, idx) => (
+                        {testimonials.map((tes, idx) => (
                             <MotionDiv
                                 key={idx}
                                 initial={{ opacity: 0, y: 20 }}

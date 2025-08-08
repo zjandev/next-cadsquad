@@ -4,12 +4,16 @@ import React from 'react'
 
 import { Button } from '@heroui/react'
 import { Image as Img } from 'antd'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 import ClientPartnerImg from '@/assets/images/client-partnert-bg.webp'
 import { PARTNER } from '@/lib/seeds/partner'
 
 export default function ClientPartner() {
+    const tClientPartner = useTranslations(
+        'landing.aboutUs.sections.clientAndPartner'
+    )
     return (
         <section className="relative w-full overflow-hidden min-h-[780px] pt-24">
             <div className="relative w-full min-h-[780px]">
@@ -23,21 +27,22 @@ export default function ClientPartner() {
                 <div className="absolute w-full top-0 left-0">
                     <div className="container">
                         <h2 className="mt-16 text-white text-center uppercase font-semibold text-xl">
-                            Khách hàng và đối tác
+                            {tClientPartner('title')}
                         </h2>
 
                         <div className="mt-10 flex items-center justify-center gap-6">
                             <Button
-                                className="rounded-full px-6 font-medium uppercase border-white text-white"
-                                variant="ghost"
-                            >
-                                Khách hàng
-                            </Button>
-                            <Button
-                                className="rounded-full px-6 font-medium uppercase border-white text-white bg-danger"
+                                className="rounded-full px-8 font-medium uppercase border-white text-white bg-danger"
                                 variant="solid"
                             >
-                                Đối tác
+                                {tClientPartner('button.client')}
+                            </Button>
+                            <Button
+                                className="rounded-full px-8 font-medium uppercase border-white text-white"
+                                variant="ghost"
+                                isDisabled
+                            >
+                                {tClientPartner('button.partner')}
                             </Button>
                         </div>
                         <div className="mt-10 grid grid-cols-5 gap-10">
