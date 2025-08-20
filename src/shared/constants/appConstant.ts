@@ -51,23 +51,31 @@ export type Social = (typeof SOCIALS)[0]
 export const CONTACT_INFORMATIONS = [
     {
         icon: CallIcon,
+        contactName: 'Call',
         name: '076 527 9228',
         path: 'tel:0765279228',
+        color: '#000000',
     },
     {
         icon: MailIcon,
+        contactName: 'Mail',
         name: 'Contact@cadsquad.vn',
         path: 'mailto:contact@cadsquad.vn',
+        color: '#888888',
     },
     {
         icon: ZaloIcon,
+        contactName: 'Zalo',
         name: 'Zalo.me/0765279228',
         path: 'https://zalo.me/0765279228',
+        color: '#0068ff',
     },
     {
         icon: FiverrIcon,
+        contactName: 'Fiverr',
         name: 'Fiverr.com/vietnamcsd',
         path: 'https://www.fiverr.com/vietnamcsd',
+        color: '#24d366',
     },
 ]
 export type ContactInfor = (typeof CONTACT_INFORMATIONS)[0]

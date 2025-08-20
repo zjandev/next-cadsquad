@@ -20,7 +20,14 @@ export function AppProvider({ children, locale, messages }: Props) {
         >
             <SwrProvider>
                 <HeroUIProvider>
-                    <ToastProvider />
+                    <ToastProvider
+                        placement="bottom-center"
+                        regionProps={{
+                            classNames: {
+                                base: '!z-[10000]',
+                            },
+                        }}
+                    />
                     <AntdRegistry>{children}</AntdRegistry>
                 </HeroUIProvider>
             </SwrProvider>

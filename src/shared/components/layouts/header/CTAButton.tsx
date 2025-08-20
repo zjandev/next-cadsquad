@@ -1,11 +1,14 @@
 'use client'
 
-import { Button } from '@heroui/react'
+import { Button, useDisclosure } from '@heroui/react'
 import { useTranslations } from 'next-intl'
 
 import { CallLoopIcon } from '@/shared/components/icons/CallLoopIcon'
 
+import ContactModal from '../../ContactModal'
+
 export default function CTAButton() {
+    const { isOpen, onOpen, onClose } = useDisclosure({ id: 'ContactModal' })
     const gradientColors = [
         '#f87171',
         '#ef4444',
@@ -18,6 +21,7 @@ export default function CTAButton() {
 
     return (
         <div className="relative">
+            <ContactModal isOpen={isOpen} onClose={onClose} />
             {/* Gradient background with pulsing effect */}
             <div
                 className="absolute inset-0 rounded-full animate-pulse blur-sm opacity-60"
@@ -38,6 +42,7 @@ export default function CTAButton() {
                         'gradient-shift 3s ease-in-out infinite alternate',
                 }}
                 endContent={<CallLoopIcon />}
+                onClick={() => onOpen()}
             >
                 {/* Shimmer effect overlay */}
                 <div className="absolute inset-0 transition-transform duration-700 ease-in-out -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full" />
