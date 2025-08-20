@@ -9,11 +9,9 @@ import { Link } from '@/i18n/navigation'
 import { SupportLanguages } from '@/i18n/routing'
 import { MotionDiv, MotionP } from '@/lib/motion'
 import Logo from '@/shared/components/Logo'
-import {
-    CONTACT_INFORMATIONS,
-    FOOTER_LINKS,
-    SOCIALS,
-} from '@/shared/constants/appConstant'
+import { CONTACT_INFORMATIONS, SOCIALS } from '@/shared/constants/appConstant'
+import { FOOTER_LINKS } from '@/shared/constants/footerLinks'
+import { OUR_SERVICES, VI_OUR_SERVICES } from '@/shared/database/ourServices'
 
 import Decorate from './Decorate'
 import SocialButton from './SocialButton'
@@ -35,6 +33,26 @@ export default function Footer() {
             width: '100%',
         },
     }
+    const services = locale === 'vi' ? VI_OUR_SERVICES : OUR_SERVICES
+
+    const footerLinks = FOOTER_LINKS.map((group) => {
+        if (group.enGroupName === 'CAD services') {
+            const newChilds = services.map((item) => {
+                return {
+                    viLabel: item.name,
+                    enLabel: item.name,
+                    href: `/cad-services/${item.slug}`,
+                }
+            })
+
+            return {
+                ...group,
+                children: newChilds,
+            }
+        }
+
+        return { ...group }
+    })
 
     return (
         <div className="max-w-screen xl:mx-20 relative h-full overflow-hidden text-white bg-linear-150 from-secondary-900 via-secondary-900 to-secondary-800 py-10 lg:py-6 px-6 lg:px-14 rounded-t-xl min-h-96">
@@ -68,7 +86,7 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className="lg:grid grid-cols-3 gap-5 mt-10 lg:mt-8 md:mt-6">
+                <div className="lg:grid grid-cols-4 gap-5 mt-10 lg:mt-8 md:mt-6">
                     <ul className="col-span-1 space-y-6">
                         {CONTACT_INFORMATIONS.map((contact, index) => (
                             <li
@@ -100,9 +118,9 @@ export default function Footer() {
                             </li>
                         ))}
                     </ul>
-                    <div className="mt-10 lg:mt-0 col-span-2">
-                        <div className="lg:grid grid-cols-2 space-y-10 xl:space-y-0">
-                            {FOOTER_LINKS.map((item, index) => {
+                    <div className="mt-10 lg:mt-0 col-span-3">
+                        <div className="lg:grid grid-cols-3 space-y-10 xl:space-y-0">
+                            {footerLinks.map((item, index) => {
                                 const groupName =
                                     item[
                                         `${locale as SupportLanguages}GroupName`
@@ -128,25 +146,28 @@ export default function Footer() {
                                             />
                                         </div>
                                         <ul className="mt-5 space-y-3">
-                                            {item.children.map(
-                                                (child, index) => {
-                                                    const label =
-                                                        child[
-                                                            `${locale as SupportLanguages}Label`
-                                                        ]
+                                            {item.children &&
+                                                item.children.map(
+                                                    (child, index) => {
+                                                        const label =
+                                                            child[
+                                                                `${locale as SupportLanguages}Label`
+                                                            ]
 
-                                                    return (
-                                                        <Link
-                                                            key={index}
-                                                            title={label}
-                                                            href={child.href}
-                                                            className="block hover:underline underline-offset-2"
-                                                        >
-                                                            {label}
-                                                        </Link>
-                                                    )
-                                                }
-                                            )}
+                                                        return (
+                                                            <Link
+                                                                key={index}
+                                                                title={label}
+                                                                href={
+                                                                    child.href
+                                                                }
+                                                                className="block hover:underline underline-offset-2 text-sm w-fit"
+                                                            >
+                                                                {label}
+                                                            </Link>
+                                                        )
+                                                    }
+                                                )}
                                         </ul>
                                     </MotionDiv>
                                 )

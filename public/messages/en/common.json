@@ -48,7 +48,9 @@
         "update": "Update",
         "contact": "Contact",
         "sendMessage": "Send message",
-        "getStartedNow": "Get started now"
+        "getStartedNow": "Get started now",
+        "next": "Next",
+        "previous": "Previous"
     },
     "table": {
         "importExportBtn": "Import / Export",
@@ -69,5 +71,19 @@
             "success": "Send email successfully!",
             "failed": "Network error!"
         }
+    },
+    "modal": {
+        "contactModal": {
+            "title": "Contact us",
+            "cta": "Contact via email",
+            "socialMedia": "Social media",
+            "copy": "Copy",
+            "success": "Copy successfully"
+        }
+    },
+    "breadcrumbs": {
+        "home": "Home",
+        "cadService": "CAD Services",
+        "aboutUs": "About us"
     }
 }

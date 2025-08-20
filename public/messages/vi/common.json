@@ -48,7 +48,9 @@
         "update": "Cập nhật",
         "contact": "Liên hệ",
         "sendMessage": "Gửi tin nhắn",
-        "getStartedNow": "Khám phá ngay"
+        "getStartedNow": "Khám phá ngay",
+        "next": "Kế tiếp",
+        "previous": "Trước đó"
     },
     "table": {
         "importExportBtn": "Nhập / Xuất",
@@ -69,5 +71,19 @@
             "success": "Gửi email thành công!",
             "failed": "Lỗi mạng!"
         }
+    },
+    "modal": {
+        "contactModal": {
+            "title": "Liên hệ với chúng tôi",
+            "cta": "Liên hệ qua email",
+            "socialMedia": "Mạng xã hội",
+            "copy": "Sao chép",
+            "success": "Sao chép thành công"
+        }
+    },
+    "breadcrumbs": {
+        "home": "Trang chủ",
+        "cadService": "Dịch vụ CAD",
+        "aboutUs": "Về chúng tôi"
     }
 }

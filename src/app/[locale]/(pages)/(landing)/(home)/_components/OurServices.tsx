@@ -6,18 +6,18 @@ import { Button } from '@heroui/react'
 import { Carousel } from 'antd'
 import { CarouselRef } from 'antd/es/carousel'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { MotionDiv } from '@/lib/motion'
-import { OUR_SERVICES } from '@/shared/database/ourServices'
+import { OUR_SERVICES, VI_OUR_SERVICES } from '@/shared/database/ourServices'
 import { useDevice } from '@/shared/hooks/useDevice'
 
 import HeadingSection from './HeadingSection'
 import ServiceCard from './cards/ServiceCard'
 
-const services = OUR_SERVICES
-
 export default function OurServices() {
+    const locale = useLocale()
+    const services = locale === 'vi' ? VI_OUR_SERVICES : OUR_SERVICES
     const carouselRef: RefObject<CarouselRef | null> = createRef<CarouselRef>()
     const tHome = useTranslations('landing.home')
     const { isMobile, isTablet, isDesktop } = useDevice()

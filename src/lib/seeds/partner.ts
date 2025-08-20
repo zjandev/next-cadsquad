@@ -15,9 +15,9 @@ export const PARTNER: Partner[] = [
     },
     {
         id: '3',
-        name: 'Alumafab',
+        name: 'BOSS',
         imageUrl:
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884849/Cadsquad/Partner/ALUMFAB_bljiic.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1755704447/Cadsquad/Partner/BOSS_iibjwv.png',
     },
     {
         id: '4',

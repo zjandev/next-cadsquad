@@ -11,7 +11,7 @@ export async function generateMetadata({
 
     return {
         title: data?.name + ' | Cadsquad.vn',
-        description: data?.description,
+        description: data?.textDescription,
         // keywords: data?.description?.split(','),
         openGraph: {
             title: data?.name,

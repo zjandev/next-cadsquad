@@ -1,17 +1,29 @@
+import { OUR_SERVICES } from '@/shared/database/ourServices'
+
 export const FOOTER_LINKS = [
     {
-        viGroupName: 'Dịch vụ CAD',
-        enGroupName: 'CAD services',
+        viGroupName: '',
+        enGroupName: '',
         children: [
             {
-                viLabel: 'Thiết kế 3D',
-                enLabel: '3D Modeling',
-                href: '/services/3d-modeling-and-rendering',
+                viLabel: 'Về chúng tôi',
+                enLabel: 'About us',
+                href: '/about-us',
             },
             {
-                viLabel: 'Kỹ thuật thép',
-                enLabel: 'Steel structure',
-                href: '/services/steel-structure',
+                viLabel: 'Tổng quan',
+                enLabel: 'Overview',
+                href: '/about-us#overview',
+            },
+            {
+                viLabel: 'Tầm nhìn',
+                enLabel: 'Vision',
+                href: '/about-us/vision',
+            },
+            {
+                viLabel: 'Hành trình của chúng tôi',
+                enLabel: 'Our Journey',
+                href: '/about-us#our-journey',
             },
         ],
     },
@@ -21,31 +33,48 @@ export const FOOTER_LINKS = [
         children: [
             {
                 viLabel: 'Khóa học AutoCAD cơ bản',
-                enLabel: 'Basic AutoCAD Course',
-                href: '/academy/basic-autocad-course',
+                enLabel: 'Autodesk Inventor Basic',
+                href: '/academy/autodesk-inventor-basic',
             },
             {
                 viLabel: 'Khóa học SolidWorks nâng cao',
-                enLabel: 'Advanced SolidWorks Course',
-                href: '/academy/advanced-solidworks-course',
+                enLabel: 'Autodesk Inventor Advance',
+                href: '/academy/autodesk-inventor-advance',
             },
             {
                 viLabel: 'Thiết kế sản phẩm 3D',
-                enLabel: '3D Product Design',
-                href: '/academy/3d-product-design',
-            },
-            {
-                viLabel: 'Kỹ thuật mô phỏng CAE',
-                enLabel: 'CAE Simulation Techniques',
-                href: '/academy/cae-simulation-techniques',
-            },
-            {
-                viLabel: 'Lập trình gia công CAM',
-                enLabel: 'CAM Programming',
-                href: '/academy/cam-programming',
+                enLabel: 'Autodesk AutoCAD',
+                href: '/academy/autodesk-autoCAD',
             },
         ],
     },
+    {
+        viGroupName: 'Dịch vụ CAD',
+        enGroupName: 'CAD services',
+        children: [],
+    },
 ]
 
+const services = OUR_SERVICES
+const getInnerCadService = () => {
+    return FOOTER_LINKS.map((group) => {
+        if (group.enGroupName === 'CAD services') {
+            const newChilds = services.map((item) => {
+                return {
+                    viLabel: item.name,
+                    enLabel: item.name,
+                    href: `/cad-services/${item.slug}`,
+                }
+            })
+
+            return {
+                ...group,
+                children: newChilds,
+            }
+        }
+
+        return { ...group }
+    })
+}
+export const FOOTER = getInnerCadService()
 export type FooterLink = (typeof FOOTER_LINKS)[0]

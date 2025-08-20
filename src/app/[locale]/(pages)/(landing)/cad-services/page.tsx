@@ -3,17 +3,19 @@
 import React from 'react'
 
 import { Breadcrumb } from 'antd'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 import ImgCadService from '@/assets/images/cad-services.png'
 import { Link } from '@/i18n/navigation'
-import { OUR_SERVICES } from '@/shared/database/ourServices'
+import { OUR_SERVICES, VI_OUR_SERVICES } from '@/shared/database/ourServices'
 
 import ServiceCard from './_components/cards/ServiceCard'
 
 export default function CADServices() {
-    const tHome = useTranslations('landing.home')
+    const locale = useLocale()
+    const ourServicess = locale === 'vi' ? VI_OUR_SERVICES : OUR_SERVICES
+    const tBreadcrumb = useTranslations('breadcrumbs')
     const tCadServices = useTranslations('landing.cadServices')
 
     return (
@@ -32,17 +34,23 @@ export default function CADServices() {
                         <Breadcrumb
                             items={[
                                 {
-                                    title: tHome('heading.title'),
+                                    title: (
+                                        <Link
+                                            href="/"
+                                            style={{ color: 'hsl(0,0%,75%)' }}
+                                        >
+                                            {tBreadcrumb('home')}
+                                        </Link>
+                                    ),
                                 },
                                 {
                                     title: (
-                                        <Link
-                                            href="/cad-services"
-                                            style={{ color: 'white' }}
+                                        <p
+                                            style={{ color: 'hsl(0,0%,97%)' }}
                                             className="font-medium"
                                         >
-                                            {tCadServices('heading.title')}
-                                        </Link>
+                                            {tBreadcrumb('cadService')}
+                                        </p>
                                     ),
                                 },
                             ]}
@@ -61,7 +69,7 @@ export default function CADServices() {
                 </div>
             </section>
             <section className="container space-y-10 mt-14">
-                {OUR_SERVICES.map((service) => (
+                {ourServicess.map((service) => (
                     <ServiceCard key={service.id} data={service} />
                 ))}
             </section>

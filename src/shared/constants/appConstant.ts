@@ -9,7 +9,7 @@ import { ZaloIcon } from '@/shared/components/icons/ZaloIcon'
 import { ABOUT_US_NAVIGATE } from './aboutUsNavigate'
 import { APP_LANGUAGES } from './appLanguages'
 import { FLOAT_CONTACTS } from './floatContact'
-import { FOOTER_LINKS } from './footerLinks'
+import { FOOTER } from './footerLinks'
 import { HEADER_NAVIGATES } from './headerNavigate'
 import { WHY_CHOOSE_US } from './whyChooseUs'
 import { WORKFLOW } from './workflow'
@@ -85,7 +85,7 @@ export {
     HEADER_NAVIGATES,
     APP_LANGUAGES,
     WHY_CHOOSE_US,
-    FOOTER_LINKS,
+    FOOTER,
     FLOAT_CONTACTS,
     WORKFLOW,
 }

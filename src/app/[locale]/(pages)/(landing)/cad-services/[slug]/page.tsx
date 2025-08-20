@@ -1,32 +1,31 @@
 import React from 'react'
 import { Suspense } from 'react'
 
-import { Breadcrumb, Image } from 'antd'
-import { ChevronsLeft, ChevronsRight } from 'lucide-react'
+import { Image } from 'antd'
+import { getLocale } from 'next-intl/server'
 import { MDXRemote } from 'next-mdx-remote-client/rsc'
 
-import { Link } from '@/i18n/navigation'
 import { MotionSection } from '@/lib/motion'
 import { cleanMarkdownString } from '@/lib/utils'
-import { OUR_SERVICES } from '@/shared/database/ourServices'
+import { OUR_SERVICES, VI_OUR_SERVICES } from '@/shared/database/ourServices'
 import { Service } from '@/validationSchemas/service.schema'
 
 import OurServices from '../../(home)/_components/OurServices'
+import PageBreadcumbs from './_components/PageBreadcumbs'
+import ServiceNavigate from './_components/ServiceNavigate'
 
 export default async function CADServiceDetailPage({
     params,
 }: {
     params: Promise<{ slug: string }>
 }) {
+    const locale = await getLocale()
     const { slug } = await params
 
-    const cadServices = OUR_SERVICES.filter((item) => item.slug === slug)
+    const OurServicess = locale === 'vi' ? VI_OUR_SERVICES : OUR_SERVICES
+    const cadServices = OurServicess.filter((item) => item.slug === slug)
 
     const data = cadServices?.[0] as Service
-
-    const prevService = data.id! - 1 !== 0 && OUR_SERVICES[data.id! - 1]
-    const nextService =
-        data.id! + 1 < OUR_SERVICES.length && OUR_SERVICES[data.id! + 1]
 
     /**
      * Use for create new content with this template
@@ -97,8 +96,8 @@ export default async function CADServiceDetailPage({
 
     // console.log(JSON.stringify(templateContent.replaceAll('  ', '')))
 
-    const description = cleanMarkdownString(data.description ?? '')
-    const source = cleanMarkdownString(data.content ?? '')
+    const description = cleanMarkdownString(data?.description ?? '')
+    const source = cleanMarkdownString(data?.content ?? '')
 
     return (
         <div className="min-h-screen pb-20 max-w-screen">
@@ -117,31 +116,7 @@ export default async function CADServiceDetailPage({
                 </div>
                 <div className="absolute top-[50%] translate-y-[-50%] left-0 w-screen">
                     <div className="container" style={{ color: 'white' }}>
-                        <Breadcrumb
-                            items={[
-                                {
-                                    title: 'Home',
-                                },
-                                {
-                                    title: 'About us',
-                                },
-                                {
-                                    title: (
-                                        <Link
-                                            href="/about-us/vision"
-                                            style={{ color: 'white' }}
-                                            className="font-medium"
-                                        >
-                                            Vision
-                                        </Link>
-                                    ),
-                                },
-                            ]}
-                            style={{
-                                color: '#c4c4c4',
-                            }}
-                            separator={<p className="text-gray-400">/</p>}
-                        />
+                        <PageBreadcumbs pageName={data?.name ?? ''} />
                         <h2 className="mt-5 text-3xl lg:text-6xl font-bold font-saira mb-3">
                             {data?.name}
                         </h2>
@@ -168,8 +143,11 @@ export default async function CADServiceDetailPage({
                 className="container min-h-40 mt-16"
             >
                 <Suspense fallback={<p>Loading...</p>}>
+                    {/* Use antd Image and replace bold middle paraph */}
                     <MDXRemote
-                        source={source.replaceAll('img', 'Image')}
+                        source={source
+                            .replaceAll('img', 'Image')
+                            .replaceAll('**', '')}
                         components={{
                             Image,
                             wrapper: ({ children }) => (
@@ -184,52 +162,7 @@ export default async function CADServiceDetailPage({
             </MotionSection>
 
             <MotionSection className="container mt-24 mb-16 flex items-center justify-end lg:justify-between gap-5">
-                {prevService ? (
-                    <Link
-                        href={`/cad-services/${prevService.slug}`}
-                        className="block"
-                    >
-                        <button className="hidden lg:block text-left border border-border rounded-lg px-7 py-4 group transition duration-250 hover:border-danger cursor-pointer">
-                            <div className="flex items-center justify-start gap-1">
-                                <ChevronsLeft
-                                    size={16}
-                                    className="group-hover:text-danger transition duration-250"
-                                />
-                                <p className="text-sm font-semibold opacity-75">
-                                    Trước đó
-                                </p>
-                            </div>
-                            <p className="mt-1 text-lg font-semibold line-clamp-2 w-[350px] max-h-[2lh] leading-normal group-hover:text-danger transition duration-250">
-                                {prevService.name}
-                            </p>
-                        </button>
-                    </Link>
-                ) : (
-                    <button></button>
-                )}
-                {nextService ? (
-                    <Link
-                        href={`/cad-services/${nextService.slug}`}
-                        className="block"
-                    >
-                        <button className="text-right border border-border rounded-lg px-7 py-4 group transition duration-250 hover:border-danger cursor-pointer">
-                            <div className="flex items-center justify-end gap-1">
-                                <p className="text-sm font-semibold opacity-75">
-                                    Kế tiếp
-                                </p>
-                                <ChevronsRight
-                                    size={16}
-                                    className="group-hover:text-danger transition duration-250"
-                                />
-                            </div>
-                            <p className="mt-1 text-lg font-semibold line-clamp-2 w-[350px] max-h-[2lh] leading-normal group-hover:text-danger transition duration-250">
-                                {nextService.name}
-                            </p>
-                        </button>
-                    </Link>
-                ) : (
-                    <button></button>
-                )}
+                <ServiceNavigate service={data} />
             </MotionSection>
 
             <MotionSection>

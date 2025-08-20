@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import { Button, Input, addToast } from '@heroui/react'
 import { Modal } from 'antd'
 import { Mail } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 import { Link } from '@/i18n/navigation'
 
@@ -15,6 +16,7 @@ type Props = {
     onClose: () => void
 }
 export default function ContactModal({ isOpen, onClose }: Props) {
+    const tModal = useTranslations('modal.contactModal')
     const mailAddress = 'Contact@cadsquad.vn'
 
     const [isLoading, setLoading] = useState(false)
@@ -24,7 +26,7 @@ export default function ContactModal({ isOpen, onClose }: Props) {
             setLoading(true)
             await navigator.clipboard.writeText(mailAddress)
             addToast({
-                title: 'Sao chép thành công',
+                title: tModal('success'),
                 color: 'success',
             })
             console.log('Text copied to clipboard successfully!')
@@ -44,7 +46,7 @@ export default function ContactModal({ isOpen, onClose }: Props) {
                         background: 'hsl(0,0%,97%)',
                     }}
                 >
-                    Contact Us
+                    {tModal('title')}
                 </p>
             }
             footer={<></>}
@@ -70,7 +72,7 @@ export default function ContactModal({ isOpen, onClose }: Props) {
                             className="rounded-full"
                             color="danger"
                         >
-                            Liên hệ qua hộp thư
+                            {tModal('cta')}
                         </Button>
                     </Link>
                 </div>
@@ -123,7 +125,7 @@ export default function ContactModal({ isOpen, onClose }: Props) {
                                     await copyToClipboard()
                                 }}
                             >
-                                Sao chép
+                                {tModal('copy')}
                             </Button>
                         }
                         style={{

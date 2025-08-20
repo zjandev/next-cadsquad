@@ -5,10 +5,15 @@ import React, { useState } from 'react'
 import { Button } from '@heroui/react'
 import { Drawer } from 'antd'
 import { ArrowUpRight, ChevronLeft, ChevronRight, HomeIcon } from 'lucide-react'
+import { useLocale } from 'next-intl'
 import Image from 'next/image'
 
 import { Link, usePathname } from '@/i18n/navigation'
-import { NAVBAR_DATA, NavigateItem } from '@/shared/constants/headerNavigate'
+import {
+    HEADER_NAVIGATES,
+    NavigateItem,
+} from '@/shared/constants/headerNavigate'
+import { OUR_SERVICES, VI_OUR_SERVICES } from '@/shared/database/ourServices'
 
 import Logo from '../../Logo'
 import CTAButton from './CTAButton'
@@ -68,6 +73,28 @@ function RootNav({
     setCurrentNav: React.Dispatch<React.SetStateAction<NavigateItem | null>>
     onClose: () => void
 }) {
+    const locale = useLocale()
+    const services = locale === 'vi' ? VI_OUR_SERVICES : OUR_SERVICES
+
+    const navbarData = HEADER_NAVIGATES.map((service) => {
+        if (services && service.enLabel === 'CAD Services') {
+            const newMenus = services?.map((item) => {
+                return {
+                    viLabel: item.name,
+                    enLabel: item.name,
+                    image: item.thumbnail,
+                    href: `/cad-services/${item.slug}`,
+                }
+            })
+
+            return {
+                ...service,
+                menus: newMenus,
+            } as NavigateItem
+        }
+
+        return { ...service }
+    })
     const pathname = usePathname()
     const isHomePath = pathname === '/'
 
@@ -85,7 +112,7 @@ function RootNav({
                         </Button>
                     </Link>
                 </li>
-                {NAVBAR_DATA.map((item, idx) => {
+                {navbarData.map((item, idx) => {
                     if (item.menus) {
                         return (
                             <li
