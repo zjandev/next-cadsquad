@@ -50,7 +50,8 @@
         "sendMessage": "Gửi tin nhắn",
         "getStartedNow": "Khám phá ngay",
         "next": "Kế tiếp",
-        "previous": "Trước đó"
+        "previous": "Trước đó",
+        "explorer": "Khám phá ngay"
     },
     "table": {
         "importExportBtn": "Nhập / Xuất",

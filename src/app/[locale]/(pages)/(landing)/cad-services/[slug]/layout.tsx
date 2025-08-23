@@ -1,27 +1,33 @@
-import { OUR_SERVICES } from '@/shared/database/ourServices'
+import { getLocale } from 'next-intl/server'
+
+import { CAD_SERVICES } from '@/shared/database/cadServices'
 
 export async function generateMetadata({
     params,
 }: {
     params: Promise<{ locale: string; slug: string }>
 }) {
+    const locale = await getLocale()
     const { slug } = await params
 
-    const data = OUR_SERVICES.find((srv) => srv.slug === slug)
+    const data = CAD_SERVICES.find((srv) => srv.slug === slug)
+
+    const title = locale === 'vi' ? data?.title?.vi : data?.title?.original
+    const description = locale === 'vi' ? data?.plainDescription?.vi : data?.plainDescription?.original
 
     return {
-        title: data?.name + ' | Cadsquad.vn',
-        description: data?.textDescription,
+        title: title + ' | Cadsquad.vn',
+        description,
         // keywords: data?.description?.split(','),
         openGraph: {
-            title: data?.name,
-            description: data?.description,
+            title: title,
+            description: description,
             images: [
                 {
-                    url: data?.thumbnail,
+                    url: data?.thumbnail.horizontal,
                     width: 1200,
                     height: 630,
-                    alt: data?.name,
+                    alt: title,
                 },
             ],
             siteName: 'Cadsquad.vn',

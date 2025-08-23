@@ -9,7 +9,7 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { MotionDiv } from '@/lib/motion'
 import { useDevice } from '@/shared/hooks/useDevice'
-import { Service } from '@/validationSchemas/service.schema'
+import { Service } from '@/validationSchemas/cad-service.schema'
 
 type Props = {
     data: Service

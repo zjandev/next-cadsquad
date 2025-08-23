@@ -1,6 +1,21 @@
-import { OUR_SERVICES } from '@/shared/database/ourServices'
+import { CAD_SERVICES } from '@/shared/database/cadServices'
 
-export const FOOTER_LINKS = [
+const getCadServiceMenu: () => FooterLink['children'] = () => {
+    return CAD_SERVICES.map((item) => {
+        return {
+            enLabel: item.title.original!,
+            viLabel: item.title.vi!,
+            href: `/cad-services/${item.slug!}`,
+        }
+    })
+}
+
+export type FooterLink = {
+    viGroupName: string
+    enGroupName: string
+    children?: { viLabel: string; enLabel: string; href: string }[]
+}
+export const FOOTER_LINKS: FooterLink[] = [
     {
         viGroupName: '',
         enGroupName: '',
@@ -51,30 +66,6 @@ export const FOOTER_LINKS = [
     {
         viGroupName: 'Dịch vụ CAD',
         enGroupName: 'CAD services',
-        children: [],
+        children: getCadServiceMenu(),
     },
 ]
-
-const services = OUR_SERVICES
-const getInnerCadService = () => {
-    return FOOTER_LINKS.map((group) => {
-        if (group.enGroupName === 'CAD services') {
-            const newChilds = services.map((item) => {
-                return {
-                    viLabel: item.name,
-                    enLabel: item.name,
-                    href: `/cad-services/${item.slug}`,
-                }
-            })
-
-            return {
-                ...group,
-                children: newChilds,
-            }
-        }
-
-        return { ...group }
-    })
-}
-export const FOOTER = getInnerCadService()
-export type FooterLink = (typeof FOOTER_LINKS)[0]

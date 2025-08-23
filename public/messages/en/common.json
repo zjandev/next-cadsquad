@@ -50,7 +50,8 @@
         "sendMessage": "Send message",
         "getStartedNow": "Get started now",
         "next": "Next",
-        "previous": "Previous"
+        "previous": "Previous",
+        "explorer": "Explorer"
     },
     "table": {
         "importExportBtn": "Import / Export",

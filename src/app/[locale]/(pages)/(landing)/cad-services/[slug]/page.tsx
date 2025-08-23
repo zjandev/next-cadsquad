@@ -7,13 +7,13 @@ import { MDXRemote } from 'next-mdx-remote-client/rsc'
 
 import { MotionSection } from '@/lib/motion'
 import { cleanMarkdownString } from '@/lib/utils'
-import { OUR_SERVICES, VI_OUR_SERVICES } from '@/shared/database/ourServices'
-import { Service } from '@/validationSchemas/service.schema'
+import { CAD_SERVICES } from '@/shared/database/cadServices'
 
 import OurServices from '../../(home)/_components/OurServices'
 import PageBreadcumbs from './_components/PageBreadcumbs'
 import ServiceNavigate from './_components/ServiceNavigate'
 
+const cadServices = CAD_SERVICES
 export default async function CADServiceDetailPage({
     params,
 }: {
@@ -21,11 +21,7 @@ export default async function CADServiceDetailPage({
 }) {
     const locale = await getLocale()
     const { slug } = await params
-
-    const OurServicess = locale === 'vi' ? VI_OUR_SERVICES : OUR_SERVICES
-    const cadServices = OurServicess.filter((item) => item.slug === slug)
-
-    const data = cadServices?.[0] as Service
+    const data = cadServices.filter((item) => item.slug === slug)?.[0]
 
     /**
      * Use for create new content with this template
@@ -96,8 +92,16 @@ export default async function CADServiceDetailPage({
 
     // console.log(JSON.stringify(templateContent.replaceAll('  ', '')))
 
-    const description = cleanMarkdownString(data?.description ?? '')
-    const source = cleanMarkdownString(data?.content ?? '')
+    const descriptionSource = (
+        locale === 'vi' ? data?.description?.vi : data?.description?.original
+    ) as string
+    const contentSource = (
+        locale === 'vi' ? data?.content?.vi : data?.content?.original
+    ) as string
+    const description = cleanMarkdownString(descriptionSource)
+    const source = cleanMarkdownString(contentSource)
+
+    const title = locale === 'vi' ? data?.title?.vi : data?.title?.original
 
     return (
         <div className="min-h-screen pb-20 max-w-screen">
@@ -105,7 +109,7 @@ export default async function CADServiceDetailPage({
                 <div className="relative size-full">
                     <Image
                         src={
-                            data?.horizontalThumbnail ??
+                            data?.thumbnail.horizontal ??
                             (data?.thumbnail as string)
                         }
                         alt="Image"
@@ -116,9 +120,9 @@ export default async function CADServiceDetailPage({
                 </div>
                 <div className="absolute top-[50%] translate-y-[-50%] left-0 w-screen">
                     <div className="container" style={{ color: 'white' }}>
-                        <PageBreadcumbs pageName={data?.name ?? ''} />
+                        <PageBreadcumbs pageName={title as string} />
                         <h2 className="mt-5 text-3xl lg:text-6xl font-bold font-saira mb-3">
-                            {data?.name}
+                            {title}
                         </h2>
                         <MDXRemote
                             source={description}

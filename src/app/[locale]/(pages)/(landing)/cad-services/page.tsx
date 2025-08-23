@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 import ImgCadService from '@/assets/images/cad-services.png'
 import { Link } from '@/i18n/navigation'
-import { OUR_SERVICES, VI_OUR_SERVICES } from '@/shared/database/ourServices'
+import { OUR_SERVICES, VI_OUR_SERVICES } from '@/shared/database/cadServices'
 
 import ServiceCard from './_components/cards/ServiceCard'
 

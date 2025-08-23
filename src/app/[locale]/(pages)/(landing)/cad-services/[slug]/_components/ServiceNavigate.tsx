@@ -6,31 +6,31 @@ import { ChevronsLeft, ChevronsRight } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
 
 import { Link } from '@/i18n/navigation'
-import { OUR_SERVICES, VI_OUR_SERVICES } from '@/shared/database/ourServices'
-import { Service } from '@/validationSchemas/service.schema'
+import { CAD_SERVICES } from '@/shared/database/cadServices'
+import { CadService } from '@/validationSchemas/cad-service.schema'
 
-type Props = { service: Service }
+type Props = { service: CadService }
 
+const cadServices = CAD_SERVICES
 export default function ServiceNavigate({ service }: Props) {
     const locale = useLocale()
     const tButton = useTranslations('button')
 
-    const ourServicess = locale === 'vi' ? VI_OUR_SERVICES : OUR_SERVICES
-    const lastService = ourServicess.find(
-        (item) => item?.order === ourServicess.length - 1
+    const lastService = cadServices.find(
+        (item) => item?.order === cadServices.length - 1
     )
-    const firstService = ourServicess.find((item) => item?.order === 1)
+    const firstService = cadServices.find((item) => item?.order === 1)
 
     const prevService =
         Number(service?.order) - 1 === 0
             ? lastService
-            : ourServicess.find(
+            : cadServices.find(
                   (item) => item?.order === Number(service?.order) - 1
               )
     const nextService =
-        Number(service?.order) === ourServicess.length
+        Number(service?.order) === cadServices.length
             ? firstService
-            : ourServicess.find(
+            : cadServices.find(
                   (item) => item?.order === Number(service?.order) + 1
               )
 
@@ -48,7 +48,9 @@ export default function ServiceNavigate({ service }: Props) {
                         </p>
                     </div>
                     <p className="mt-1 text-lg font-semibold line-clamp-2 w-[350px] max-h-[2lh] leading-normal group-hover:text-danger transition duration-250">
-                        {prevService?.name}
+                        {locale === 'vi'
+                            ? prevService?.title?.vi
+                            : prevService?.title.original}
                     </p>
                 </button>
             </Link>
@@ -64,7 +66,9 @@ export default function ServiceNavigate({ service }: Props) {
                         />
                     </div>
                     <p className="mt-1 text-lg font-semibold line-clamp-2 w-[350px] max-h-[2lh] leading-normal group-hover:text-danger transition duration-250">
-                        {nextService?.name}
+                        {locale === 'vi'
+                            ? nextService?.title?.vi
+                            : nextService?.title.original}
                     </p>
                 </button>
             </Link>

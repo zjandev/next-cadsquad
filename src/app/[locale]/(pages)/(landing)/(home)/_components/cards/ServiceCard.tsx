@@ -3,10 +3,12 @@
 import { Image } from 'antd'
 import { MoveUpRight } from 'lucide-react'
 import { Variants } from 'motion'
+import { useLocale } from 'next-intl'
+import { useTranslations } from 'use-intl'
 
 import { Link } from '@/i18n/navigation'
 import { MotionButton, MotionDiv, MotionP } from '@/lib/motion'
-import { Service } from '@/validationSchemas/service.schema'
+import { CadService } from '@/validationSchemas/cad-service.schema'
 
 const buttonTextVariants: Variants = {
     init: {
@@ -29,9 +31,13 @@ const buttonTextVariants: Variants = {
     },
 }
 
-export default function ServiceCard({ data }: { data: Service }) {
+export default function ServiceCard({ data }: { data: CadService }) {
+    const tButton = useTranslations('button')
+    const locale = useLocale()
+    const title = locale === 'vi' ? data.title.vi : data.title.original
+
     return (
-        <div key={data.id} title={data.name} className="px-3">
+        <div key={data.id} title={title} className="px-3">
             <MotionDiv
                 initial="init"
                 animate="animate"
@@ -43,16 +49,16 @@ export default function ServiceCard({ data }: { data: Service }) {
                     className="block group size-full"
                 >
                     <Image
-                        src={data?.thumbnail}
+                        src={data?.thumbnail?.vertical}
                         alt="Service image"
-                        title={data.name}
+                        title={title}
                         rootClassName="!block size-full"
                         className="!block !size-full object-cover rounded-xl brightness-50 group-hover:scale-125 transition duration-250"
                         preview={false}
                     />
                     <div className="py-3 px-5 absolute top-1">
                         <p className="text-white text-lg font-semibold font-saira max-w-[90%]">
-                            {data.name}
+                            {title}
                         </p>
                     </div>
                 </Link>
@@ -63,7 +69,7 @@ export default function ServiceCard({ data }: { data: Service }) {
                             variants={buttonTextVariants}
                             className="leading-none text-base"
                         >
-                            Explorer
+                            {tButton('explorer')}
                         </MotionP>
                     </MotionButton>
                 </Link>

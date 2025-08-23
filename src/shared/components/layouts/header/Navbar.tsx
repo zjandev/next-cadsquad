@@ -15,34 +15,11 @@ import {
     HEADER_NAVIGATES,
     NavigateItem,
 } from '@/shared/constants/headerNavigate'
-import { OUR_SERVICES, VI_OUR_SERVICES } from '@/shared/database/ourServices'
 
 export default function Navbar() {
-    const locale = useLocale()
-    const services = locale === 'vi' ? VI_OUR_SERVICES : OUR_SERVICES
-
-    const navbarData = HEADER_NAVIGATES.map((service) => {
-        if (services && service.enLabel === 'CAD Services') {
-            const newMenus = services?.map((item) => {
-                return {
-                    viLabel: item.name,
-                    enLabel: item.name,
-                    image: item.thumbnail,
-                    href: `/cad-services/${item.slug}`,
-                }
-            })
-
-            return {
-                ...service,
-                menus: newMenus,
-            } as NavigateItem
-        }
-
-        return { ...service }
-    })
     return (
         <nav className="z-50 flex items-center justify-start gap-2">
-            {navbarData.map((item, index) => {
+            {HEADER_NAVIGATES.map((item, index) => {
                 return <NavbarItem key={index} data={item} index={index} />
             })}
         </nav>

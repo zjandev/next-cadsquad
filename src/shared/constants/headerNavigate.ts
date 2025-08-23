@@ -1,10 +1,20 @@
 import { StaticImageData } from 'next/image'
 
-import Img3dDrawing from '@/assets/images/3d-drawing.png'
 import ImgCsdHeart from '@/assets/images/cadsquad-heart.png'
-import ImgStellStructure from '@/assets/images/stell-structure.png'
 import ImgTeam from '@/assets/images/teams.png'
 import ImgVision from '@/assets/images/vision.png'
+import { CAD_SERVICES } from '@/shared/database/cadServices'
+
+const getCadServiceMenu: () => NavigateItem['menus'] = () => {
+    return CAD_SERVICES.map((item) => {
+        return {
+            enLabel: item.title.original!,
+            viLabel: item.title.vi!,
+            href: `/cad-services/${item.slug!}`,
+            image: item.thumbnail.vertical!,
+        }
+    })
+}
 
 export type NavigateItem = {
     viLabel: string
@@ -49,20 +59,7 @@ export const HEADER_NAVIGATES: NavigateItem[] = [
         enLabel: 'CAD Services',
         viLabel: 'Dịch vụ CAD',
         href: '/cad-services',
-        menus: [
-            {
-                viLabel: 'Mô hình hóa và dựng hình 3D',
-                enLabel: '3D modeling & rendering',
-                image: Img3dDrawing,
-                href: '/cad-services/3d-modeling-and-rendering',
-            },
-            {
-                viLabel: 'Kết cấu thép',
-                enLabel: 'Steel structure ',
-                image: ImgStellStructure,
-                href: '/cad-services/stell-structure',
-            },
-        ],
+        menus: getCadServiceMenu(),
     },
     {
         enLabel: 'Academy',
