@@ -1,8 +1,8 @@
 import { StaticImageData } from 'next/image'
 
-import ImgCsdHeart from '@/assets/images/cadsquad-heart.png'
-import ImgTeam from '@/assets/images/teams.png'
-import ImgVision from '@/assets/images/vision.png'
+import ImgCsdHeart from '@/assets/images/cadsquad-heart.webp'
+import ImgTeam from '@/assets/images/teams.webp'
+import ImgVision from '@/assets/images/vision.webp'
 import { CAD_SERVICES } from '@/shared/database/cadServices'
 
 const getCadServiceMenu: () => NavigateItem['menus'] = () => {

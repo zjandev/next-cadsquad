@@ -3,18 +3,16 @@
 import React from 'react'
 
 import { Breadcrumb } from 'antd'
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-import ImgCadService from '@/assets/images/cad-services.png'
+import ImgCadService from '@/assets/images/cad-services.webp'
 import { Link } from '@/i18n/navigation'
-import { OUR_SERVICES, VI_OUR_SERVICES } from '@/shared/database/cadServices'
+import { CAD_SERVICES } from '@/shared/database/cadServices'
 
 import ServiceCard from './_components/cards/ServiceCard'
 
 export default function CADServices() {
-    const locale = useLocale()
-    const ourServicess = locale === 'vi' ? VI_OUR_SERVICES : OUR_SERVICES
     const tBreadcrumb = useTranslations('breadcrumbs')
     const tCadServices = useTranslations('landing.cadServices')
 
@@ -69,7 +67,7 @@ export default function CADServices() {
                 </div>
             </section>
             <section className="container space-y-10 mt-14">
-                {ourServicess.map((service) => (
+                {CAD_SERVICES.map((service) => (
                     <ServiceCard key={service.id} data={service} />
                 ))}
             </section>

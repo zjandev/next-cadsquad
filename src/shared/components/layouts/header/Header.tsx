@@ -10,43 +10,6 @@ import Logo from '@/shared/components/Logo'
 import Actions from '@/shared/components/layouts/header/Actions'
 import Navbar from '@/shared/components/layouts/header/Navbar'
 
-const wrapperVariants: Variants = {
-    init: { opacity: 0 },
-    collapse: {
-        opacity: 1,
-        boxShadow:
-            'rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px',
-        transition: {
-            duration: 0.05,
-        },
-        background: 'var(--background)',
-    },
-    extend: {
-        opacity: 1,
-        boxShadow: 'none',
-        transition: {
-            duration: 0.05,
-        },
-        // background: 'var(--background)',
-    },
-}
-
-const logoVariants: Variants = {
-    init: { opacity: 0, y: 10, height: '64px' },
-    collapse: {
-        opacity: 1,
-        y: 0,
-        height: '40px',
-        transition: { delay: 0, type: 'spring', stiffness: 120, damping: 20 },
-    },
-    extend: {
-        opacity: 1,
-        y: 0,
-        height: '64px',
-        transition: { delay: 0, type: 'spring', stiffness: 120, damping: 20 },
-    },
-}
-
 const BREAKPOINT = 20
 
 export default function Header() {
@@ -60,6 +23,53 @@ export default function Header() {
             setExtend(true)
         }
     }, [y])
+
+    const wrapperVariants: Variants = {
+        init: { opacity: 0 },
+        collapse: {
+            opacity: 1,
+            boxShadow:
+                'rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px',
+            transition: {
+                duration: 0.05,
+            },
+            background: 'var(--background)',
+        },
+        extend: {
+            opacity: 1,
+            boxShadow: 'none',
+            transition: {
+                duration: 0.05,
+            },
+            // background: 'var(--background)',
+        },
+    }
+
+    const logoVariants: Variants = {
+        init: { opacity: 0, y: 10, height: '64px' },
+        collapse: {
+            opacity: 1,
+            y: 0,
+            height: '40px',
+            transition: {
+                delay: 0,
+                type: 'spring',
+                stiffness: 120,
+                damping: 20,
+            },
+        },
+        extend: {
+            opacity: 1,
+            y: 0,
+            height: '64px',
+            transition: {
+                delay: 0,
+                type: 'spring',
+                stiffness: 120,
+                damping: 20,
+            },
+        },
+    }
 
     return (
         <MotionHeader

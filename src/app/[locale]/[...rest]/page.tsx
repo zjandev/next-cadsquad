@@ -4,7 +4,7 @@ import { Button } from '@heroui/react'
 import { HomeIcon } from 'lucide-react'
 import Image from 'next/image'
 
-import NotFoundImg from '@/assets/images/not-found.png'
+import NotFoundImg from '@/assets/images/not-found.webp'
 import { Link } from '@/i18n/navigation'
 import Footer from '@/shared/components/layouts/footer'
 import Header from '@/shared/components/layouts/header'

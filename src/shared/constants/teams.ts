@@ -1,8 +1,8 @@
-import ImgDatLe from '@/assets/images/teams/DatLe.png'
-import ImgDuongCao from '@/assets/images/teams/DuongCao.png'
-import ImgHieuNguyen from '@/assets/images/teams/HieuNguyen.png'
-import ImgMinhNguyen from '@/assets/images/teams/MinhNguyen.png'
-import ImgPhongPham from '@/assets/images/teams/PhongPham.png'
+import ImgDatLe from '@/assets/images/teams/DatLe.webp'
+import ImgDuongCao from '@/assets/images/teams/DuongCao.webp'
+import ImgHieuNguyen from '@/assets/images/teams/HieuNguyen.webp'
+import ImgMinhNguyen from '@/assets/images/teams/MinhNguyen.webp'
+import ImgPhongPham from '@/assets/images/teams/PhongPham.webp'
 
 export const TEAMS = [
     {

@@ -9,7 +9,7 @@ export const POSTS: Post[] = [
             'Phần mềm AutoCAD đã quá quen thuộc trong ngành CAD CAM, với độ sử dụng phổ biến hàng đầu trên toàn thế giới. Trải qua 60 năm phát triển, giờ đây AutoCAD được sử dụng cho nhiều ứng dụng, bao gồm các kế hoạch kiến trúc, bố cục và bản vẽ sản xuất sản phẩm. Nhờ vào tính ứng dụng linh hoạt  này đã khiến AutoCAD đã và đang trở thành tiêu chuẩn cần có cho một số ngành công nghiệp.',
         keywords: ['autocad', 'tutorial', 'newbie', 'huong-dan'],
         thumbnailUrl:
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1754559976/Cadsquad/posts/huong-dan-su-dung-autocad-cho-nguoi-moi-bat-dau_xaesjd.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1754559976/Cadsquad/posts/huong-dan-su-dung-autocad-cho-nguoi-moi-bat-dau_xaesjd.webp',
         bgCoverUrl:
             'https://lagrandeourse.design/wp-content/uploads/2024/04/Techniques-de-prototypage-rapide-en-product-design.jpg',
         content: `
@@ -833,7 +833,7 @@ Hy vọng bài viết trên đây cung cấp cho bạn lệnh AutoCAD cơ bản 
             'Cách ẩn hiện đối tượng bằng lớp trong AutoCAD',
         ],
         thumbnailUrl:
-            'https://kkhouse.com.vn/wp-content/uploads/2023/02/go-lenh-tat-goi-layer.png',
+            'https://kkhouse.com.vn/wp-content/uploads/2023/02/go-lenh-tat-goi-layer.webp',
         content: `
 Layers – Thiết lập và quản lý đường nét trong bản vẽ là yếu tố rất quan trọng đối với bất cứ người dùng CAD nào. Khi một bản vẽ sử dụng tới rất nhiều layer, các chi tiết trở nên rối và phức tạp, bạn có thể ẩn bớt các đối tượng mà bạn tạm thời chưa dùng tớ nhằm quan sát và thao tác được dễ dàng hơn.
 

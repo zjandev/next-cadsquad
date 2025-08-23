@@ -7,10 +7,10 @@ import { Breadcrumb } from 'antd'
 import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-import ImgCadsquadCard from '@/assets/images/cadsquad-card.png'
-import Focus1 from '@/assets/images/focus_1.png'
-import ImgVision from '@/assets/images/heading-pages/vision.png'
-import TeamImg from '@/assets/images/team.png'
+import ImgCadsquadCard from '@/assets/images/cadsquad-card.webp'
+import Focus1 from '@/assets/images/focus_1.webp'
+import ImgVision from '@/assets/images/heading-pages/vision.webp'
+import TeamImg from '@/assets/images/team.webp'
 import { Link } from '@/i18n/navigation'
 import { SupportLanguages } from '@/i18n/routing'
 import { COMPANY_NAME } from '@/shared/constants/appConstant'
@@ -131,7 +131,7 @@ export default function AboutUsPage() {
                             className="md:mt-0 h-fit"
                             style={{
                                 backgroundImage:
-                                    "url('https://res.cloudinary.com/dqx1guyc0/image/upload/v1750452293/Cadsquad/u28sazqxenpryifqd8da.png')",
+                                    "url('https://res.cloudinary.com/dqx1guyc0/image/upload/v1750452293/Cadsquad/u28sazqxenpryifqd8da.webp')",
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center',
                             }}

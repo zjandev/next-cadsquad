@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
             from: `${fullName} <${email}>`,
             to: [
                 `${envConfig.NEXT_PUBLIC_CADSQUAD_EMAIL}`,
-                'caohaiduong04@gmail.com',
+                'contact@cadsquad.vn',
             ],
             subject: EMAIL_SUBJECT,
             html: emailHtml,

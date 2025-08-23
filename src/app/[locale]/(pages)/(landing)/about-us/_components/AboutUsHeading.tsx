@@ -10,8 +10,8 @@ export default function AboutUsHeading() {
     const tAboutUs = useTranslations('landing.aboutUs')
 
     return (
-        <section className="relative w-full overflow-hidden h-[350px] lg:h-[500px]">
-            <div className="relative w-full h-[520px]">
+        <section className="relative w-full overflow-hidden h-[280px] lg:h-[520px]">
+            <div className="relative w-full h-[280px] lg:h-[520px]">
                 <Image
                     src={AboutUsImage}
                     alt="Image"
@@ -20,7 +20,7 @@ export default function AboutUsHeading() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
                 <div className="container">
-                    <div className="text-6xl font-saira text-white font-semibold absolute top-[50%] -translate-y-[50%] ">
+                    <div className="container text-4xl leading-tight lg:text-6xl font-saira text-white font-semibold absolute top-[50%] -translate-y-[50%]">
                         <MotionH1 className="uppercase">
                             {tAboutUs('heading.title')}
                         </MotionH1>

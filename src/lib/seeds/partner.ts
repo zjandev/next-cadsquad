@@ -5,25 +5,25 @@ export const PARTNER: Partner[] = [
         id: '1',
         name: 'Hoth Intelligence',
         imageUrl:
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884851/Cadsquad/Partner/Hoth_Intel_drk8eb.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884851/Cadsquad/Partner/Hoth_Intel_drk8eb.webp',
     },
     {
         id: '2',
         name: 'Metidea',
         imageUrl:
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884849/Cadsquad/Partner/METIDEA_vurgrh.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884849/Cadsquad/Partner/METIDEA_vurgrh.webp',
     },
     {
         id: '3',
         name: 'BOSS',
         imageUrl:
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1755704447/Cadsquad/Partner/BOSS_iibjwv.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1755704447/Cadsquad/Partner/BOSS_iibjwv.webp',
     },
     {
         id: '4',
         name: 'AMTEK International',
         imageUrl:
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884849/Cadsquad/Partner/Amtek_International_LLC_ljr1nd.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884849/Cadsquad/Partner/Amtek_International_LLC_ljr1nd.webp',
     },
     {
         id: '5',
@@ -35,13 +35,13 @@ export const PARTNER: Partner[] = [
         id: '6',
         name: 'Schulze Brakel',
         imageUrl:
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884849/Cadsquad/Partner/Schulze-Brakel_GmbH_emazfg.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884849/Cadsquad/Partner/Schulze-Brakel_GmbH_emazfg.webp',
     },
     {
         id: '7',
         name: 'Inpex',
         imageUrl:
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884848/Cadsquad/Partner/INPEX_lhquin.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884848/Cadsquad/Partner/INPEX_lhquin.webp',
     },
     {
         id: '8',
@@ -53,12 +53,12 @@ export const PARTNER: Partner[] = [
         id: '9',
         name: 'JB&Co',
         imageUrl:
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884848/Cadsquad/Partner/JB_CO_yw1fud.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884848/Cadsquad/Partner/JB_CO_yw1fud.webp',
     },
     {
         id: '10',
         name: 'AnTech',
         imageUrl:
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884848/Cadsquad/Partner/AnTech_Ltd_nzdmtq.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1753884848/Cadsquad/Partner/AnTech_Ltd_nzdmtq.webp',
     },
 ]

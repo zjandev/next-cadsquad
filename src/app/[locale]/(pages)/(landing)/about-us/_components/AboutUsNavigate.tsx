@@ -8,8 +8,10 @@ import {
     ABOUT_US_NAVIGATE,
     VI_ABOUT_US_NAVIGATE,
 } from '@/shared/constants/aboutUsNavigate'
+import { useDevice } from '@/shared/hooks/useDevice'
 
 export default function AboutUsNavigate() {
+    const { isMobile } = useDevice()
     const locale = useLocale()
 
     const aboutUsNavigate =
@@ -17,12 +19,17 @@ export default function AboutUsNavigate() {
 
     return (
         <nav className="bg-border">
-            <ul className="container flex items-center justify-center">
+            <ul
+                className="container flex items-center overflow-x-auto scroll-none"
+                style={{
+                    justifyContent: isMobile ? 'start' : 'center',
+                }}
+            >
                 {aboutUsNavigate.map((item, idx) => {
                     return (
                         <li
                             key={idx}
-                            className="py-3 pr-16 flex items-center justify-center"
+                            className="py-3 pr-16 flex items-center justify-center text-nowrap"
                         >
                             <p className="text-[#aaa9a9] text-lg font-medium font-saira uppercase">
                                 {item.title}

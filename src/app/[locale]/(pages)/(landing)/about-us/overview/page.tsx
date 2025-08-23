@@ -2,7 +2,7 @@ import React from 'react'
 
 import Image from 'next/image'
 
-import ImgFounderBanner from '@/assets/images/founder-banner.png'
+import ImgFounderBanner from '@/assets/images/founder-banner.webp'
 
 // import InformationTable from '../_components/tables/InformationTable'
 

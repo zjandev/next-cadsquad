@@ -14,26 +14,25 @@ export default function InformationTable() {
         locale === 'vi' ? VI_ABOUT_CADSQUAD_INFO : ABOUT_CADSQUAD_INFO
 
     return (
-        <table className="w-full border border-gray-300 shadow-md">
+        <table className="w-full border border-gray-300 shadow-md text-sm lg:text-base">
             <tbody>
                 {aboutCadsquadInfo.map((item, index) => {
                     return (
                         <tr
                             key={item.title + index}
-                            className="grid grid-cols-[0.5fr_1fr] gap-14 border-b border-gray-200 last:border-none"
+                            className="grid grid-cols-[100px_1fr] items-center lg:grid-cols-[360px_1fr] last:border-none border-b border-[#dee2e6a1]"
                         >
-                            <td className="py-5 pl-10 font-semibold uppercase align-middle bg-gray-200 border-b border-border">
+                            <th className="h-full text-left px-4 py-2 lg:py-5 lg:px-10 font-semibold uppercase align-middle bg-[#f6f6f6]">
                                 {item.title}
-                            </td>
-                            {item.value && (
-                                <td className="py-5 tracking-wide align-middle">
-                                    {item.value}
-                                </td>
-                            )}
-
-                            {item.values && (
-                                <td className="py-5 pl-8">
-                                    <ul className="space-y-2 list-disc">
+                            </th>
+                            <td className="h-full px-4 py-2 lg:px-8 lg:py-5">
+                                {item.value && (
+                                    <p className="tracking-wide align-middle">
+                                        {item.value}
+                                    </p>
+                                )}
+                                {item.values && (
+                                    <ul className="ml-8 space-y-2 list-disc">
                                         {item.values?.map((item, index) => {
                                             return (
                                                 <li
@@ -45,8 +44,8 @@ export default function InformationTable() {
                                             )
                                         })}
                                     </ul>
-                                </td>
-                            )}
+                                )}
+                            </td>
                         </tr>
                     )
                 })}

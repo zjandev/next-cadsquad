@@ -26,15 +26,15 @@ export const CAD_SERVICES: CadService[] = [
         },
         thumbnail: {
             vertical:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655051/Cadsquad/services/agme8joqrrctlvcxaz3q.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655051/Cadsquad/services/agme8joqrrctlvcxaz3q.webp',
             horizontal:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660226/Cadsquad/services/qahqr6f2psilu6wibvv3.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660226/Cadsquad/services/qahqr6f2psilu6wibvv3.webp',
             verticalType: 'image/png',
             horizontalType: 'image/png',
         },
         images: [
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750837833/Cadsquad/services/zhykau5hfbkwxjravj0t.png',
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750837834/Cadsquad/services/q2zrh8b1dx8b0ombn0p5.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750837833/Cadsquad/services/zhykau5hfbkwxjravj0t.webp',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750837834/Cadsquad/services/q2zrh8b1dx8b0ombn0p5.webp',
         ],
         content: {
             original:
@@ -67,15 +67,15 @@ export const CAD_SERVICES: CadService[] = [
         },
         thumbnail: {
             vertical:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655141/Cadsquad/services/qyc9zoe89qk4vtjvdd8q.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655141/Cadsquad/services/qyc9zoe89qk4vtjvdd8q.webp',
             horizontal:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660268/Cadsquad/services/igpei3ez5mgfdp9fnt9y.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660268/Cadsquad/services/igpei3ez5mgfdp9fnt9y.webp',
             verticalType: 'image/png',
             horizontalType: 'image/png',
         },
         images: [
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750842002/Cadsquad/services/c6sw4tskunuio57wqlrd.png',
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750842002/Cadsquad/services/rg2hskbc2s9rmxs2ifuo.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750842002/Cadsquad/services/c6sw4tskunuio57wqlrd.webp',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750842002/Cadsquad/services/rg2hskbc2s9rmxs2ifuo.webp',
         ],
         content: {
             original:
@@ -111,13 +111,13 @@ export const CAD_SERVICES: CadService[] = [
             vertical:
                 'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655243/Cadsquad/services/wniuipbbf9hlwv2xqbie.webp',
             horizontal:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660300/Cadsquad/services/w54yfljxxumiudhwdci4.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660300/Cadsquad/services/w54yfljxxumiudhwdci4.webp',
             verticalType: 'image/webp',
             horizontalType: 'image/png',
         },
         images: [
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750843097/Cadsquad/services/qf2m1chz6ebapk1njdlw.png',
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750843097/Cadsquad/services/b6lro8ymfyoqel5sui8x.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750843097/Cadsquad/services/qf2m1chz6ebapk1njdlw.webp',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750843097/Cadsquad/services/b6lro8ymfyoqel5sui8x.webp',
         ],
         content: {
             original:
@@ -150,15 +150,15 @@ export const CAD_SERVICES: CadService[] = [
         },
         thumbnail: {
             vertical:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655303/Cadsquad/services/ri5w9ghhvw6cwyrttebq.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655303/Cadsquad/services/ri5w9ghhvw6cwyrttebq.webp',
             horizontal:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660330/Cadsquad/services/tgc9zzl8kneqncjkthzc.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660330/Cadsquad/services/tgc9zzl8kneqncjkthzc.webp',
             verticalType: 'image/png',
             horizontalType: 'image/png',
         },
         images: [
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750843718/Cadsquad/services/znqmzigzpfsbypw8akdu.png',
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750843719/Cadsquad/services/gavuephzaepjsncnprbo.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750843718/Cadsquad/services/znqmzigzpfsbypw8akdu.webp',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750843719/Cadsquad/services/gavuephzaepjsncnprbo.webp',
         ],
         content: {
             original:
@@ -191,15 +191,15 @@ export const CAD_SERVICES: CadService[] = [
         },
         thumbnail: {
             vertical:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655362/Cadsquad/services/uajj3fccfa1fnjq5wxzz.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655362/Cadsquad/services/uajj3fccfa1fnjq5wxzz.webp',
             horizontal:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660382/Cadsquad/services/lpleentj0pdyfrbdx6qt.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660382/Cadsquad/services/lpleentj0pdyfrbdx6qt.webp',
             verticalType: 'image/png',
             horizontalType: 'image/png',
         },
         images: [
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750844201/Cadsquad/services/aj2wuxoyypjcywjslws5.png',
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750844197/Cadsquad/services/xxfwrt0wqysft9z6h4pc.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750844201/Cadsquad/services/aj2wuxoyypjcywjslws5.webp',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750844197/Cadsquad/services/xxfwrt0wqysft9z6h4pc.webp',
         ],
         content: {
             original:
@@ -234,13 +234,13 @@ export const CAD_SERVICES: CadService[] = [
             vertical:
                 'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655432/Cadsquad/services/io4o8s2yzo5s5wc0xk19.jpg',
             horizontal:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660414/Cadsquad/services/rvn5hlwyfup1i38miolp.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660414/Cadsquad/services/rvn5hlwyfup1i38miolp.webp',
             verticalType: 'image/jpeg',
             horizontalType: 'image/png',
         },
         images: [
             'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750844538/Cadsquad/services/e2kserj1vczzjeesa3js.jpg',
-            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750844542/Cadsquad/services/k7mp7wlsk0upxkntaodu.png',
+            'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750844542/Cadsquad/services/k7mp7wlsk0upxkntaodu.webp',
         ],
         content: {
             original:
@@ -278,9 +278,9 @@ export const CAD_SERVICES: CadService[] = [
         slug: 'structural-analysis-(-fea-)',
         thumbnail: {
             vertical:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655563/Cadsquad/services/v0wvcg4r1fqbhxzbw4fe.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655563/Cadsquad/services/v0wvcg4r1fqbhxzbw4fe.webp',
             horizontal:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660441/Cadsquad/services/q9wtklawwmotqd6x6vjg.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660441/Cadsquad/services/q9wtklawwmotqd6x6vjg.webp',
             horizontalType: 'image/png',
             verticalType: 'image/png',
         },
@@ -354,9 +354,9 @@ export const CAD_SERVICES: CadService[] = [
         slug: 'custom-design-services-on-request',
         thumbnail: {
             vertical:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655700/Cadsquad/services/kuxa0nmi6psdabbijpbj.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750655700/Cadsquad/services/kuxa0nmi6psdabbijpbj.webp',
             horizontal:
-                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660602/Cadsquad/services/jm7pm3wvmlndtv4yzclq.png',
+                'https://res.cloudinary.com/dqx1guyc0/image/upload/v1750660602/Cadsquad/services/jm7pm3wvmlndtv4yzclq.webp',
             verticalType: 'image/png',
             horizontalType: 'image/png',
         },

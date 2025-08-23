@@ -58,6 +58,10 @@
                 "title": "Tổng quan",
                 "aboutCadsquad": "Về CADSQUAD"
             },
+            "founderStory": {
+                "title": "Câu chuyện nhà sáng lập",
+                "body": "<paragraph>Ông Phạm Tiến Phong là một kỹ sư cơ khí trẻ với kinh nghiệm thực tiễn làm việc tại các tập đoàn hàng đầu trong lĩnh vực công nghiệp nặng và chế biến thực phẩm. Trong suốt sự nghiệp, ông đã tham gia sâu vào thiết kế máy móc, bản vẽ kỹ thuật và các quy trình sản xuất thực tế - điều này giúp ông hiểu rõ khoảng cách giữa ý tưởng kỹ thuật và thực thi thực tiễn.</paragraph> <paragraph>Với mong muốn thu hẹp khoảng cách này, ông đã thành lập CADSquad - một công ty định hướng dịch vụ, cung cấp các giải pháp thiết kế cơ khí, chuyển đổi dữ liệu CAD, mô phỏng kỹ thuật và đào tạo CAD chuyên nghiệp. Mục tiêu của ông là mang đến các dịch vụ kỹ thuật chất lượng cao, đáng tin cậy, giúp các kỹ sư, nhà sản xuất và sinh viên làm chủ công nghệ thiết kế hiện đại và áp dụng nó một cách tự tin.</paragraph> <paragraph>Tại CADSquad, chúng tôi cam kết không chỉ là nhà cung cấp dịch vụ mà còn là đối tác kỹ thuật của bạn, giúp biến ý tưởng thành hiện thực.</paragraph>"
+            },
             "ourJourney": {
                 "title": "Lịch sử phát triển"
             },

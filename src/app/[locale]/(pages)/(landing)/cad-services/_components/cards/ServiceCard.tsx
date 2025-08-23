@@ -1,23 +1,32 @@
+'use client'
+
 import React from 'react'
 
 import { Button, Skeleton } from '@heroui/react'
 import { Image } from 'antd'
 import { ChevronRight } from 'lucide-react'
 import { Variants } from 'motion'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { Link } from '@/i18n/navigation'
 import { MotionDiv } from '@/lib/motion'
 import { useDevice } from '@/shared/hooks/useDevice'
-import { Service } from '@/validationSchemas/cad-service.schema'
+import { CadService } from '@/validationSchemas/cad-service.schema'
 
 type Props = {
-    data: Service
+    data: CadService
 }
 
 export default function ServiceCard({ data }: Props) {
+    const locale = useLocale()
     const tButton = useTranslations('button')
     const { isMobile } = useDevice()
+
+    const title = locale === 'vi' ? data?.title?.vi : data?.title?.original
+    const shortDescription =
+        locale === 'vi'
+            ? data?.shortDescription?.vi
+            : data?.shortDescription?.original
 
     const wrapperVariants: Variants = {
         init: {
@@ -47,21 +56,30 @@ export default function ServiceCard({ data }: Props) {
             className="lg:grid grid-cols-[600px_1fr] gap-10 border-1 p-4 rounded-lg"
         >
             <div className="h-full overflow-hidden rounded-lg aspect-video">
-                <Image
-                    src={data.thumbnail}
-                    alt={data.name}
-                    className="object-cover h-full aspect-video"
-                />
+                <Link
+                    href={destination}
+                    passHref
+                    className="block"
+                    title={title}
+                >
+                    <Image
+                        src={data?.thumbnail?.vertical}
+                        alt={title}
+                        className="object-cover h-full aspect-video"
+                        preview={false}
+                    />
+                </Link>
             </div>
             <div className="mt-6 lg:mt-0 w-full">
                 <Link
                     href={destination}
-                    className="text-2xl font-semibold font-saira line-clamp-1 hover:underline underline-offset-4"
+                    className="text-2xl font-semibold line-clamp-1 hover:underline underline-offset-4"
+                    title={title}
                 >
-                    {data.name}
+                    {title}
                 </Link>
                 <p className="mt-3 lg:mt-5 text-lg text-gray-700">
-                    {data.shortDescription}
+                    {shortDescription}
                 </p>
                 <Link href={destination} className="block">
                     <Button

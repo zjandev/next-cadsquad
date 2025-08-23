@@ -5,8 +5,8 @@ import React from 'react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-import BannerImg from '@/assets/images/banner.png'
-import MobileBannerImg from '@/assets/images/mobile-banner.png'
+import BannerImg from '@/assets/images/banner.webp'
+import MobileBannerImg from '@/assets/images/mobile-banner.webp'
 import { MotionSpan } from '@/lib/motion'
 
 export default function Banner() {

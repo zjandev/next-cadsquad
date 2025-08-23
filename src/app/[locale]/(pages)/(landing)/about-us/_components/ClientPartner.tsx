@@ -45,7 +45,7 @@ export default function ClientPartner() {
                                 {tClientPartner('button.partner')}
                             </Button>
                         </div>
-                        <div className="mt-10 grid grid-cols-5 gap-10">
+                        <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
                             {PARTNER.map((pNer, idx) => {
                                 return (
                                     <div

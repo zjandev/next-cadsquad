@@ -63,7 +63,7 @@ export const VI_ABOUT_CADSQUAD_INFO = [
     },
     {
         title: 'Nhà sáng lập',
-        value: 'Phạm Tiền Phong',
+        value: 'Ông Phạm Tiền Phong',
     },
     {
         title: 'Sản phẩm & dịch vụ',
