@@ -120,7 +120,7 @@ export default function ContactModal({ isOpen, onClose }: Props) {
                             <Button
                                 isLoading={isLoading}
                                 size="sm"
-                                className="rounded-lg bg-[#3f96ff] text-white"
+                                className="px-8 rounded-xl bg-secondary text-white"
                                 onPress={async () => {
                                     await copyToClipboard()
                                 }}

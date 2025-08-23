@@ -1,4 +1,4 @@
-import FloatContact from '@/shared/components/layouts/floatContact'
+import FAB from '@/shared/components/layouts/FAB'
 import Footer from '@/shared/components/layouts/footer'
 import AppHeader from '@/shared/components/layouts/header'
 
@@ -12,7 +12,7 @@ export default function LandingLayout({
             <AppHeader />
             <main className="pt-[106px]">
                 {children}
-                <FloatContact />
+                <FAB />
             </main>
             <Footer />
         </>

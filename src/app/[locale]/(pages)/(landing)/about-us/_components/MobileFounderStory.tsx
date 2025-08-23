@@ -2,13 +2,12 @@
 
 import React from 'react'
 
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-import FounderStoryImg from '@/assets/images/founder-banner.webp'
+import FounderStoryImg from '@/assets/images/founder-banner-mobile.webp'
 
 export default function MobileFounderStory() {
-    const locale = useLocale()
     const tFounderStory = useTranslations(
         'landing.aboutUs.sections.founderStory'
     )

@@ -13,7 +13,7 @@ import { FLOAT_CONTACTS } from '@/shared/constants/appConstant'
 import ContactButton from './ContactButton'
 import ScrollToTop from './ScrollToTop'
 
-export default function FloatContact() {
+export default function FAB() {
     const [show, setShow] = useState(false)
     const [enableScroll, setEnableScroll] = useState(false)
 
