@@ -3,11 +3,8 @@
 import React, { useEffect, useState } from 'react'
 
 import { X } from 'lucide-react'
-import { Variants } from 'motion'
-import { AnimatePresence } from 'motion/react'
 import Image from 'next/image'
 
-import { MotionDiv } from '@/lib/motion'
 import FabZalo from '@/shared/components/icons/fab/FabZalo.webp'
 
 import { FabCall } from '../../icons/fab/FabCall'
@@ -19,21 +16,8 @@ type Props = {
     onOpen: () => void
     onClose: () => void
 }
+
 export default function ContactButton({ isOpen, onOpen, onClose }: Props) {
-    const wrapperSlide: Variants = {
-        init: {
-            opacity: 0,
-            x: 20,
-        },
-        animate: {
-            opacity: 1,
-            x: 0,
-        },
-        exit: {
-            opacity: 1,
-            x: 40,
-        },
-    }
     const slides: {
         id: number
         title: string
@@ -43,61 +27,37 @@ export default function ContactButton({ isOpen, onOpen, onClose }: Props) {
             id: 1,
             title: 'Contact us',
             body: (
-                <MotionDiv
-                    variants={wrapperSlide}
-                    initial="init"
-                    whileInView="animate"
-                    exit="exit"
-                    className="flex items-center justify-center flex-col"
-                >
+                <div className="flex items-center justify-center flex-col">
                     <FabMail width={24} height={24} className="text-white" />
                     <p className="text-white mt-0.5 text-[10px] font-semibold">
                         Contact us
                     </p>
-                </MotionDiv>
+                </div>
             ),
         },
         {
             id: 2,
             title: 'Whatsapp',
             body: (
-                <MotionDiv
-                    variants={wrapperSlide}
-                    initial="init"
-                    whileInView="animate"
-                    exit="exit"
-                    className="p-3 bg-white rounded-full text-[#ef4444]"
-                >
+                <div className="p-3 bg-white rounded-full text-[#ef4444]">
                     <FabCall width={34} height={34} />
-                </MotionDiv>
+                </div>
             ),
         },
         {
             id: 3,
             title: 'Messenger',
             body: (
-                <MotionDiv
-                    variants={wrapperSlide}
-                    initial="init"
-                    whileInView="animate"
-                    exit="exit"
-                    className="p-3 bg-white rounded-full text-[#ef4444]"
-                >
+                <div className="p-3 bg-white rounded-full text-[#ef4444]">
                     <FabMessenger width={34} height={34} />
-                </MotionDiv>
+                </div>
             ),
         },
         {
             id: 4,
             title: 'Zalo',
             body: (
-                <MotionDiv
-                    variants={wrapperSlide}
-                    initial="init"
-                    whileInView="animate"
-                    exit="exit"
-                    className="p-3 bg-white rounded-full text-[#ef4444]"
-                >
+                <div className="p-3 bg-white rounded-full text-[#ef4444]">
                     <Image
                         src={FabZalo}
                         width={32}
@@ -105,21 +65,23 @@ export default function ContactButton({ isOpen, onOpen, onClose }: Props) {
                         className="size-[32px] hue-rotate-170"
                         alt="Zalo"
                     />
-                </MotionDiv>
+                </div>
             ),
         },
     ]
+
     const [currentSlide, setCurrentSlide] = useState<(typeof slides)[0]>(
         slides[0]
     )
 
-    const toggleHanlder = () => {
+    const toggleHandler = () => {
         if (isOpen) {
             onClose()
         } else {
             onOpen()
         }
     }
+
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prevSlide) => {
@@ -129,14 +91,14 @@ export default function ContactButton({ isOpen, onOpen, onClose }: Props) {
                 const nextIndex = (currentIndex + 1) % slides.length
                 return slides[nextIndex]
             })
-        }, 500) // Changed to 10 seconds as per comment
+        }, 800)
 
         return () => clearInterval(interval)
-    }, [currentSlide]) // Changed dependency to slides array
+    }, [])
 
     if (isOpen) {
         return (
-            <button onClick={toggleHanlder} className="size-20 cursor-pointer">
+            <button onClick={toggleHandler} className="size-20 cursor-pointer">
                 <div className="size-full rounded-full bg-[#ef4444] flex items-center justify-center">
                     <div className="flex items-center justify-center flex-col text-white">
                         <X size={40} />
@@ -145,11 +107,66 @@ export default function ContactButton({ isOpen, onOpen, onClose }: Props) {
             </button>
         )
     }
+
     return (
-        <button onClick={toggleHanlder} className="size-20 cursor-pointer">
-            <div className="size-full rounded-full bg-[#ef4444] flex items-center justify-center">
-                <AnimatePresence>{currentSlide.body}</AnimatePresence>
-            </div>
-        </button>
+        <div className="relative">
+            <style jsx>{`
+                /* Ring Pulse Animation */
+                @keyframes ringPulse {
+                    0% {
+                        transform: scale(1);
+                        opacity: 0.7;
+                    }
+                    50% {
+                        transform: scale(1.4);
+                        opacity: 0.3;
+                    }
+                    100% {
+                        transform: scale(1.8);
+                        opacity: 0;
+                    }
+                }
+
+                /* Ring Elements */
+                .ring-pulse-btn::before,
+                .ring-pulse-btn::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 2px solid #ef4444;
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 0;
+                }
+
+                .ring-pulse-btn::before {
+                    animation: ringPulse 2s infinite;
+                }
+
+                .ring-pulse-btn::after {
+                    animation: ringPulse 2s infinite 1s;
+                }
+
+                .ring-pulse-btn {
+                    position: relative;
+                }
+
+                .ring-pulse-btn > div {
+                    position: relative;
+                    z-index: 2;
+                }
+            `}</style>
+            <button
+                onClick={toggleHandler}
+                className="ring-pulse-btn size-20 cursor-pointer relative"
+            >
+                <div className="size-full rounded-full bg-[#ef4444] flex items-center justify-center relative z-10">
+                    {currentSlide.body}
+                </div>
+            </button>
+        </div>
     )
 }
