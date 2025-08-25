@@ -3,7 +3,7 @@ import React from 'react'
 import { Image } from 'antd'
 
 import { IconQuotes } from '@/shared/components/icons/IconQuotes'
-import { Testimonial } from '@/shared/components/ui/animated-testimonials'
+import { Testimonial } from '@/shared/database/testimonials'
 
 export default function CustomerReviewCard({ data }: { data: Testimonial }) {
     return (

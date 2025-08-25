@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useTransition } from 'react'
+import React from 'react'
 
 import { Button } from '@heroui/react'
 import { useTranslations } from 'next-intl'

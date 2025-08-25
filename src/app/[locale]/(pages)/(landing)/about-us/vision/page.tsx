@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 import ImgCadsquadCard from '@/assets/images/cadsquad-card.webp'
 import Focus1 from '@/assets/images/focus_1.webp'
-import ImgVision from '@/assets/images/heading-pages/vision.webp'
+import ImgVision from '@/assets/images/vision-banner.webp'
 import TeamImg from '@/assets/images/team.webp'
 import { Link } from '@/i18n/navigation'
 import { SupportLanguages } from '@/i18n/routing'
