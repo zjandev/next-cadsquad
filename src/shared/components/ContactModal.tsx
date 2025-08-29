@@ -80,7 +80,7 @@ export default function ContactModal({ isOpen, onClose }: Props) {
                     className="mt-6 mb-4"
                     style={{ color: 'hsl(0, 0%, 80%)' }}
                 />
-                <p className="font-semibold">Mạng xã hội</p>
+                <p className="font-semibold">{tModal('socialMedia')}</p>
                 <ul className="mt-3 flex items-center justify-start gap-2">
                     {CONTACT_INFORMATIONS.map((item, idx) => {
                         return (

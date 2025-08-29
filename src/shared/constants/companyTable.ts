@@ -26,16 +26,33 @@ export const ABOUT_CADSQUAD_INFO = [
     {
         title: 'Business activities',
         values: [
-            'Technical Drawing Digitization & CAD Data Creation',
-            'Part Extraction from Assembly Drawings',
-            'Custom Machine Design for Food & Material Handling Systems',
-            '3D and 2D for Steel structure',
-            'CAD for Sheet Metal Manufacturing',
-            'Machine Design Support - From Concept to Manufacturing',
-            '3D Modeling & 3D Printing Support',
-            'Structural Analysis (FEA)',
-            'Mechanical Motion Simulation',
-            'Custom Design Services on Request',
+            {
+                value: 'Technical Drawing Digitization & CAD Data Creation',
+                href: 'technical-drawing-digitization-and-cad-data-creation',
+            },
+            {
+                value: 'Part Extraction from Assembly Drawings',
+                href: 'part-extraction-from-assembly-drawings',
+            },
+            {
+                value: 'Custom Machine Design for Food & Material Handling Systems',
+                href: 'custom-machine-design-for-food-and-material-handling-systems',
+            },
+            {
+                value: '3D and 2D for Steel structure',
+                href: '3d-and-2d-for-steel-structure',
+            },
+            {
+                value: 'CAD for Sheet Metal Manufacturing',
+                href: 'cad-for-sheet-metal-manufacturing',
+            },
+            {
+                value: 'Machine Design Support - From Concept to Manufacturing',
+                href: 'machine-design-support-from-concept-to-manufacturing',
+            },
+            { value: 'Structural Analysis (FEA)', href: 'structural-analysis-(-fea-)' },
+            { value: 'Mechanical Motion Simulation', href: 'mechanical-motion-simulation' },
+            { value: 'Custom Design Services on Request', href: 'custom-design-services-on-request' },
         ],
     },
 ]
@@ -68,16 +85,33 @@ export const VI_ABOUT_CADSQUAD_INFO = [
     {
         title: 'Sản phẩm & dịch vụ',
         values: [
-            'Số hóa bản vẽ kỹ thuật & Tạo dữ liệu CAD',
-            'Tách chi tiết từ bản vẽ lắp ráp',
-            'Thiết kế máy tùy chỉnh cho hệ thống thực phẩm & xử lý vật liệu',
-            'Thiết kế 3D và 2D cho kết cấu thép',
-            'Thiết kế CAD cho gia công kim loại tấm',
-            'Hỗ trợ thiết kế máy – Từ ý tưởng đến sản xuất',
-            'Hỗ trợ mô hình 3D & In 3D',
-            'Phân tích kết cấu (FEA)',
-            'Mô phỏng chuyển động cơ khí',
-            'Dịch vụ thiết kế tùy chỉnh theo yêu cầu',
+            {
+                value: 'Số hóa bản vẽ kỹ thuật & Tạo dữ liệu CAD',
+                href: 'technical-drawing-digitization-and-cad-data-creation',
+            },
+            {
+                value: 'Tách chi tiết từ bản vẽ lắp ráp',
+                href: 'part-extraction-from-assembly-drawings',
+            },
+            {
+                value: 'Thiết kế máy tùy chỉnh cho hệ thống thực phẩm & xử lý vật liệu',
+                href: 'custom-machine-design-for-food-and-material-handling-systems',
+            },
+            {
+                value: 'Thiết kế 3D và 2D cho kết cấu thép',
+                href: '3d-and-2d-for-steel-structure',
+            },
+            {
+                value: 'Thiết kế CAD cho gia công kim loại tấm',
+                href: 'cad-for-sheet-metal-manufacturing',
+            },
+            {
+                value: 'Hỗ trợ thiết kế máy – Từ ý tưởng đến sản xuất',
+                href: 'machine-design-support-from-concept-to-manufacturing',
+            },
+            { value: 'Phân tích kết cấu (FEA)', href: 'structural-analysis-(-fea-)' },
+            { value: 'Mô phỏng chuyển động cơ khí', href: 'mechanical-motion-simulation' },
+            { value: 'Dịch vụ thiết kế tùy chỉnh theo yêu cầu', href: 'custom-design-services-on-request' },
         ],
     },
 ]

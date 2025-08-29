@@ -171,7 +171,7 @@ export const CAD_SERVICES: CadService[] = [
         order: 5,
         title: {
             original: 'CAD for Sheet Metal Manufacturing',
-            vi: 'CAD cho Sản Xuất Kim Loại Tấm',
+            vi: 'Thiết kế CAD cho gia công kim loại tấm',
         },
         slug: 'cad-for-sheet-metal-manufacturing',
         description: {

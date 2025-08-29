@@ -51,8 +51,8 @@ export const CONTACT_INFORMATIONS = [
     {
         icon: CallIcon,
         contactName: 'Call',
-        name: '076 527 9228',
-        path: 'tel:0765279228',
+        name: '+84 765 279 228',
+        path: 'tel:+84765279228',
         color: '#000000',
     },
     {

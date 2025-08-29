@@ -2,7 +2,6 @@
 
 import React from 'react'
 
-import { Button } from '@heroui/react'
 import { Image as Img } from 'antd'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
@@ -16,7 +15,7 @@ export default function ClientPartner() {
     )
     return (
         <section className="relative w-full overflow-hidden min-h-[780px] pt-24">
-            <div className="relative w-full min-h-[780px]">
+            <div className="relative w-full min-h-[1400px] lg:min-h-[780px]">
                 <Image
                     src={ClientPartnerImg}
                     alt="Image"
@@ -30,7 +29,7 @@ export default function ClientPartner() {
                             {tClientPartner('title')}
                         </h2>
 
-                        <div className="mt-10 flex items-center justify-center gap-6">
+                        {/* <div className="mt-10 flex items-center justify-center gap-6">
                             <Button
                                 className="rounded-full px-8 font-medium uppercase border-white text-white bg-danger"
                                 variant="solid"
@@ -44,7 +43,7 @@ export default function ClientPartner() {
                             >
                                 {tClientPartner('button.partner')}
                             </Button>
-                        </div>
+                        </div> */}
                         <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
                             {PARTNER.map((pNer, idx) => {
                                 return (

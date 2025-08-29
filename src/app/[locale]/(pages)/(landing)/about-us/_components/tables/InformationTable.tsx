@@ -2,6 +2,7 @@ import React from 'react'
 
 import { useLocale } from 'next-intl'
 
+import { Link } from '@/i18n/navigation'
 import {
     ABOUT_CADSQUAD_INFO,
     VI_ABOUT_CADSQUAD_INFO,
@@ -36,10 +37,16 @@ export default function InformationTable() {
                                         {item.values?.map((item, index) => {
                                             return (
                                                 <li
-                                                    key={item + index}
+                                                    key={item.value + index}
                                                     className="tracking-wide"
                                                 >
-                                                    {item}
+                                                    <Link
+                                                        href={`/cad-services/${item.href}`}
+                                                        title={item.value}
+                                                        className="block transition duration-200 hover:underline underline-offset-2"
+                                                    >
+                                                        {item.value}
+                                                    </Link>
                                                 </li>
                                             )
                                         })}
