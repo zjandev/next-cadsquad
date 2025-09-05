@@ -16,6 +16,7 @@ export default function ReasonCard({ data }: Props) {
                 width="70"
                 height="70"
                 className="mx-auto my-2 lg:my-6 rounded-2xl"
+                unoptimized
             />
             <p className="text-lg font-bold text-center">{data.title}</p>
             <p className="mt-2 text-sm leading-normal text-center group-hover:text-text dark:group-hover:text-primary-900 opacity-70">

@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
             },
         ],
     },
+    publicRuntimeConfig: {
+        staticFolder: "/assets"
+    }
     // eslint: {
     //     // Tắt ESLint trong quá trình build
     //     ignoreDuringBuilds: true,

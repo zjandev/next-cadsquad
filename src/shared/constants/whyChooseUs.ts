@@ -62,43 +62,43 @@ export const VI_WHY_CHOOSE_US: Reason[] = [
         icon: '/assets/gifs/best-customer-experience.gif',
     },
     {
-        title: 'Dịch vụ Toàn diện',
+        title: 'Dịch vụ toàn diện',
         description:
             'Chúng tôi cung cấp đa dạng dịch vụ, bao gồm mô hình 3D, bản vẽ 2D, kết cấu thép, mô phỏng, dựng hình, in 3D. Sự đa dạng này đáp ứng nhiều nhu cầu khác nhau của khách hàng.',
         icon: '/assets/gifs/customer-service.gif',
     },
     {
-        title: 'Đảm bảo Chất lượng',
+        title: 'Đảm bảo chất lượng',
         description:
             'CADSQUAD cam kết mang lại kết quả xuất sắc với sự chính xác và chú trọng từng chi tiết. Quy trình kiểm soát chất lượng của chúng tôi đảm bảo sự hoàn hảo trong mọi dự án.',
         icon: '/assets/gifs/premium.gif',
     },
     {
-        title: 'Giải pháp Sáng tạo',
+        title: 'Giải pháp sáng tạo',
         description:
             'Đội ngũ nghệ sĩ 3D của chúng tôi tận tâm biến ý tưởng của bạn thành hiện thực với sự sáng tạo và đổi mới, biến các khái niệm thành những hình ảnh ấn tượng để lại dấu ấn lâu dài.',
         icon: '/assets/gifs/innovation.gif',
     },
     {
-        title: 'Công nghệ Hiện đại',
+        title: 'Công nghệ hiện đại',
         description:
             'Chúng tôi áp dụng các công cụ phần mềm và phần cứng mới nhất để luôn dẫn đầu trong ngành, đảm bảo hiệu quả và độ chính xác cho mọi dự án.',
         icon: '/assets/gifs/learning.gif',
     },
     {
-        title: 'Giao hàng Đúng hạn',
+        title: 'Giao hàng đúng hạn',
         description:
             'CADSQUAD hiểu rõ tầm quan trọng của tiến độ. Chúng tôi luôn nỗ lực bàn giao dự án đúng thời gian, giúp bạn duy trì lịch trình công việc.',
         icon: '/assets/gifs/delivery-truck.gif',
     },
     {
-        title: 'Lấy Khách hàng làm Trung tâm',
+        title: 'Lấy khách hàng làm trung tâm',
         description:
             'Chúng tôi ưu tiên giao tiếp cởi mở với khách hàng, đảm bảo tầm nhìn và phản hồi của bạn được tích hợp vào quá trình thiết kế để đạt kết quả mong muốn.',
         icon: '/assets/gifs/customer-satisfaction.gif',
     },
     {
-        title: 'Giá cả Cạnh tranh',
+        title: 'Giá cả cạnh tranh',
         description:
             'Bên cạnh chất lượng dịch vụ cao, CADSQUAD vẫn mang đến mức giá cạnh tranh, giúp dịch vụ mô hình 3D, dựng hình và thiết kế chuyên nghiệp trở nên dễ tiếp cận cho nhiều khách hàng.',
         icon: '/assets/gifs/dollar.gif',
