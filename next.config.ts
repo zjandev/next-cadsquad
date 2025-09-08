@@ -2,9 +2,6 @@ import type { NextConfig } from 'next'
 
 import createNextIntlPlugin from 'next-intl/plugin'
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const withImages = require('next-images')
-
 const nextConfig: NextConfig = {
     /* config options here */
     images: {
@@ -13,11 +10,13 @@ const nextConfig: NextConfig = {
                 protocol: 'https',
                 hostname: 'res.cloudinary.com',
             },
+            {
+                protocol: 'https',
+                hostname: 'media1.giphy.com',
+            },
         ],
-        formats: ['image/webp'],
-        disableStaticImages: false,
     },
 }
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 
-export default withNextIntl(withImages(nextConfig))
+export default withNextIntl(nextConfig)
