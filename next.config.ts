@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
                 hostname: 'res.cloudinary.com',
             },
         ],
+        formats: ['image/webp'],
+        disableStaticImages: false,
     },
     // eslint: {
     //     // Tắt ESLint trong quá trình build
