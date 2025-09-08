@@ -2,6 +2,9 @@ import type { NextConfig } from 'next'
 
 import createNextIntlPlugin from 'next-intl/plugin'
 
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const withImages = require('next-images')
+
 const nextConfig: NextConfig = {
     /* config options here */
     images: {
@@ -12,17 +15,9 @@ const nextConfig: NextConfig = {
             },
         ],
         formats: ['image/webp'],
-        disableStaticImages: false,
+        disableStaticImages: true,
     },
-    // eslint: {
-    //     // Tắt ESLint trong quá trình build
-    //     ignoreDuringBuilds: true,
-    // },
-    // typescript: {
-    //     // Tắt TypeScript type checking trong quá trình build
-    //     ignoreBuildErrors: true,
-    // },
 }
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 
-export default withNextIntl(nextConfig)
+export default withNextIntl(withImages(nextConfig))

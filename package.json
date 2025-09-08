@@ -33,6 +33,7 @@
     "marked": "^16.1.2",
     "motion": "^12.18.1",
     "next": "15.3.3",
+    "next-images": "^1.8.5",
     "next-intl": "^4.1.0",
     "next-mdx-remote-client": "^2.1.2",
     "nodemailer": "^7.0.3",
