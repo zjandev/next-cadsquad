@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
             },
         ],
         formats: ['image/webp'],
-        disableStaticImages: true,
+        disableStaticImages: false,
     },
 }
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
