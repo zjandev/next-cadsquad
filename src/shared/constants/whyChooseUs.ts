@@ -1,56 +1,67 @@
+import { StaticImageData } from 'next/image'
+
+import ExpericenceIcon from '@/assets/gifs/best-customer-experience.gif'
+import ClientApproachIcon from '@/assets/gifs/customer-satisfaction.gif'
+import ComprehensiveIcon from '@/assets/gifs/customer-service.gif'
+import TimelyDeliveryIcon from '@/assets/gifs/delivery-truck.gif'
+import PricingIcon from '@/assets/gifs/dollar.gif'
+import CreativeSolutionsIcon from '@/assets/gifs/innovation.gif'
+import TechnologyIcon from '@/assets/gifs/learning.gif'
+import QualityAssuranceIcon from '@/assets/gifs/premium.gif'
+
 export type Reason = {
     title: string
     description: string
-    icon: string
+    icon: StaticImageData
 }
 export const WHY_CHOOSE_US: Reason[] = [
     {
         title: 'Experience and Expertise',
         description:
             "CADSQUAD boasts a wealth of experience in 3D modeling and rendering, particularly in the field of mechanical. Our team's deep expertise ensures high-quality results.",
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/best-customer-experience.gif?token=ALEUZ5KFZOF6ZALGB3SWLTDIXM5YG',
+        icon: ExpericenceIcon,
     },
     {
         title: 'Comprehensive Services',
         description:
             'We offer a wide range of services, including 3D modeling, 2D drawings, steel structure, simulation, rendering, 3D printing. Our versatility caters to various client needs.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/customer-service.gif?token=ALEUZ5L75ZGRCPB4IQNMTGTIXM52E',
+        icon: ComprehensiveIcon,
     },
     {
         title: 'Quality Assurance',
         description:
             'CADSQUAD is committed to delivering top-notch results with a focus on precision and attention to detail. Our quality assurance processes guarantee excellence in every project we undertake',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/premium.gif?token=ALEUZ5L4IYY6SOGYR7U3Q2LIXM53I',
+        icon: QualityAssuranceIcon,
     },
     {
         title: 'Creative Solutions',
         description:
             'Our team of 3D artists is dedicated to bringing your ideas to life with creativity and innovation, turning concepts into stunning visual representations that make a lasting impact.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/innovation.gif?token=ALEUZ5N2C2E7NYAACJ65DQLIXM54W',
+        icon: CreativeSolutionsIcon,
     },
     {
         title: 'Cutting-Edge Technology',
         description:
             'We leverage the latest software and hardware tools to stay at the forefront of the industry, ensuring efficiency and accuracy in all our projects.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/learning.gif?token=ALEUZ5L6RSPWAU7CAQHLWM3IXM55O',
+        icon: TechnologyIcon,
     },
     {
         title: 'Timely Delivery',
         description:
             'CADSQUAD understands the importance of deadlines. We are dedicated to delivering projects on time, helping you stay on track with your project schedules.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/delivery-truck.gif?token=ALEUZ5PTCY7D25WRQC2K26LIXM56I',
+        icon: TimelyDeliveryIcon,
     },
     {
         title: 'Client-Centric Approach',
         description:
             'We prioritize open communication with our clients, ensuring that your vision and feedback are incorporated into the design process to achieve your desired outcomes.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/customer-satisfaction.gif?token=ALEUZ5NZZSUXJFK4RU33SC3IXM5ZI',
+        icon: ClientApproachIcon,
     },
     {
         title: 'Competitive Pricing',
         description:
             'Despite our high-quality services, CADSQUAD offers competitive pricing options, making professional 3D modeling, rendering, and design services accessible to a broad range of clients.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/dollar.gif?token=ALEUZ5IWXFLNWOR6NOQA2QDIXM57E',
+        icon: PricingIcon,
     },
 ]
 
@@ -59,48 +70,48 @@ export const VI_WHY_CHOOSE_US: Reason[] = [
         title: 'Kinh nghiệm và Chuyên môn',
         description:
             'CADSQUAD sở hữu bề dày kinh nghiệm trong lĩnh vực mô hình hóa và dựng hình 3D, đặc biệt trong ngành cơ khí. Chuyên môn sâu của đội ngũ chúng tôi đảm bảo mang lại kết quả chất lượng cao.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/best-customer-experience.gif?token=ALEUZ5KFZOF6ZALGB3SWLTDIXM5YG',
+        icon: ExpericenceIcon,
     },
     {
         title: 'Dịch vụ toàn diện',
         description:
             'Chúng tôi cung cấp đa dạng dịch vụ, bao gồm mô hình 3D, bản vẽ 2D, kết cấu thép, mô phỏng, dựng hình, in 3D. Sự đa dạng này đáp ứng nhiều nhu cầu khác nhau của khách hàng.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/customer-service.gif?token=ALEUZ5L75ZGRCPB4IQNMTGTIXM52E',
+        icon: ComprehensiveIcon,
     },
     {
         title: 'Đảm bảo chất lượng',
         description:
             'CADSQUAD cam kết mang lại kết quả xuất sắc với sự chính xác và chú trọng từng chi tiết. Quy trình kiểm soát chất lượng của chúng tôi đảm bảo sự hoàn hảo trong mọi dự án.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/premium.gif?token=ALEUZ5L4IYY6SOGYR7U3Q2LIXM53I',
+        icon: QualityAssuranceIcon,
     },
     {
         title: 'Giải pháp sáng tạo',
         description:
             'Đội ngũ nghệ sĩ 3D của chúng tôi tận tâm biến ý tưởng của bạn thành hiện thực với sự sáng tạo và đổi mới, biến các khái niệm thành những hình ảnh ấn tượng để lại dấu ấn lâu dài.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/innovation.gif?token=ALEUZ5N2C2E7NYAACJ65DQLIXM54W',
+        icon: CreativeSolutionsIcon,
     },
     {
         title: 'Công nghệ hiện đại',
         description:
             'Chúng tôi áp dụng các công cụ phần mềm và phần cứng mới nhất để luôn dẫn đầu trong ngành, đảm bảo hiệu quả và độ chính xác cho mọi dự án.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/learning.gif?token=ALEUZ5L6RSPWAU7CAQHLWM3IXM55O',
+        icon: TechnologyIcon,
     },
     {
         title: 'Giao hàng đúng hạn',
         description:
             'CADSQUAD hiểu rõ tầm quan trọng của tiến độ. Chúng tôi luôn nỗ lực bàn giao dự án đúng thời gian, giúp bạn duy trì lịch trình công việc.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/delivery-truck.gif?token=ALEUZ5PTCY7D25WRQC2K26LIXM56I',
+        icon: TimelyDeliveryIcon,
     },
     {
         title: 'Lấy khách hàng làm trung tâm',
         description:
             'Chúng tôi ưu tiên giao tiếp cởi mở với khách hàng, đảm bảo tầm nhìn và phản hồi của bạn được tích hợp vào quá trình thiết kế để đạt kết quả mong muốn.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/customer-satisfaction.gif?token=ALEUZ5NZZSUXJFK4RU33SC3IXM5ZI',
+        icon: ClientApproachIcon,
     },
     {
         title: 'Giá cả cạnh tranh',
         description:
             'Bên cạnh chất lượng dịch vụ cao, CADSQUAD vẫn mang đến mức giá cạnh tranh, giúp dịch vụ mô hình 3D, dựng hình và thiết kế chuyên nghiệp trở nên dễ tiếp cận cho nhiều khách hàng.',
-        icon: 'https://media.githubusercontent.com/media/zjandev/next-cadsquad/refs/heads/master/public/assets/gifs/dollar.gif?token=ALEUZ5IWXFLNWOR6NOQA2QDIXM57E',
+        icon: PricingIcon,
     },
 ]
