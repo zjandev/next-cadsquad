@@ -50,8 +50,9 @@
     },
     "aboutUs": {
         "heading": {
-            "title": "Giới thiệu về Cadsquad",
-            "description": ""
+            "title": "Về Chúng Tôi",
+            "slogan": "CADSQUAD VIETNAM",
+            "description": "<paragraph>CADSQUAD Vietnam là nhà cung cấp toàn cầu các giải pháp thiết kế cơ khí theo yêu cầu, chuyên về dịch vụ CAD và kỹ thuật chất lượng cao. Chúng tôi biến những ý tưởng sáng tạo thành những sản phẩm cụ thể, bền vững, mang lại giá trị vượt trội cho các ngành công nghiệp trên toàn thế giới.</paragraph><paragraph>CADSQUAD Vietnam luôn sẵn sàng mang đến các giải pháp kỹ thuật đẳng cấp quốc tế, vượt trên sự mong đợi của bạn.</paragraph>"
         },
         "sections": {
             "overview": {

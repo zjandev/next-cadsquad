@@ -74,7 +74,7 @@ export default async function middleware(req: NextRequest) {
 // Combine both matchers to exclude paths from both middleware
 export const config = {
     matcher: [
-        // Exclude API, static assets, and file extensions from both middleware
-        '/((?!api|trpc|_next|_vercel|_next/static|_next/image|.*\\.png$|.*\\..*).*)',
+        // Exclude API, static assets, sites, and file extensions
+        '/((?!api|trpc|_next|_vercel|sites|_next/static|_next/image|.*\\.png$|.*\\..*).*)',
     ],
 }

@@ -51,7 +51,8 @@
     "aboutUs": {
         "heading": {
             "title": "About Us",
-            "description": "CADSQUAD VIETNAM"
+            "slogan": "CADSQUAD VIETNAM",
+            "description": "<paragraph>CADSQUAD Vietnam is a global provider of tailored mechanical design solutions, specializing in high-quality CAD and engineering services. We transform innovative ideas into tangible, sustainable products, delivering exceptional value to industries worldwide.</paragraph><paragraph>CADSQUAD Vietnam is ready to deliver world class engineering solutions that exceed your expectations.</paragraph>"
         },
         "sections": {
             "overview": {
