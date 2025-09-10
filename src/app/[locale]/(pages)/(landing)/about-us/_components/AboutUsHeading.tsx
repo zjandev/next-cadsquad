@@ -11,6 +11,7 @@ import { MotionH1 } from '@/lib/motion'
 
 export default function AboutUsHeading() {
     const tAboutUs = useTranslations('landing.aboutUs')
+    const tButton = useTranslations('button')
 
     return (
         <section className="relative w-full overflow-hidden h-[450px] lg:h-[520px]">
@@ -52,7 +53,7 @@ export default function AboutUsHeading() {
                                 color="secondary"
                             >
                                 <p className="text-sm lg:text-base">
-                                    Download the brochure
+                                    {tButton('downloadBrochure')}
                                 </p>
                             </Button>
                         </Link>

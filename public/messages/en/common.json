@@ -51,7 +51,8 @@
         "getStartedNow": "Get started now",
         "next": "Next",
         "previous": "Previous",
-        "explorer": "Explorer"
+        "explorer": "Explorer",
+        "downloadBrochure": "Download the brochure"
     },
     "table": {
         "importExportBtn": "Import / Export",
